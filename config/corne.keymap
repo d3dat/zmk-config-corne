@@ -65,10 +65,28 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
+        mm_comma: mm_comma_ru {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_COMMA";
+            bindings = <&macro_comma_ru>, <&kp SEMI>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
         mm_dot: mm_dot {
             compatible = "zmk,behavior-mod-morph";
             label = "MM_DOT";
             bindings = <&macro_dot>, <&kp LS(SEMI)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_dot: mm_dot_ru {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_DOT";
+            bindings = <&macro_dot_ru>, <&kp LS(SEMI)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -85,20 +103,6 @@
     };
 
     macros {
-        macro_comma: macro_comma {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp COMMA &kp SPACE>;
-            label = "MACRO_COMMA";
-        };
-
-        macro_dot: macro_dot {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp DOT &kp SPACE &sk LSHFT>;
-            label = "MACRO_DOT";
-        };
-
         macro_en: macro_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -113,11 +117,25 @@
             label = "MACRO_RU";
         };
 
+        macro_comma: macro_comma {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA &kp SPACE>;
+            label = "MACRO_COMMA";
+        };
+
         macro_comma_ru: macro_comma_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(SLASH) &kp SPACE>;
             label = "MACRO_COMMA_RU";
+        };
+
+        macro_dot: macro_dot {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DOT &kp SPACE &sk LSHFT>;
+            label = "MACRO_DOT";
         };
 
         macro_dot_ru: macro_dot_ru {
@@ -162,10 +180,10 @@
 
         ru {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans       &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans       &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans       &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &lt 3 SPACE  &trans    &trans  &trans  &trans
             >;
         };
 
@@ -180,10 +198,10 @@
 
         ext_ru {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&none     &none         &kp BACKSPACE    &kp F16         &none             &none            &kp BACKSPACE  &kp HOME    &kp PG_UP     &kp PG_DN   &kp END    &kp KP_NUMLOCK
+&kp CAPS  &kp LEFT_GUI  &hml LALT LC(S)  &hml LCTRL ESC  &hml LSHFT LC(F)  &kp SPACE        &kp TAB        &kp LEFT    &kp UP        &kp DOWN    &kp RIGHT  &kp BACKSLASH
+&none     &kp LC(Z)     &kp LC(X)        &kp LC(C)       &kp LC(V)         &kp BACKSPACE    &kp RET        &kp DELETE  &mm_comma_ru  &mm_dot_ru  &mm_minus  &kp INS
+                                         &trans          &trans            &trans           &trans         &trans      &trans
             >;
         };
 
