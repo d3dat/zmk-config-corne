@@ -112,6 +112,20 @@
             bindings = <&kp F15 &to 1>;
             label = "MACRO_RU";
         };
+
+        macro_comma_ru: macro_comma_ru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(SLASH) &kp SPACE>;
+            label = "MACRO_COMMA_RU";
+        };
+
+        macro_dot_ru: macro_dot_ru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DOT &kp SPACE &sk LSHFT>;
+            label = "MACRO_DOT_RU";
+        };
     };
 
     combos {
@@ -139,10 +153,10 @@
             //                    | GUI | LWR | ALT/ENT |   | HYPER/SPC | BKSP  | RSE |
 
             bindings = <
-&kp GRAVE     &kp Q        &kp W        &kp E         &kp R         &kp T        &kp Y        &kp U         &kp I         &kp O        &kp P           &kp LEFT_BRACKET
-&kp TAB       &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G        &kp H        &hmr LSHFT J  &hmr LCTRL K  &hmr LALT L  &hmr LGUI SEMI  &kp SQT
-&kp LEFT_ALT  &kp Z        &lt 4 X      &lt 3 C       &lt 8 V       &kp B        &kp N        &kp M         &kp COMMA     &kp DOT      &kp FSLH        &kp RIGHT_BRACKET
-                                        &mo 6         &lt 2 SPACE   &lt 4 ESC    &lt 3 ENTER  &lt 5 F16     &mo 6
+&kp GRAVE     &kp Q        &kp W        &kp E         &kp R         &kp T        &kp Y        &kp U            &kp I         &kp O        &kp P           &kp LEFT_BRACKET
+&kp TAB       &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G        &kp H        &hmr LSHFT J     &hmr LCTRL K  &hmr LALT L  &hmr LGUI SEMI  &kp SQT
+&kp LEFT_ALT  &kp Z        &lt 6 X      &lt 4 C       &lt 5 V       &kp B        &kp N        &kp M            &kp COMMA     &kp DOT      &kp FSLH        &kp RIGHT_BRACKET
+                                        &mo 7         &lt 2 SPACE   &lt 5 ESC    &lt 4 ENTER  &lt 6 BACKSPACE  &mo 7
             >;
         };
 
@@ -161,6 +175,15 @@
 &kp CAPS  &kp LEFT_GUI  &hml LALT LC(S)  &hml LCTRL ESC  &hml LSHFT LC(F)  &kp SPACE        &kp TAB        &kp LEFT    &kp UP     &kp DOWN   &kp RIGHT  &kp BACKSLASH
 &none     &kp LC(Z)     &kp LC(X)        &kp LC(C)       &kp LC(V)         &kp BACKSPACE    &kp RET        &kp DELETE  &mm_comma  &mm_dot    &mm_minus  &kp INS
                                          &trans          &trans            &trans           &trans         &trans      &trans
+            >;
+        };
+
+        ext_ru {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
 
