@@ -55,7 +55,7 @@
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
             hold-trigger-on-release;
         };
-   };
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -68,10 +68,10 @@
             //                    | GUI | LWR | ALT/ENT |   | HYPER/SPC | BKSP  | RSE |
 
             bindings = <
-&kp GRAVE     &kp Q       &kp W       &kp E        &kp R        &kp T        &kp Y        &kp U        &kp I        &kp O       &kp P          &kp LEFT_BRACKET
+&kp GRAVE     &kp Q        &kp W        &kp E         &kp R         &kp T        &kp Y        &kp U         &kp I         &kp O        &kp P           &kp LEFT_BRACKET
 &kp TAB       &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G        &kp H        &hmr LSHFT J  &hmr LCTRL K  &hmr LALT L  &hmr LGUI SEMI  &kp SQT
-&kp LEFT_ALT  &kp Z       &lt 4 X     &lt 6 C      &kp V        &kp B        &kp N        &kp M        &kp COMMA    &kp DOT     &kp FSLH       &kp RIGHT_BRACKET
-                                      &lt 2 TAB    &lt 3 SPACE  &lt 5 ESC    &lt 4 ENTER  &lt 6 F16    &none
+&kp LEFT_ALT  &kp Z        &lt 4 X      &lt 6 C       &lt 5 V       &kp B        &kp N        &kp M         &kp COMMA     &kp DOT      &kp FSLH        &kp RIGHT_BRACKET
+                                        &lt 2 TAB     &lt 3 SPACE   &lt 5 ESC    &lt 4 ENTER  &lt 6 F16     &none
             >;
         };
 
@@ -107,10 +107,10 @@
 
         ext {
             bindings = <
-&none     &none         &kp BACKSPACE   &kp F16        &none            &none            &kp BACKSPACE  &kp HOME    &kp PG_UP  &kp PG_DN  &kp END    &kp KP_NUMLOCK
+&none     &none         &kp BACKSPACE    &kp F16         &none             &none            &kp BACKSPACE  &kp HOME    &kp PG_UP  &kp PG_DN  &kp END    &kp KP_NUMLOCK
 &kp CAPS  &kp LEFT_GUI  &hml LALT LC(S)  &hml LCTRL ESC  &hml LSHFT LC(F)  &kp SPACE        &kp TAB        &kp LEFT    &kp UP     &kp DOWN   &kp RIGHT  &kp BACKSLASH
-&none     &kp LC(Z)     &kp LC(X)       &kp LC(C)      &kp LC(V)        &kp BACKSPACE    &kp RET        &kp DELETE  &none      &none      &none      &kp INS
-                                        &trans         &trans           &trans           &trans         &trans      &trans
+&none     &kp LC(Z)     &kp LC(X)        &kp LC(C)       &kp LC(V)         &kp BACKSPACE    &kp RET        &kp DELETE  &none      &none      &none      &kp INS
+                                         &trans          &trans            &trans           &trans         &trans      &trans
             >;
         };
 
