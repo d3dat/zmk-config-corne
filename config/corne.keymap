@@ -55,12 +55,55 @@
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
             hold-trigger-on-release;
         };
+
+        mm_comma: mm_comma {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_COMMA";
+            bindings = <&macro_comma>, <&kp SEMI>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_dot: mm_dot {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_DOT";
+            bindings = <&macro_dot>, <&kp LS(SEMI)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_minus: mm_minus {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_MINUS";
+            bindings = <&kp MINUS>, <&kp MINUS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    };
+
+    macros {
+        macro_comma: macro_comma {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA &kp SPACE>;
+            label = "MACRO_COMMA";
+        };
+
+        macro_dot: macro_dot {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DOT &kp SPACE &sk LSHFT>;
+            label = "MACRO_DOT";
+        };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        en {
             // -----------------------------------------------------------------------------------------
             // | TAB  |  Q  |  W  |  E  |  R  |    T    |   |  Y  |  U   |  I  |  O  |  P  | ESC |
             // | CTRL |  A  |  S  |  D  |  F  |    G    |   |  H  |  J   |  K  |  L  |  ;  |  LWR/'   |
@@ -70,8 +113,53 @@
             bindings = <
 &kp GRAVE     &kp Q        &kp W        &kp E         &kp R         &kp T        &kp Y        &kp U         &kp I         &kp O        &kp P           &kp LEFT_BRACKET
 &kp TAB       &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G        &kp H        &hmr LSHFT J  &hmr LCTRL K  &hmr LALT L  &hmr LGUI SEMI  &kp SQT
-&kp LEFT_ALT  &kp Z        &lt 4 X      &lt 6 C       &lt 5 V       &kp B        &kp N        &kp M         &kp COMMA     &kp DOT      &kp FSLH        &kp RIGHT_BRACKET
-                                        &lt 2 TAB     &lt 3 SPACE   &lt 5 ESC    &lt 4 ENTER  &lt 6 F16     &none
+&kp LEFT_ALT  &kp Z        &lt 4 X      &lt 3 C       &lt 7 V       &kp B        &kp N        &kp M         &kp COMMA     &kp DOT      &kp FSLH        &kp RIGHT_BRACKET
+                                        &none         &lt 2 SPACE   &lt 4 ESC    &lt 3 ENTER  &lt 5 F16     &none
+            >;
+        };
+
+        ru {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        ext {
+            bindings = <
+&none     &none         &kp BACKSPACE    &kp F16         &none             &none            &kp BACKSPACE  &kp HOME    &kp PG_UP  &kp PG_DN  &kp END    &kp KP_NUMLOCK
+&kp CAPS  &kp LEFT_GUI  &hml LALT LC(S)  &hml LCTRL ESC  &hml LSHFT LC(F)  &kp SPACE        &kp TAB        &kp LEFT    &kp UP     &kp DOWN   &kp RIGHT  &kp BACKSLASH
+&none     &kp LC(Z)     &kp LC(X)        &kp LC(C)       &kp LC(V)         &kp BACKSPACE    &kp RET        &kp DELETE  &mm_comma  &mm_dot    &mm_minus  &kp INS
+                                         &trans          &trans            &trans           &trans         &trans      &trans
+            >;
+        };
+
+        num {
+            bindings = <
+&trans  &trans    &kp BACKSPACE  &trans     &trans     &kp TAB      &kp SLASH   &kp N9  &kp N0  &kp MINUS  &kp EQUAL  &trans
+&trans  &kp LGUI  &kp LALT       &kp LCTRL  &kp LSHFT  &kp SPACE    &kp PERIOD  &kp N5  &kp N6  &kp N7     &kp N8     &trans
+&trans  &kp LALT  &kp LCTRL      &trans     &kp LSHFT  &kp RET      &kp COMMA   &kp N1  &kp N2  &kp N3     &kp N4     &trans
+                                 &trans     &trans     &trans       &trans      &trans  &trans
+            >;
+        };
+
+        fn {
+            bindings = <
+&trans  &trans    &trans    &trans     &trans      &trans    &trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans
+&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHIFT  &trans    &trans  &kp F5  &kp F6   &kp F7   &kp F8   &trans
+&trans  &trans    &trans    &trans     &trans      &trans    &trans  &kp F1  &kp F2   &kp F3   &kp F4   &trans
+                            &trans     &trans      &trans    &trans  &trans  &trans
+            >;
+        };
+
+        mouse {
+            bindings = <
+&none  &kp LGUI  &kp LALT   &kp LCTRL  &kp LSHFT  &none    &studio_unlock   &mmv MOVE_X(-100)  &mmv MOVE_Y(-100)  &mmv MOVE_Y(100)  &mmv MOVE_X(100)  &none
+&none  &kp LALT  &kp LSHFT  &mkp RCLK  &mkp LCLK  &none    &msc SCRL_RIGHT  &mmv MOVE_LEFT     &mmv MOVE_UP       &mmv MOVE_DOWN    &mmv MOVE_RIGHT   &none
+&none  &kp LALT  &none      &kp LCTRL  &kp LSHFT  &none    &msc SCRL_LEFT   &mkp LCLK          &msc SCRL_UP       &msc SCRL_DOWN    &mkp RCLK         &none
+                            &none      &none      &none    &none            &none              &studio_unlock
             >;
         };
 
@@ -102,42 +190,6 @@
 &trans      &kp C_PREV    &kp C_NEXT    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PP        &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans   &trans
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans    &trans    &trans  &trans     &trans   &trans
                                         &trans        &trans        &trans          &trans    &trans    &trans
-            >;
-        };
-
-        ext {
-            bindings = <
-&none     &none         &kp BACKSPACE    &kp F16         &none             &none            &kp BACKSPACE  &kp HOME    &kp PG_UP  &kp PG_DN  &kp END    &kp KP_NUMLOCK
-&kp CAPS  &kp LEFT_GUI  &hml LALT LC(S)  &hml LCTRL ESC  &hml LSHFT LC(F)  &kp SPACE        &kp TAB        &kp LEFT    &kp UP     &kp DOWN   &kp RIGHT  &kp BACKSLASH
-&none     &kp LC(Z)     &kp LC(X)        &kp LC(C)       &kp LC(V)         &kp BACKSPACE    &kp RET        &kp DELETE  &none      &none      &none      &kp INS
-                                         &trans          &trans            &trans           &trans         &trans      &trans
-            >;
-        };
-
-        mouse {
-            bindings = <
-&none  &kp LGUI  &kp LALT   &kp LCTRL  &kp LSHFT  &none    &studio_unlock   &mmv MOVE_X(-100)  &mmv MOVE_Y(-100)  &mmv MOVE_Y(100)  &mmv MOVE_X(100)  &none
-&none  &kp LALT  &kp LSHFT  &mkp RCLK  &mkp LCLK  &none    &msc SCRL_RIGHT  &mmv MOVE_LEFT     &mmv MOVE_UP       &mmv MOVE_DOWN    &mmv MOVE_RIGHT   &none
-&none  &kp LALT  &none      &kp LCTRL  &kp LSHFT  &none    &msc SCRL_LEFT   &mkp LCLK          &msc SCRL_UP       &msc SCRL_DOWN    &mkp RCLK         &none
-                            &none      &none      &none    &none            &none              &studio_unlock
-            >;
-        };
-
-        fn {
-            bindings = <
-&trans  &trans    &trans    &trans     &trans      &trans    &trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans
-&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHIFT  &trans    &trans  &kp F5  &kp F6   &kp F7   &kp F8   &trans
-&trans  &trans    &trans    &trans     &trans      &trans    &trans  &kp F1  &kp F2   &kp F3   &kp F4   &trans
-                            &trans     &trans      &trans    &trans  &trans  &trans
-            >;
-        };
-
-        num {
-            bindings = <
-&trans  &trans    &kp BACKSPACE  &trans     &trans     &kp TAB      &kp SLASH   &kp N9  &kp N0  &kp MINUS  &kp EQUAL  &trans
-&trans  &kp LGUI  &kp LALT       &kp LCTRL  &kp LSHFT  &kp SPACE    &kp PERIOD  &kp N5  &kp N6  &kp N7     &kp N8     &trans
-&trans  &kp LALT  &kp LCTRL      &trans     &kp LSHFT  &kp RET      &kp COMMA   &kp N1  &kp N2  &kp N3     &kp N4     &trans
-                                 &trans     &trans     &trans       &trans      &trans  &trans
             >;
         };
     };
