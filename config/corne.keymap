@@ -18,6 +18,8 @@
     require-prior-idle-ms = <125>;
 };
 
+&sk { quick-release; };
+
 / {
     behaviors {
         tp: tap_preferred {
