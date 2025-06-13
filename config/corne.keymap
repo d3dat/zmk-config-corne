@@ -63,10 +63,10 @@
         };
 
         fn_word: fn_word {
-        compatible = "zmk,behavior-auto-layer";
-        #binding-cells = <1>;
-        continue-list = <F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12>;
-        ignore-modifiers;
+            compatible = "zmk,behavior-auto-layer";
+            #binding-cells = <1>;
+            continue-list = <F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12>;
+            ignore-modifiers;
         };
 
         mm_comma: mm_comma {
@@ -157,13 +157,6 @@
             bindings = <&kp CAPS &to 0>;
             label = "MACRO_LNG_SYNC";
         };
-
-        macro_f5: macro_f5 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&tog 5 &kp F5>;
-            label = "MACRO_F5";
-        };
     };
 
     combos {
@@ -229,19 +222,19 @@
 
         ext {
             bindings = <
-&none     &none         &kp BACKSPACE  &kp ESCAPE  &kp DEL    &none        &kp BACKSPACE  &kp HOME  &kp PG_UP  &kp PG_DN  &kp END    &kp KP_NUMLOCK
-&kp CAPS  &sk LEFT_GUI  &sk LALT       &sk LCTRL   &sk LSHFT  &kp SPACE    &kp TAB        &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &kp BACKSLASH
-&none     &none         &tog 6         &tog 7      &fn_word 5 &kp DEL      &kp BACKSPACE  &kp RET   &mm_comma  &mm_dot    &mm_minus  &kp INS
-                                       &trans      &trans     &trans       &trans         &trans    &trans
+&none     &none         &kp BACKSPACE  &kp ESCAPE  &kp DEL     &none        &kp BACKSPACE  &kp HOME  &kp PG_UP  &kp PG_DN  &kp END    &kp KP_NUMLOCK
+&kp CAPS  &sk LEFT_GUI  &sk LALT       &sk LCTRL   &sk LSHFT   &kp SPACE    &kp TAB        &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &kp BACKSLASH
+&none     &none         &tog 6         &tog 7      &fn_word 5  &kp DEL      &kp BACKSPACE  &kp RET   &mm_comma  &mm_dot    &mm_minus  &kp INS
+                                       &trans      &trans      &trans       &trans         &trans    &trans
             >;
         };
 
         ext_ru {
             bindings = <
-&none     &none         &kp BACKSPACE  &kp ESCAPE  &kp DEL    &none        &kp BACKSPACE  &kp HOME  &kp PG_UP     &kp PG_DN   &kp END    &kp KP_NUMLOCK
-&kp CAPS  &sk LEFT_GUI  &sk LALT       &sk LCTRL   &sk LSHFT  &kp SPACE    &kp TAB        &kp LEFT  &kp UP        &kp DOWN    &kp RIGHT  &kp BACKSLASH
-&none     &none         &tog 6         &tog 7      &fn_word 5 &kp DEL      &kp BACKSPACE  &kp RET   &mm_comma_ru  &mm_dot_ru  &mm_minus  &kp INS
-                                       &trans      &trans     &trans       &trans         &trans    &trans
+&none     &none         &kp BACKSPACE  &kp ESCAPE  &kp DEL     &none        &kp BACKSPACE  &kp HOME  &kp PG_UP     &kp PG_DN   &kp END    &kp KP_NUMLOCK
+&kp CAPS  &sk LEFT_GUI  &sk LALT       &sk LCTRL   &sk LSHFT   &kp SPACE    &kp TAB        &kp LEFT  &kp UP        &kp DOWN    &kp RIGHT  &kp BACKSLASH
+&none     &none         &tog 6         &tog 7      &fn_word 5  &kp DEL      &kp BACKSPACE  &kp RET   &mm_comma_ru  &mm_dot_ru  &mm_minus  &kp INS
+                                       &trans      &trans      &trans       &trans         &trans    &trans
             >;
         };
 
