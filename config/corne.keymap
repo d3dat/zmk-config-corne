@@ -141,7 +141,7 @@
         macro_dot_ru: macro_dot_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp DOT &kp SPACE &sk LSHFT>;
+            bindings = <&kp SLASH &kp SPACE &sk LSHFT>;
             label = "MACRO_DOT_RU";
         };
     };
@@ -157,6 +157,21 @@
         combo_ru {
             bindings = <&macro_ru>;
             key-positions = <19 7>;
+        };
+
+        combo_esc {
+            bindings = <&kp ESC>;
+            key-positions = <15 3>;
+        };
+
+        combo_ret {
+            bindings = <&kp RET>;
+            key-positions = <20 8>;
+        };
+
+        combo_bspc {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <18 19>;
         };
     };
 
