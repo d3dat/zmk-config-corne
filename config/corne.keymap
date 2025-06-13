@@ -17,6 +17,12 @@
     release-after-ms = <2000>;
 };
 
+&sl {
+    release-after-ms = <2000>;
+
+    /delete-property/ quick-release;
+};
+
 / {
     behaviors {
         tp: tap_preferred {
@@ -143,6 +149,20 @@
             bindings = <&kp CAPS &to 0>;
             label = "MACRO_LNG_SYNC";
         };
+
+        macro_mouse_tog: macro_mouse_tog {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&tog 6>,
+                <&macro_press>,
+                <&kp SPACE>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp SPACE>;
+
+            label = "MACRO_MOUSE_TOG";
+        };
     };
 
     combos {
@@ -244,10 +264,10 @@
 
         mouse {
             bindings = <
-&none  &kp LGUI  &kp LALT   &kp LCTRL  &kp LSHFT  &none     &studio_unlock   &mmv MOVE_X(-100)  &mmv MOVE_Y(-100)  &mmv MOVE_Y(100)  &mmv MOVE_X(100)  &none
-&none  &kp LALT  &kp LSHFT  &mkp RCLK  &mkp LCLK  &none     &msc SCRL_RIGHT  &mmv MOVE_LEFT     &mmv MOVE_UP       &mmv MOVE_DOWN    &mmv MOVE_RIGHT   &none
-&none  &kp LALT  &none      &kp LCTRL  &kp LSHFT  &none     &msc SCRL_LEFT   &mkp LCLK          &msc SCRL_UP       &msc SCRL_DOWN    &mkp RCLK         &none
-                            &none      &tog 6     &tog 6    &none            &none              &studio_unlock
+&none  &kp LGUI  &kp LALT   &kp LCTRL  &kp LSHFT         &none     &studio_unlock   &mmv MOVE_X(-100)  &mmv MOVE_Y(-100)  &mmv MOVE_Y(100)  &mmv MOVE_X(100)  &none
+&none  &kp LALT  &kp LSHFT  &mkp RCLK  &mkp LCLK         &none     &msc SCRL_RIGHT  &mmv MOVE_LEFT     &mmv MOVE_UP       &mmv MOVE_DOWN    &mmv MOVE_RIGHT   &none
+&none  &kp LALT  &none      &kp LCTRL  &kp LSHFT         &none     &msc SCRL_LEFT   &mkp LCLK          &msc SCRL_UP       &msc SCRL_DOWN    &mkp RCLK         &none
+                            &none      &macro_mouse_tog  &tog 6    &none            &none              &studio_unlock
             >;
         };
 
