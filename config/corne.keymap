@@ -105,20 +105,6 @@
     };
 
     macros {
-        macro_en: macro_en {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp F14 &to 0>;
-            label = "MACRO_EN";
-        };
-
-        macro_ru: macro_ru {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp F15 &to 1>;
-            label = "MACRO_RU";
-        };
-
         macro_comma: macro_comma {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -146,18 +132,32 @@
             bindings = <&kp SLASH &kp SPACE &sk LSHFT>;
             label = "MACRO_DOT_RU";
         };
+
+        macro_lng: macro_lng {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp CAPS &tog 1>;
+            label = "MACRO_LNG";
+        };
+
+        macro_lng_en: macro_lng_sync {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp CAPS &to 0>;
+            label = "MACRO_LNG_SYNC";
+        };
     };
 
     combos {
         compatible = "zmk,combos";
 
         combo_en {
-            bindings = <&macro_en>;
+            bindings = <&macro_lng_en>;
             key-positions = <16 4>;
         };
 
         combo_ru {
-            bindings = <&macro_ru>;
+            bindings = <&macro_lng>;
             key-positions = <19 7>;
         };
 
