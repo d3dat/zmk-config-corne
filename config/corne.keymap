@@ -196,7 +196,7 @@
 &kp GRAVE     &kp Q  &kp W    &kp E    &kp R        &kp T        &kp Y        &kp U            &kp I      &kp O    &kp P          &kp LEFT_BRACKET
 &kp TAB       &kp A  &kp S    &kp D    &kp F        &kp G        &kp H        &kp J            &kp K      &kp L    &kp SEMICOLON  &kp SQT
 &kp LEFT_ALT  &kp Z  &lt 6 X  &lt 4 C  &lt 5 V      &kp B        &kp N        &kp M            &kp COMMA  &kp DOT  &kp FSLH       &kp RIGHT_BRACKET
-                              &mo 7    &lt 2 SPACE  &lt 5 ESC    &lt 4 ENTER  &lt 4 BACKSPACE  &mo 7
+                              &mo 8    &lt 2 SPACE  &lt 5 ESC    &lt 4 ENTER  &lt 4 BACKSPACE  &mo 8
             >;
         };
 
@@ -213,7 +213,7 @@
             bindings = <
 &none     &none         &kp BACKSPACE  &kp ESCAPE  &kp DEL    &none        &kp BACKSPACE  &kp HOME  &kp PG_UP  &kp PG_DN  &kp END    &kp KP_NUMLOCK
 &kp CAPS  &sk LEFT_GUI  &sk LALT       &sk LCTRL   &sk LSHFT  &kp SPACE    &kp TAB        &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &kp BACKSLASH
-&none     &none         &tog 6         &none       &none      &kp DEL      &kp BACKSPACE  &kp RET   &mm_comma  &mm_dot    &mm_minus  &kp INS
+&none     &none         &tog 6         &tog 7      &sl 5      &kp DEL      &kp BACKSPACE  &kp RET   &mm_comma  &mm_dot    &mm_minus  &kp INS
                                        &trans      &trans     &trans       &trans         &trans    &trans
             >;
         };
@@ -222,7 +222,7 @@
             bindings = <
 &none     &none         &kp BACKSPACE  &kp ESCAPE  &kp DEL    &none        &kp BACKSPACE  &kp HOME  &kp PG_UP     &kp PG_DN   &kp END    &kp KP_NUMLOCK
 &kp CAPS  &sk LEFT_GUI  &sk LALT       &sk LCTRL   &sk LSHFT  &kp SPACE    &kp TAB        &kp LEFT  &kp UP        &kp DOWN    &kp RIGHT  &kp BACKSLASH
-&none     &kp LC(Z)     &kp LC(X)      &kp LC(C)   &kp LC(V)  &kp DEL      &kp BACKSPACE  &kp RET   &mm_comma_ru  &mm_dot_ru  &mm_minus  &kp INS
+&none     &none         &tog 6         &tog 7      &sl 5      &kp DEL      &kp BACKSPACE  &kp RET   &mm_comma_ru  &mm_dot_ru  &mm_minus  &kp INS
                                        &trans      &trans     &trans       &trans         &trans    &trans
             >;
         };
@@ -251,6 +251,15 @@
 &none  &kp LALT  &kp LSHFT  &mkp RCLK  &mkp LCLK  &none     &msc SCRL_RIGHT  &mmv MOVE_LEFT     &mmv MOVE_UP       &mmv MOVE_DOWN    &mmv MOVE_RIGHT   &none
 &none  &kp LALT  &none      &kp LCTRL  &kp LSHFT  &none     &msc SCRL_LEFT   &mkp LCLK          &msc SCRL_UP       &msc SCRL_DOWN    &mkp RCLK         &none
                             &none      &tog 6     &tog 6    &none            &none              &studio_unlock
+            >;
+        };
+
+        sym {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans     &trans   &trans  &trans
+&trans  &kp N7  &kp N5  &kp N3  &kp N1  &kp N9    &kp N8  &kp N0  &kp N2     &kp N4   &kp N6  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp COMMA  &kp DOT  &trans  &trans
+                        &trans  &tog 7  &tog 7    &trans  &trans  &trans
             >;
         };
 
