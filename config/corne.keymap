@@ -193,7 +193,7 @@
         };
 
         combo_num_word {
-            bindings = <&num_word 0>;
+            bindings = <&num_word 7>;
             key-positions = <20 8>;
         };
     };
