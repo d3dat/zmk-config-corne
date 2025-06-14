@@ -232,19 +232,19 @@
 
         ext {
             bindings = <
-&none     &none         &kp BACKSPACE  &kp ESCAPE  &kp DEL    &none        &kp BACKSPACE  &kp HOME  &kp PG_UP  &kp PG_DN  &kp END    &kp KP_NUMLOCK
-&kp CAPS  &sk LEFT_GUI  &sk LALT       &sk LCTRL   &sk LSHFT  &kp SPACE    &kp TAB        &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &kp BACKSLASH
-&none     &none         &tog 6         &tog 7      &sl 5      &kp DEL      &kp BACKSPACE  &kp RET   &mm_comma  &mm_dot    &mm_minus  &kp INS
-                                       &trans      &trans     &trans       &trans         &trans    &trans
+&none     &none         &kp BACKSPACE  &kp ESCAPE  &kp DEL    &none      &kp INS        &kp HOME  &kp PG_UP  &kp PG_DN  &kp END    &kp KP_NUMLOCK
+&kp CAPS  &sk LEFT_GUI  &sk LALT       &sk LCTRL   &sk LSHFT  &none      &kp TAB        &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &kp BACKSLASH
+&none     &none         &tog 6         &tog 7      &sl 5      &kp DEL    &kp BACKSPACE  &kp RET   &mm_comma  &mm_dot    &mm_minus  &kp INS
+                                       &trans      &trans     &trans     &trans         &trans    &trans
             >;
         };
 
         ext_ru {
             bindings = <
-&none     &none         &kp BACKSPACE  &kp ESCAPE  &kp DEL    &none        &kp BACKSPACE  &kp HOME  &kp PG_UP     &kp PG_DN   &kp END    &kp KP_NUMLOCK
-&kp CAPS  &sk LEFT_GUI  &sk LALT       &sk LCTRL   &sk LSHFT  &kp SPACE    &kp TAB        &kp LEFT  &kp UP        &kp DOWN    &kp RIGHT  &kp BACKSLASH
-&none     &none         &tog 6         &tog 7      &sl 5      &kp DEL      &kp BACKSPACE  &kp RET   &mm_comma_ru  &mm_dot_ru  &mm_minus  &kp INS
-                                       &trans      &trans     &trans       &trans         &trans    &trans
+&none     &none         &kp BACKSPACE  &kp ESCAPE  &kp DEL    &none      &kp INS        &kp HOME  &kp PG_UP     &kp PG_DN   &kp END    &kp KP_NUMLOCK
+&kp CAPS  &sk LEFT_GUI  &sk LALT       &sk LCTRL   &sk LSHFT  &none      &kp TAB        &kp LEFT  &kp UP        &kp DOWN    &kp RIGHT  &kp BACKSLASH
+&none     &none         &tog 6         &tog 7      &sl 5      &kp DEL    &kp BACKSPACE  &kp RET   &mm_comma_ru  &mm_dot_ru  &mm_minus  &kp INS
+                                       &trans      &trans     &trans     &trans         &trans    &trans
             >;
         };
 
