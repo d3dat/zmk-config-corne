@@ -287,7 +287,7 @@
             bindings = <
 &trans  &kp LC(Q)  &kp LC(W)  &kp LC(ESC)  &kp LC(R)  &kp LC(T)    &trans  &trans     &trans     &trans    &trans    &trans
 &trans  &kp LC(A)  &kp LC(S)  &kp LC(D)    &kp LC(F)  &kp LC(G)    &trans  &sk LSHFT  &sk LCTRL  &sk LALT  &sk LGUI  &trans
-&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)    &kp LC(V)  &kp LC(B)    &trans  &trans     &trans     &trans    &trans    &trans
+&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)    &kp LC(V)  &kp LC(B)    &trans  &kp ENTER  &trans     &trans    &trans    &trans
                               &trans       &trans     &trans       &trans  &trans     &trans
             >;
         };
