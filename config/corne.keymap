@@ -211,8 +211,8 @@
             bindings = <
 &kp GRAVE     &kp Q        &kp W        &kp E         &kp R         &kp T        &kp Y        &kp U         &kp I         &kp O        &kp P           &kp LEFT_BRACKET
 &kp TAB       &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G        &kp H        &hmr LSHFT J  &hmr LCTRL K  &hmr LALT L  &hmr LGUI SEMI  &kp SQT
-&kp LEFT_ALT  &kp Z        &kp X        &kp C         &kp V         &kp B        &kp N        &kp M         &kp COMMA     &kp DOT      &kp FSLH        &kp RIGHT_BRACKET
-                                        &mo 10        &lt 2 SPACE   &lt 6 ESC    &lt 4 ENTER  &sl 9         &mo 10
+&kp LEFT_ALT  &kp Z        &kp X        &lt 4 X       &kp V         &kp B        &kp N        &kp M         &kp COMMA     &kp DOT      &kp FSLH        &kp RIGHT_BRACKET
+                                        &mo 9         &lt 2 SPACE   &lt 6 ESC    &lt 4 ENTER  &sl 0         &mo 9
             >;
         };
 
@@ -229,7 +229,7 @@
             bindings = <
 &none     &none         &kp BACKSPACE  &kp ESCAPE  &kp DEL    &none        &kp BACKSPACE  &kp HOME  &kp PG_UP  &kp PG_DN  &kp END    &kp KP_NUMLOCK
 &kp CAPS  &sk LEFT_GUI  &sk LALT       &sk LCTRL   &sk LSHFT  &kp SPACE    &kp TAB        &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &kp BACKSLASH
-&none     &tog 7        &tog 6         &mo 4       &sl 5      &kp DEL      &kp BACKSPACE  &kp RET   &mm_comma  &mm_dot    &mm_minus  &kp INS
+&none     &none         &tog 6         &tog 7      &sl 5      &kp DEL      &kp BACKSPACE  &kp RET   &mm_comma  &mm_dot    &mm_minus  &kp INS
                                        &trans      &trans     &trans       &trans         &trans    &trans
             >;
         };
@@ -285,15 +285,6 @@
 &kp CAPS  &sk LEFT_GUI  &sk LALT       &sk LCTRL  &sk LSHFT  &kp SPACE    &kp TAB        &kp LEFT  &kp UP        &kp DOWN    &kp RIGHT  &kp BACKSLASH
 &none     &none         &none          &none      &none      &kp DEL      &kp BACKSPACE  &kp RET   &mm_comma_ru  &mm_dot_ru  &mm_minus  &kp INS
                                        &trans     &trans     &trans       &trans         &trans    &trans
-            >;
-        };
-
-        mod {
-            bindings = <
-&trans  &kp LC(Q)  &kp LC(W)  &kp LC(ESC)  &kp LC(R)  &kp LC(T)    &trans  &trans     &trans     &trans    &trans    &trans
-&trans  &kp LC(A)  &kp LC(S)  &kp LC(D)    &kp LC(F)  &kp LC(G)    &trans  &sk LSHFT  &sk LCTRL  &sk LALT  &sk LGUI  &trans
-&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)    &kp LC(V)  &kp LC(B)    &trans  &kp ENTER  &trans     &trans    &trans    &trans
-                              &trans       &trans     &trans       &trans  &trans     &trans
             >;
         };
 
