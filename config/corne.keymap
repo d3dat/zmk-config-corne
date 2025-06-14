@@ -209,12 +209,12 @@
         };
 
         combo_en_word {
-            bindings = <&en_word>;
+            bindings = <&en_word 0>;
             key-positions = <20 8>;
         };
 
         combo_num_word {
-            bindings = <&num_word>;
+            bindings = <&num_word 7>;
             key-positions = <27 15>;
         };
     };
