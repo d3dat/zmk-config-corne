@@ -62,27 +62,11 @@
             hold-trigger-on-release;
         };
 
-        fn_word: fn_word {
-            compatible = "zmk,behavior-auto-layer";
-            #binding-cells = <1>;
-            continue-list = <F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12>;
-            ignore-modifiers;
-        };
-
         num_word: num_word {
             compatible = "zmk,behavior-auto-layer";
             #binding-cells = <1>;
             continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
             ignore-numbers;
-        };
-
-        en_word: en_word {
-            compatible = "zmk,behavior-auto-layer";
-            #binding-cells = <1>;
-            continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
-            ignore-alphas;
-            ignore-numbers;
-            ignore-modifiers;
         };
 
         mm_comma: mm_comma {
@@ -208,14 +192,9 @@
             key-positions = <16 28>;
         };
 
-        combo_en_word {
-            bindings = <&en_word 0>;
-            key-positions = <20 8>;
-        };
-
         combo_num_word {
-            bindings = <&num_word 7>;
-            key-positions = <27 15>;
+            bindings = <&num_word 0>;
+            key-positions = <20 8>;
         };
     };
 
