@@ -246,19 +246,19 @@
 
         ext {
             bindings = <
-&none     &none               &kp BACKSPACE   &kp ESCAPE       &kp DEL          &none      &kp INS        &kp HOME  &kp PG_UP  &kp PG_DN  &kp END    &kp KP_NUMLOCK
-&kp CAPS  &tp LEFT_GUI LC(A)  &tp LALT LC(S)  &tp LCTRL LC(D)  &tp LSHFT LC(F)  &tog 9     &kp TAB        &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &kp BACKSLASH
-&none     &kp LC(Z)           &kp LC(X)       &kp LC(C)        &kp LC(V)        &tog 10    &kp BACKSPACE  &kp RET   &mm_comma  &mm_dot    &mm_minus  &kp INS
-                                              &trans           &trans           &trans     &trans         &trans    &trans
+&none     &none               &kp BACKSPACE   &kp ESCAPE       &kp DEL          &none      &kp INS  &kp HOME  &kp PG_UP  &kp PG_DN  &kp END    &kp KP_NUMLOCK
+&kp CAPS  &tp LEFT_GUI LC(A)  &tp LALT LC(S)  &tp LCTRL LC(D)  &tp LSHFT LC(F)  &tog 9     &kp TAB  &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &kp BACKSLASH
+&none     &kp LC(Z)           &kp LC(X)       &kp LC(C)        &kp LC(V)        &tog 10    &kp DEL  &kp RET   &mm_comma  &mm_dot    &mm_minus  &kp INS
+                                              &trans           &trans           &trans     &trans   &trans    &trans
             >;
         };
 
         ext_ru {
             bindings = <
-&none     &none               &kp BACKSPACE   &kp ESCAPE       &kp DEL          &none      &kp INS        &kp HOME  &kp PG_UP     &kp PG_DN   &kp END    &kp KP_NUMLOCK
-&kp CAPS  &tp LEFT_GUI LC(A)  &tp LALT LC(S)  &tp LCTRL LC(D)  &tp LSHFT LC(F)  &tog 10    &kp TAB        &kp LEFT  &kp UP        &kp DOWN    &kp RIGHT  &kp BACKSLASH
-&none     &kp LC(Z)           &kp LC(X)       &kp LC(C)        &kp LC(V)        &tog 9     &kp BACKSPACE  &kp RET   &mm_comma_ru  &mm_dot_ru  &mm_minus  &kp INS
-                                              &trans           &trans           &trans     &trans         &trans    &trans
+&none     &none               &kp BACKSPACE   &kp ESCAPE       &kp DEL          &none      &kp INS  &kp HOME  &kp PG_UP     &kp PG_DN   &kp END    &kp KP_NUMLOCK
+&kp CAPS  &tp LEFT_GUI LC(A)  &tp LALT LC(S)  &tp LCTRL LC(D)  &tp LSHFT LC(F)  &tog 9     &kp TAB  &kp LEFT  &kp UP        &kp DOWN    &kp RIGHT  &kp BACKSLASH
+&none     &kp LC(Z)           &kp LC(X)       &kp LC(C)        &kp LC(V)        &tog 10    &kp DEL  &kp RET   &mm_comma_ru  &mm_dot_ru  &mm_minus  &kp INS
+                                              &trans           &trans           &trans     &trans   &trans    &trans
             >;
         };
 
