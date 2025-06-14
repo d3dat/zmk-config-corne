@@ -207,6 +207,16 @@
             bindings = <&kp SPACE>;
             key-positions = <16 28>;
         };
+
+        combo_en_word {
+            bindings = <&en_word>;
+            key-positions = <20 8>;
+        };
+
+        combo_num_word {
+            bindings = <&num_word>;
+            key-positions = <27 15>;
+        };
     };
 
     keymap {
