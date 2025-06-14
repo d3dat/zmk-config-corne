@@ -204,10 +204,10 @@
             //                    | GUI | LWR | ALT/ENT |   | HYPER/SPC | BKSP  | RSE |
 
             bindings = <
-&kp GRAVE     &kp Q  &kp W    &kp E    &kp R        &kp T        &kp Y        &kp U  &kp I      &kp O    &kp P          &kp LEFT_BRACKET
-&kp TAB       &kp A  &kp S    &kp D    &kp F        &kp G        &kp H        &kp J  &kp K      &kp L    &kp SEMICOLON  &kp SQT
-&kp LEFT_ALT  &kp Z  &lt 6 X  &lt 4 C  &lt 5 V      &kp B        &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH       &kp RIGHT_BRACKET
-                              &mo 8    &lt 2 SPACE  &lt 5 ESC    &lt 4 ENTER  &sl 5  &mo 8
+&kp GRAVE     &kp Q  &kp W  &kp E  &kp R        &kp T        &kp Y        &kp U  &kp I      &kp O    &kp P          &kp LEFT_BRACKET
+&kp TAB       &kp A  &kp S  &kp D  &kp F        &kp G        &kp H        &kp J  &kp K      &kp L    &kp SEMICOLON  &kp SQT
+&kp LEFT_ALT  &kp Z  &kp X  &kp C  &kp V        &kp B        &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH       &kp RIGHT_BRACKET
+                            &mo 9  &lt 2 SPACE  &lt 5 ESC    &lt 4 ENTER  &sl 8  &mo 9
             >;
         };
 
@@ -222,19 +222,19 @@
 
         ext {
             bindings = <
-&none     &none         &kp BACKSPACE  &kp ESCAPE  &kp DEL     &none        &kp BACKSPACE  &kp HOME  &kp PG_UP  &kp PG_DN  &kp END    &kp KP_NUMLOCK
-&kp CAPS  &sk LEFT_GUI  &sk LALT       &sk LCTRL   &sk LSHFT   &kp SPACE    &kp TAB        &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &kp BACKSLASH
-&none     &none         &tog 6         &tog 7      &fn_word 5  &kp DEL      &kp BACKSPACE  &kp RET   &mm_comma  &mm_dot    &mm_minus  &kp INS
-                                       &trans      &trans      &trans       &trans         &trans    &trans
+&none     &none         &kp BACKSPACE  &kp ESCAPE  &kp DEL    &none        &kp BACKSPACE  &kp HOME  &kp PG_UP  &kp PG_DN  &kp END    &kp KP_NUMLOCK
+&kp CAPS  &sk LEFT_GUI  &sk LALT       &sk LCTRL   &sk LSHFT  &kp SPACE    &kp TAB        &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &kp BACKSLASH
+&none     &tog 7        &tog 6         &mo 4       &sl 5      &kp DEL      &kp BACKSPACE  &kp RET   &mm_comma  &mm_dot    &mm_minus  &kp INS
+                                       &trans      &trans     &trans       &trans         &trans    &trans
             >;
         };
 
         ext_ru {
             bindings = <
-&none     &none         &kp BACKSPACE  &kp ESCAPE  &kp DEL     &none        &kp BACKSPACE  &kp HOME  &kp PG_UP     &kp PG_DN   &kp END    &kp KP_NUMLOCK
-&kp CAPS  &sk LEFT_GUI  &sk LALT       &sk LCTRL   &sk LSHFT   &kp SPACE    &kp TAB        &kp LEFT  &kp UP        &kp DOWN    &kp RIGHT  &kp BACKSLASH
-&none     &none         &tog 6         &tog 7      &fn_word 5  &kp DEL      &kp BACKSPACE  &kp RET   &mm_comma_ru  &mm_dot_ru  &mm_minus  &kp INS
-                                       &trans      &trans      &trans       &trans         &trans    &trans
+&none     &none         &kp BACKSPACE  &kp ESCAPE  &kp DEL    &none        &kp BACKSPACE  &kp HOME  &kp PG_UP     &kp PG_DN   &kp END    &kp KP_NUMLOCK
+&kp CAPS  &sk LEFT_GUI  &sk LALT       &sk LCTRL   &sk LSHFT  &kp SPACE    &kp TAB        &kp LEFT  &kp UP        &kp DOWN    &kp RIGHT  &kp BACKSLASH
+&none     &tog 7        &tog 6         &mo 4       &sl 5      &kp DEL      &kp BACKSPACE  &kp RET   &mm_comma_ru  &mm_dot_ru  &mm_minus  &kp INS
+                                       &trans      &trans     &trans       &trans         &trans    &trans
             >;
         };
 
@@ -271,6 +271,15 @@
 &trans  &kp N7  &kp N5  &kp N3  &kp N1  &kp N9    &kp N8  &kp N0  &kp N2     &kp N4   &kp N6  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp COMMA  &kp DOT  &trans  &trans
                         &trans  &tog 7  &tog 7    &trans  &trans  &trans
+            >;
+        };
+
+        mod {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans     &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &sk LSHFT  &sk LCTRL  &sk LALT  &sk LGUI  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans     &trans    &trans    &trans
+                        &trans  &trans  &trans    &trans  &trans     &trans
             >;
         };
 
