@@ -70,21 +70,21 @@
         };
 
         num_word: num_word {
-        compatible = "zmk,behavior-auto-layer";
-        #binding-cells = <0>;
-        layers = <7>; // Replace NUM by index of numbers layer
-        continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
-        ignore-numbers;
+            compatible = "zmk,behavior-auto-layer";
+            #binding-cells = <0>;
+            layers = <7>; // Replace NUM by index of numbers layer
+            continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
+            ignore-numbers;
         };
 
         en_word: en_word {
-        compatible = "zmk,behavior-auto-layer";
-        #binding-cells = <0>;
-        layers = <0>; // Replace NUM by index of numbers layer
-        continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
-        ignore-alphas;
-        ignore-numbers;
-        ignore-modifiers;
+            compatible = "zmk,behavior-auto-layer";
+            #binding-cells = <0>;
+            layers = <0>; // Replace NUM by index of numbers layer
+            continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
+            ignore-alphas;
+            ignore-numbers;
+            ignore-modifiers;
         };
 
         mm_comma: mm_comma {
@@ -222,10 +222,10 @@
             //                    | GUI | LWR | ALT/ENT |   | HYPER/SPC | BKSP  | RSE |
 
             bindings = <
-&kp GRAVE     &kp Q  &kp W  &kp E   &kp R        &kp T        &kp Y        &kp U  &kp I      &kp O    &kp P          &kp LEFT_BRACKET
-&kp TAB       &kp A  &kp S  &kp D   &kp F        &kp G        &kp H        &kp J  &kp K      &kp L    &kp SEMICOLON  &kp SQT
-&kp LEFT_ALT  &kp Z  &kp X  &kp C   &kp V        &kp B        &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH       &kp RIGHT_BRACKET
-                            &mo 10  &lt 2 SPACE  &lt 6 ESC    &lt 4 ENTER  &sl 9  &mo 10
+&kp GRAVE     &kp Q        &kp W        &kp E         &kp R         &kp T        &kp Y        &kp U         &kp I         &kp O        &kp P           &kp LEFT_BRACKET
+&kp TAB       &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G        &kp H        &hmr LSHFT J  &hmr LCTRL K  &hmr LALT L  &hmr LGUI SEMI  &kp SQT
+&kp LEFT_ALT  &kp Z        &kp X        &kp C         &kp V         &kp B        &kp N        &kp M         &kp COMMA     &kp DOT      &kp FSLH        &kp RIGHT_BRACKET
+                                        &mo 10        &lt 2 SPACE   &lt 6 ESC    &lt 4 ENTER  &sl 9         &mo 10
             >;
         };
 
