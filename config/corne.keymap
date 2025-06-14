@@ -157,6 +157,20 @@
             bindings = <&kp CAPS &to 0>;
             label = "MACRO_LNG_SYNC";
         };
+
+        macro_lt: macro_lt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp CAPS &kp LS(COMMA) &kp CAPS>;
+            label = "MACRO_LT";
+        };
+
+        macro_gt: macro_gt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp CAPS &kp LS(COMMA) &kp CAPS>;
+            label = "MACRO_GT";
+        };
     };
 
     combos {
@@ -216,25 +230,25 @@
             bindings = <
 &kp GRAVE     &kp Q        &kp W        &kp E         &kp R         &kp T        &kp Y        &kp U         &kp I         &kp O        &kp P           &kp LEFT_BRACKET
 &kp TAB       &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G        &kp H        &hmr LSHFT J  &hmr LCTRL K  &hmr LALT L  &hmr LGUI SEMI  &kp SQT
-&kp LEFT_ALT  &lt 8 Z      &kp X        &lt 4 C       &kp V         &kp B        &kp N        &kp M         &kp COMMA     &kp DOT      &kp FSLH        &kp RIGHT_BRACKET
+&kp LEFT_ALT  &lt 8 Z      &kp X        &lt 4 C       &lt 6 V       &kp B        &kp N        &kp M         &kp COMMA     &kp DOT      &kp FSLH        &kp RIGHT_BRACKET
                                         &mo 12        &lt 2 SPACE   &lt 9 ESC    &lt 4 ENTER  &sl 0         &mo 12
             >;
         };
 
         ru {
             bindings = <
-&trans  &trans  &trans  &trans  &trans       &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans       &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans       &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &lt 3 SPACE  &trans    &trans  &trans  &trans
+&trans  &trans  &trans  &trans   &trans       &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans   &trans       &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &lt 5 C  &lt 7 V      &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans   &lt 3 SPACE  &trans    &trans  &trans  &trans
             >;
         };
 
         ext {
             bindings = <
 &none     &none         &kp BACKSPACE  &kp ESCAPE  &kp DEL    &none      &kp INS        &kp HOME  &kp PG_UP  &kp PG_DN  &kp END    &kp KP_NUMLOCK
-&kp CAPS  &sk LEFT_GUI  &sk LALT       &sk LCTRL   &sk LSHFT  &none      &kp TAB        &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &kp BACKSLASH
-&none     &none         &tog 9         &tog 10     &sl 8      &kp DEL    &kp BACKSPACE  &kp RET   &mm_comma  &mm_dot    &mm_minus  &kp INS
+&kp CAPS  &sk LEFT_GUI  &sk LALT       &sk LCTRL   &sk LSHFT  &tog 10    &kp TAB        &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &kp BACKSLASH
+&none     &kp LC(Z)     &kp LC(X)      &kp LC(C)   &kp LC(V)  &tog 9     &kp BACKSPACE  &kp RET   &mm_comma  &mm_dot    &mm_minus  &kp INS
                                        &trans      &trans     &trans     &trans         &trans    &trans
             >;
         };
@@ -242,8 +256,8 @@
         ext_ru {
             bindings = <
 &none     &none         &kp BACKSPACE  &kp ESCAPE  &kp DEL    &none      &kp INS        &kp HOME  &kp PG_UP     &kp PG_DN   &kp END    &kp KP_NUMLOCK
-&kp CAPS  &sk LEFT_GUI  &sk LALT       &sk LCTRL   &sk LSHFT  &none      &kp TAB        &kp LEFT  &kp UP        &kp DOWN    &kp RIGHT  &kp BACKSLASH
-&none     &none         &tog 9         &tog 10     &sl 8      &kp DEL    &kp BACKSPACE  &kp RET   &mm_comma_ru  &mm_dot_ru  &mm_minus  &kp INS
+&kp CAPS  &sk LEFT_GUI  &sk LALT       &sk LCTRL   &sk LSHFT  &tog 10    &kp TAB        &kp LEFT  &kp UP        &kp DOWN    &kp RIGHT  &kp BACKSLASH
+&none     &kp LC(Z)     &kp LC(X)      &kp LC(C)   &kp LC(V)  &tog 9     &kp BACKSPACE  &kp RET   &mm_comma_ru  &mm_dot_ru  &mm_minus  &kp INS
                                        &trans      &trans     &trans     &trans         &trans    &trans
             >;
         };
@@ -277,10 +291,10 @@
 
         sym_ru {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &kp LS(SLASH)  &kp LS(N9)  &kp LS(N0)  &kp LS(MINUS)  &kp LS(EQUAL)  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp LS(DOT)    &kp LS(N5)  &kp LS(N6)  &kp LS(N7)     &kp LS(N8)     &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp LS(COMMA)  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)     &kp LS(N4)     &trans
-                        &trans  &trans  &trans    &trans         &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LS(BACKSLASH)  &kp LS(N9)  &kp LS(N0)  &kp LS(MINUS)  &kp LS(EQUAL)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &macro_gt          &kp LS(N5)  &kp LS(N6)  &kp LS(N7)     &kp LS(N8)     &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &macro_lt          &kp LS(N1)  &kp LS(N2)  &kp LS(N3)     &kp LS(N4)     &trans
+                        &trans  &trans  &trans    &trans             &trans      &trans
             >;
         };
 
