@@ -69,6 +69,24 @@
             ignore-modifiers;
         };
 
+        num_word: num_word {
+        compatible = "zmk,behavior-auto-layer";
+        #binding-cells = <0>;
+        layers = <7>; // Replace NUM by index of numbers layer
+        continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
+        ignore-numbers;
+        };
+
+        en_word: en_word {
+        compatible = "zmk,behavior-auto-layer";
+        #binding-cells = <0>;
+        layers = <0>; // Replace NUM by index of numbers layer
+        continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
+        ignore-alphas;
+        ignore-numbers;
+        ignore-modifiers;
+        };
+
         mm_comma: mm_comma {
             compatible = "zmk,behavior-mod-morph";
             label = "MM_COMMA";
