@@ -273,10 +273,10 @@
 
         num_ru {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &trans    &kp BACKSPACE  &trans     &trans     &kp TAB      &kp SLASH   &kp N9  &kp N0  &kp MINUS  &kp EQUAL  &trans
+&trans  &kp LGUI  &kp LALT       &kp LCTRL  &kp LSHFT  &kp SPACE    &kp PERIOD  &kp N5  &kp N6  &kp N7     &kp N8     &trans
+&trans  &kp LALT  &kp LCTRL      &trans     &kp LSHFT  &kp RET      &kp COMMA   &kp N1  &kp N2  &kp N3     &kp N4     &trans
+                                 &trans     &trans     &trans       &trans      &trans  &trans
             >;
         };
 
