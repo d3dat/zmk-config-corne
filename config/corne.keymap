@@ -236,7 +236,7 @@
 &kp GRAVE     &kp Q        &kp W        &kp E         &kp R         &kp T        &kp Y        &kp U         &kp I         &kp O        &kp P           &kp LEFT_BRACKET
 &kp TAB       &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &lt 9 G      &kp H        &hmr LSHFT J  &hmr LCTRL K  &hmr LALT L  &hmr LGUI SEMI  &kp SQT
 &kp LEFT_ALT  &kp Z        &lt 8 X      &lt 4 C       &lt 6 V       &kp B        &kp N        &kp M         &kp COMMA     &kp DOT      &kp FSLH        &kp RIGHT_BRACKET
-                                        &mo 13        &lt 1 SPACE   &lt 9 ESC    &lt 4 ENTER  &sl 0         &mo 13
+                                        &mo 13        &lt 1 SPACE   &lt 8 ESC    &lt 4 ENTER  &sl 0         &mo 13
             >;
         };
 
@@ -305,10 +305,10 @@
 
         fn {
             bindings = <
-&none  &none     &none  &none      &none      &none     &none   &kp F9  &kp F10  &kp F11  &kp F12  &none
-&none  &none     &none  &kp LCTRL  &kp LSHFT  &none     &none   &kp F5  &kp F6   &kp F7   &kp F8   &none
-&none  &kp LALT  &none  &none      &none      &none     &none   &kp F1  &kp F2   &kp F3   &kp F4   &none
-                        &trans     &tog 8     &tog 8    &trans  &trans  &trans
+&none  &none     &none     &none      &none      &none     &none   &kp F9  &kp F10  &kp F11  &kp F12  &none
+&none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none     &none   &kp F5  &kp F6   &kp F7   &kp F8   &none
+&none  &none     &none     &none      &none      &none     &none   &kp F1  &kp F2   &kp F3   &kp F4   &none
+                           &trans     &trans     &trans    &trans  &trans  &trans
             >;
         };
 
