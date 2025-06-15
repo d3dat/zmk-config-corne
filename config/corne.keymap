@@ -207,7 +207,7 @@
         };
 
         combo_num_word {
-            bindings = <&num_word 7>;
+            bindings = <&num_word 4>;
             key-positions = <9 21>;
         };
 
