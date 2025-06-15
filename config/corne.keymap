@@ -242,9 +242,9 @@
 
         ext {
             bindings = <
-&none     &none               &kp BACKSPACE   &kp ESCAPE       &kp DEL          &none      &kp INS  &kp HOME  &kp PG_UP  &kp PG_DN  &kp END    &kp KP_NUMLOCK
-&kp CAPS  &tp LEFT_GUI LC(A)  &tp LALT LC(S)  &tp LCTRL LC(D)  &tp LSHFT LC(F)  &tog 9     &kp TAB  &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &kp BACKSLASH
-&none     &kp LC(Z)           &kp LC(X)       &kp LC(C)        &kp LC(V)        &tog 11    &kp DEL  &kp RET   &mm_comma  &mm_dot    &mm_minus  &kp INS
+&none     &none               &kp BACKSPACE   &kp ESCAPE       &kp DEL          &none      &kp INS  &kp HOME  &kp PG_UP  &kp PG_DN  &kp END    &none
+&kp CAPS  &tp LEFT_GUI LC(A)  &tp LALT LC(S)  &tp LCTRL LC(D)  &tp LSHFT LC(F)  &tog 9     &kp TAB  &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &none
+&none     &kp LC(Z)           &kp LC(X)       &kp LC(C)        &kp LC(V)        &tog 11    &kp DEL  &kp RET   &mm_comma  &mm_dot    &mm_minus  &none
                                               &trans           &trans           &trans     &trans   &trans    &trans
             >;
         };
