@@ -147,7 +147,7 @@
         macro_lng: macro_lng {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp CAPS &tog 1>;
+            bindings = <&kp CAPS &tog 2>;
             label = "MACRO_LNG";
         };
 
@@ -178,7 +178,7 @@
 
         combo_en {
             bindings = <&macro_lng_en>;
-            key-positions = <16 4>;
+            key-positions = <6 18>;
         };
 
         combo_ru {
@@ -215,6 +215,11 @@
             bindings = <&caps_word>;
             key-positions = <20 8>;
         };
+
+        combo_del {
+            bindings = <&kp DEL>;
+            key-positions = <30 31>;
+        };
     };
 
     keymap {
@@ -231,7 +236,16 @@
 &kp GRAVE     &kp Q        &kp W        &kp E         &kp R         &kp T        &kp Y        &kp U         &kp I         &kp O        &kp P           &kp LEFT_BRACKET
 &kp TAB       &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &lt 9 G      &kp H        &hmr LSHFT J  &hmr LCTRL K  &hmr LALT L  &hmr LGUI SEMI  &kp SQT
 &kp LEFT_ALT  &kp Z        &lt 8 X      &lt 4 C       &lt 6 V       &kp B        &kp N        &kp M         &kp COMMA     &kp DOT      &kp FSLH        &kp RIGHT_BRACKET
-                                        &mo 12        &lt 2 SPACE   &lt 9 ESC    &lt 4 ENTER  &sl 0         &mo 12
+                                        &mo 13        &lt 1 SPACE   &lt 9 ESC    &lt 4 ENTER  &sl 0         &mo 13
+            >;
+        };
+
+        ext {
+            bindings = <
+&none     &none               &kp BACKSPACE   &kp ESCAPE       &kp DEL          &none      &kp INS  &kp HOME  &kp PG_UP  &kp PG_DN  &kp END    &kp KP_NUMLOCK
+&kp CAPS  &tp LEFT_GUI LC(A)  &tp LALT LC(S)  &tp LCTRL LC(D)  &tp LSHFT LC(F)  &tog 9     &kp TAB  &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &kp BACKSLASH
+&none     &kp LC(Z)           &kp LC(X)       &kp LC(C)        &kp LC(V)        &tog 11    &kp DEL  &kp RET   &mm_comma  &mm_dot    &mm_minus  &kp INS
+                                              &trans           &trans           &trans     &trans   &trans    &trans
             >;
         };
 
@@ -244,20 +258,11 @@
             >;
         };
 
-        ext {
-            bindings = <
-&none     &none               &kp BACKSPACE   &kp ESCAPE       &kp DEL          &none      &kp INS  &kp HOME  &kp PG_UP  &kp PG_DN  &kp END    &kp KP_NUMLOCK
-&kp CAPS  &tp LEFT_GUI LC(A)  &tp LALT LC(S)  &tp LCTRL LC(D)  &tp LSHFT LC(F)  &tog 9     &kp TAB  &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &kp BACKSLASH
-&none     &kp LC(Z)           &kp LC(X)       &kp LC(C)        &kp LC(V)        &tog 10    &kp DEL  &kp RET   &mm_comma  &mm_dot    &mm_minus  &kp INS
-                                              &trans           &trans           &trans     &trans   &trans    &trans
-            >;
-        };
-
-        ext_ru {
+        ru_ext {
             bindings = <
 &none     &none               &kp BACKSPACE   &kp ESCAPE       &kp DEL          &none      &kp INS  &kp HOME  &kp PG_UP     &kp PG_DN   &kp END    &kp KP_NUMLOCK
 &kp CAPS  &tp LEFT_GUI LC(A)  &tp LALT LC(S)  &tp LCTRL LC(D)  &tp LSHFT LC(F)  &tog 9     &kp TAB  &kp LEFT  &kp UP        &kp DOWN    &kp RIGHT  &kp BACKSLASH
-&none     &kp LC(Z)           &kp LC(X)       &kp LC(C)        &kp LC(V)        &tog 10    &kp DEL  &kp RET   &mm_comma_ru  &mm_dot_ru  &mm_minus  &kp INS
+&none     &kp LC(Z)           &kp LC(X)       &kp LC(C)        &kp LC(V)        &tog 11    &kp DEL  &kp RET   &mm_comma_ru  &mm_dot_ru  &mm_minus  &kp INS
                                               &trans           &trans           &trans     &trans   &trans    &trans
             >;
         };
@@ -309,10 +314,19 @@
 
         mouse {
             bindings = <
-&none  &kp LGUI  &kp LALT   &kp LCTRL  &kp LSHFT  &none     &studio_unlock   &mmv MOVE_X(-100)  &mmv MOVE_Y(-100)  &mmv MOVE_Y(100)  &mmv MOVE_X(100)  &none
-&none  &kp LALT  &kp LSHFT  &mkp RCLK  &mkp LCLK  &tog 9    &msc SCRL_RIGHT  &mmv MOVE_LEFT     &mmv MOVE_UP       &mmv MOVE_DOWN    &mmv MOVE_RIGHT   &none
-&none  &kp LALT  &none      &kp LCTRL  &kp LSHFT  &none     &msc SCRL_LEFT   &mkp LCLK          &msc SCRL_UP       &msc SCRL_DOWN    &mkp RCLK         &none
-                            &none      &tog 9     &tog 9    &none            &tog 9             &studio_unlock
+&none  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none     &studio_unlock  &msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_RIGHT  &none
+&none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &tog 9    &tog 9          &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none
+&none  &tog 9          &mkp MB3        &mkp RCLK     &mkp LCLK        &none     &none           &mkp LCLK       &mkp RCLK       &mkp MB3        &tog 9           &none
+                                       &none         &mo 10           &trans    &trans          &none           &studio_unlock
+            >;
+        };
+
+        mouse_ext {
+            bindings = <
+&trans  &trans    &trans    &trans     &trans     &trans    &trans  &msc SCRL_LEFT     &msc SCRL_UP       &msc SCRL_DOWN    &msc SCRL_RIGHT   &trans
+&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &trans  &mmv MOVE_LEFT     &mmv MOVE_UP       &mmv MOVE_DOWN    &mmv MOVE_RIGHT   &trans
+&trans  &trans    &mkp MB3  &mkp RCLK  &mkp LCLK  &trans    &trans  &mmv MOVE_X(-200)  &mmv MOVE_Y(-200)  &mmv MOVE_Y(200)  &mmv MOVE_X(200)  &trans
+                            &trans     &trans     &trans    &trans  &trans             &trans
             >;
         };
 
@@ -321,13 +335,13 @@
 &trans  &trans  &trans  &trans  &trans        &trans     &trans  &trans   &trans     &trans   &trans  &trans
 &trans  &kp N7  &kp N5  &kp N3  &kp N1        &kp N9     &kp N8  &kp N0   &kp N2     &kp N4   &kp N6  &trans
 &trans  &trans  &trans  &trans  &trans        &trans     &trans  &trans   &kp COMMA  &kp DOT  &trans  &trans
-                        &trans  &lt 11 SPACE  &tog 10    &trans  &tog 10  &trans
+                        &trans  &lt 12 SPACE  &tog 11    &trans  &tog 11  &trans
             >;
         };
 
-        ext_multi {
+        multi_ext {
             bindings = <
-&none     &none         &kp BACKSPACE  &tog 10    &kp DEL    &none        &kp BACKSPACE  &kp HOME  &kp PG_UP     &kp PG_DN   &kp END    &kp KP_NUMLOCK
+&none     &none         &kp BACKSPACE  &tog 11    &kp DEL    &none        &kp BACKSPACE  &kp HOME  &kp PG_UP     &kp PG_DN   &kp END    &kp KP_NUMLOCK
 &kp CAPS  &sk LEFT_GUI  &sk LALT       &sk LCTRL  &sk LSHFT  &kp SPACE    &kp TAB        &kp LEFT  &kp UP        &kp DOWN    &kp RIGHT  &kp BACKSLASH
 &none     &none         &none          &none      &none      &kp DEL      &kp BACKSPACE  &kp RET   &mm_comma_ru  &mm_dot_ru  &mm_minus  &kp INS
                                        &trans     &trans     &trans       &trans         &trans    &trans
