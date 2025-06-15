@@ -287,10 +287,10 @@
 
         sym {
             bindings = <
-&trans  &trans    &trans    &trans     &trans  &trans    &kp LS(SLASH)  &kp LS(N9)  &kp LS(N0)  &kp LS(MINUS)  &kp LS(EQUAL)  &trans
-&trans  &trans    &trans    &trans     &trans  &trans    &kp LS(DOT)    &kp LS(N5)  &kp LS(N6)  &kp LS(N7)     &kp LS(N8)     &trans
-&trans  &kp LGUI  &kp LALT  &kp LCTRL  &trans  &trans    &kp LS(COMMA)  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)     &kp LS(N4)     &trans
-                            &trans     &trans  &trans    &trans         &trans      &trans
+&trans  &trans    &trans    &trans     &trans  &trans    &kp GRAVE    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)  &trans
+&trans  &trans    &trans    &trans     &trans  &trans    &kp LS(DOT)  &kp MINUS         &kp LS(NUMBER_4)   &kp LS(N7)            &kp LS(BACKSLASH)      &trans
+&trans  &kp LGUI  &kp LALT  &kp LCTRL  &trans  &trans    &none        &kp LS(MINUS)     &kp LS(NUMBER_6)   &kp LS(NUMBER_4)      &kp NON_US_BACKSLASH   &trans
+                            &trans     &trans  &trans    &trans       &trans            &trans
             >;
         };
 
@@ -316,7 +316,7 @@
             bindings = <
 &none  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none     &studio_unlock  &msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_RIGHT  &none
 &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none     &tog 9          &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none
-&none  &none           &mkp MB3        &mkp RCLK     &mkp LCLK        &none     &none           &mkp LCLK       &mkp RCLK       &mkp MB3        &none            &none
+&none  &none           &mkp MB3        &mkp RCLK     &mkp LCLK        &tog 9    &none           &mkp LCLK       &mkp RCLK       &mkp MB3        &none            &none
                                        &none         &mo 10           &trans    &trans          &none           &studio_unlock
             >;
         };
