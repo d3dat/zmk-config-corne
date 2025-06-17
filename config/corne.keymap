@@ -238,7 +238,7 @@
         };
 
         combo_num_ru {
-            bindings = <&num_word 4>;
+            bindings = <&num_word 5>;
             key-positions = <8 20>;
             layers = <2>;
         };
