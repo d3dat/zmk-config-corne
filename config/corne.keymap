@@ -223,7 +223,7 @@
 
         combo_del {
             bindings = <&kp DEL>;
-            key-positions = <19 20>;
+            key-positions = <18 30>;
         };
 
         combo_mouse_l {
