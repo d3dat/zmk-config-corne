@@ -211,9 +211,10 @@
             key-positions = <16 28>;
         };
 
-        combo_num_word {
+        combo_num_word_en {
             bindings = <&num_word 4>;
             key-positions = <8 20>;
+            layers = <0>;
         };
 
         combo_caps_word {
@@ -221,8 +222,8 @@
             key-positions = <21 9>;
         };
 
-        combo_del {
-            bindings = <&kp DEL>;
+        combo_ins {
+            bindings = <&kp INS>;
             key-positions = <18 30>;
         };
 
@@ -234,6 +235,12 @@
         combo_mouse_r {
             bindings = <&tog 9>;
             key-positions = <6 7>;
+        };
+
+        combo_num_ru {
+            bindings = <&num_word 4>;
+            key-positions = <8 20>;
+            layers = <2>;
         };
     };
 
@@ -257,10 +264,10 @@
 
         ext {
             bindings = <
-&none     &none               &kp BACKSPACE   &kp ESCAPE       &kp DEL          &none      &kp INS  &kp HOME  &kp PG_UP  &kp PG_DN  &kp END    &none
-&kp CAPS  &tp LEFT_GUI LC(A)  &tp LALT LC(S)  &tp LCTRL LC(D)  &tp LSHFT LC(F)  &tog 9     &kp TAB  &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &none
-&none     &kp LC(Z)           &kp LC(X)       &kp LC(C)        &kp LC(V)        &tog 11    &kp DEL  &kp RET   &mm_comma  &mm_dot    &mm_minus  &none
-                                              &trans           &trans           &trans     &trans   &trans    &trans
+&none     &none               &kp BACKSPACE   &kp ESCAPE       &kp DEL          &none     &kp BACKSPACE  &kp HOME  &kp PG_UP  &kp PG_DN  &kp END    &none
+&kp CAPS  &tp LEFT_GUI LC(A)  &tp LALT LC(S)  &tp LCTRL LC(D)  &tp LSHFT LC(F)  &none     &kp TAB        &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &none
+&none     &kp LC(Z)           &kp LC(X)       &kp LC(C)        &kp LC(V)        &none     &kp DEL        &kp RET   &mm_comma  &mm_dot    &mm_minus  &none
+                                              &trans           &trans           &trans    &trans         &trans    &trans
             >;
         };
 
