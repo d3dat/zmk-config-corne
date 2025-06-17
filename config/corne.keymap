@@ -221,9 +221,14 @@
             key-positions = <30 18>;
         };
 
-        combo_mouse {
+        combo_mouse_l {
             bindings = <&tog 9>;
-            key-positions = <4 16>;
+            key-positions = <16 15>;
+        };
+
+        combo_mouse_r {
+            bindings = <&tog 9>;
+            key-positions = <19 20>;
         };
     };
 
