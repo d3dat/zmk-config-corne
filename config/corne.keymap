@@ -182,12 +182,12 @@
         };
 
         combo_lng_l {
-            bindings = <&macro_lng_l>;
+            bindings = <&macro_lng>;
             key-positions = <16 4>;
         };
 
         combo_lng_r {
-            bindings = <&macro_lng_r>;
+            bindings = <&macro_lng>;
             key-positions = <19 7>;
         };
 
