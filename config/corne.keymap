@@ -260,6 +260,26 @@
             key-positions = <8 20>;
             layers = <2>;
         };
+
+        combo_lbkt {
+            bindings = <&kp LBKT>;
+            key-positions = <10 9>;
+        };
+
+        combo_sqt {
+            bindings = <&kp SQT>;
+            key-positions = <21 22>;
+        };
+
+        combo_rbkt {
+            bindings = <&kp RBKT>;
+            key-positions = <33 34>;
+        };
+
+        combo_caps {
+            bindings = <&kp CAPS>;
+            key-positions = <2 14>;
+        };
     };
 
     keymap {
@@ -273,19 +293,19 @@
             //                    | GUI | LWR | ALT/ENT |   | HYPER/SPC | BKSP  | RSE |
 
             bindings = <
-&kp GRAVE     &kp Q        &kp W        &kp E         &kp R         &kp T         &kp Y        &kp U         &kp I         &kp O        &kp P           &kp LEFT_BRACKET
-&kp TAB       &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &lt 9 G       &kp H        &hmr LSHFT J  &hmr LCTRL K  &hmr LALT L  &hmr LGUI SEMI  &kp SQT
-&kp LEFT_ALT  &kp Z        &lt 8 X      &lt 4 C       &lt 6 V       &kp B         &kp N        &kp M         &kp COMMA     &kp DOT      &kp FSLH        &kp RIGHT_BRACKET
-                                        &mo 13        &lt 1 SPACE   &lt 11 ESC    &lt 4 ENTER  &mo 9         &mo 13
+&none  &kp Q        &kp W        &kp E         &kp R         &kp T         &kp Y        &kp U         &kp I         &kp O        &kp P           &none
+&none  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &lt 9 G       &kp H        &hmr LSHFT J  &hmr LCTRL K  &hmr LALT L  &hmr LGUI SEMI  &none
+&none  &kp Z        &lt 8 X      &lt 4 C       &lt 6 V       &kp B         &kp N        &kp M         &kp COMMA     &kp DOT      &kp FSLH        &none
+                                 &mo 13        &lt 1 SPACE   &lt 11 ESC    &lt 4 ENTER  &mo 9         &mo 13
             >;
         };
 
         ext {
             bindings = <
-&none     &none               &kp BACKSPACE   &kp ESCAPE       &kp DEL          &swap_tab      &kp BACKSPACE  &kp HOME  &kp PG_UP  &kp PG_DN  &kp END    &none
-&kp CAPS  &tp LEFT_GUI LC(A)  &tp LALT LC(S)  &tp LCTRL LC(D)  &tp LSHFT LC(F)  &swap_win      &kp TAB        &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &none
-&none     &kp LC(Z)           &kp LC(X)       &kp LC(C)        &kp LC(V)        &kp RS(TAB)    &kp DEL        &kp RET   &mm_comma  &mm_dot    &mm_minus  &none
-                                              &trans           &trans           &trans         &trans         &trans    &trans
+&none  &kp GRAVE           &kp BACKSPACE   &kp ESCAPE       &kp DEL          &swap_tab      &kp BACKSPACE  &kp HOME  &kp PG_UP  &kp PG_DN  &kp END    &none
+&none  &tp LEFT_GUI LC(A)  &tp LALT LC(S)  &tp LCTRL LC(D)  &tp LSHFT LC(F)  &swap_win      &kp TAB        &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &none
+&none  &kp LC(Z)           &kp LC(X)       &kp LC(C)        &kp LC(V)        &kp RS(TAB)    &kp DEL        &kp RET   &mm_comma  &mm_dot    &mm_minus  &none
+                                           &trans           &trans           &trans         &trans         &trans    &trans
             >;
         };
 
@@ -300,10 +320,10 @@
 
         ru_ext {
             bindings = <
-&none     &none               &kp BACKSPACE   &kp ESCAPE       &kp DEL          &swap_tab      &kp DEL  &kp HOME  &kp PG_UP     &kp PG_DN   &kp END    &kp KP_NUMLOCK
-&kp CAPS  &tp LEFT_GUI LC(A)  &tp LALT LC(S)  &tp LCTRL LC(D)  &tp LSHFT LC(F)  &swap_win      &kp TAB  &kp LEFT  &kp UP        &kp DOWN    &kp RIGHT  &kp BACKSLASH
-&none     &kp LC(Z)           &kp LC(X)       &kp LC(C)        &kp LC(V)        &kp RS(TAB)    &kp DEL  &kp RET   &mm_comma_ru  &mm_dot_ru  &mm_minus  &kp INS
-                                              &trans           &trans           &trans         &trans   &trans    &trans
+&none  &kp GRAVE           &kp BACKSPACE   &kp ESCAPE       &kp DEL          &swap_tab      &kp BACKSPACE  &kp HOME  &kp PG_UP     &kp PG_DN   &kp END    &none
+&none  &tp LEFT_GUI LC(A)  &tp LALT LC(S)  &tp LCTRL LC(D)  &tp LSHFT LC(F)  &swap_win      &kp TAB        &kp LEFT  &kp UP        &kp DOWN    &kp RIGHT  &none
+&none  &kp LC(Z)           &kp LC(X)       &kp LC(C)        &kp LC(V)        &kp RS(TAB)    &kp DEL        &kp RET   &mm_comma_ru  &mm_dot_ru  &mm_minus  &none
+                                           &trans           &trans           &trans         &trans         &trans    &trans
             >;
         };
 
