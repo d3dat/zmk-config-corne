@@ -242,15 +242,15 @@
 
         combo_mouse_l {
             bindings = <&tog 9>;
-            key-positions = <5 17>;
+            key-positions = <5 4>;
         };
 
         combo_mouse_r {
             bindings = <&tog 9>;
-            key-positions = <6 18>;
+            key-positions = <6 7>;
         };
 
-        combo_num_ru {
+        combo_num_word_ru {
             bindings = <&num_word 5>;
             key-positions = <8 20>;
             layers = <2>;
