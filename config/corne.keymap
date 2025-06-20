@@ -283,8 +283,8 @@
         ext {
             bindings = <
 &none     &none               &kp BACKSPACE   &kp ESCAPE       &kp DEL          &swap_tab      &kp BACKSPACE  &kp HOME  &kp PG_UP  &kp PG_DN  &kp END    &none
-&kp CAPS  &tp LEFT_GUI LC(A)  &tp LALT LC(S)  &tp LCTRL LC(D)  &tp LSHFT LC(F)  &kp LS(TAB)    &kp TAB        &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &none
-&none     &kp LC(Z)           &kp LC(X)       &kp LC(C)        &kp LC(V)        &swap_win      &kp DEL        &kp RET   &mm_comma  &mm_dot    &mm_minus  &none
+&kp CAPS  &tp LEFT_GUI LC(A)  &tp LALT LC(S)  &tp LCTRL LC(D)  &tp LSHFT LC(F)  &swap_win      &kp TAB        &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &none
+&none     &kp LC(Z)           &kp LC(X)       &kp LC(C)        &kp LC(V)        &kt LS(TAB)    &kp DEL        &kp RET   &mm_comma  &mm_dot    &mm_minus  &none
                                               &trans           &trans           &trans         &trans         &trans    &trans
             >;
         };
