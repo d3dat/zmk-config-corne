@@ -120,7 +120,7 @@
             #binding-cells = <0>;
             bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
 
-            ignored-key-positions = <16 19 20 21 22>;
+            ignored-key-positions = <4 16 19 20 21 22>;
         };
 
         swap_tab: swapper_tab {
@@ -129,7 +129,7 @@
             #binding-cells = <0>;
             bindings = <&kt LCTRL>, <&kp TAB>, <&kt LCTRL>;
 
-            ignored-key-positions = <16 19 20 21 22>;
+            ignored-key-positions = <4 16 19 20 21 22>;
         };
     };
 
@@ -300,7 +300,7 @@
 &none  &kp GRAVE           &kp BACKSPACE   &kp ESCAPE       &kp DEL          &kp LS(GRAVE)    &kp INS        &kp HOME  &kp PG_UP  &kp PG_DN  &kp END    &none
 &none  &tp LEFT_GUI LC(A)  &tp LALT LC(S)  &tp LCTRL LC(D)  &tp LSHFT LC(F)  &swap_win        &kp BACKSPACE  &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &none
 &none  &kp LC(Z)           &kp LC(X)       &kp LC(C)        &kp LC(V)        &swap_tab        &kp DEL        &kp RET   &mm_comma  &mm_dot    &mm_minus  &none
-                                           &trans           &trans           &trans           &trans         &trans    &trans
+                                           &trans           &trans           &trans           &trans         &kp TAB   &trans
             >;
         };
 
@@ -318,7 +318,7 @@
 &none  &kp GRAVE           &kp BACKSPACE   &kp ESCAPE       &kp DEL          &kp CAPS     &kp INS        &kp HOME  &kp PG_UP     &kp PG_DN   &kp END    &none
 &none  &tp LEFT_GUI LC(A)  &tp LALT LC(S)  &tp LCTRL LC(D)  &tp LSHFT LC(F)  &swap_win    &kp BACKSPACE  &kp LEFT  &kp UP        &kp DOWN    &kp RIGHT  &none
 &none  &kp LC(Z)           &kp LC(X)       &kp LC(C)        &kp LC(V)        &swap_tab    &kp DEL        &kp RET   &mm_comma_ru  &mm_dot_ru  &mm_minus  &none
-                                           &trans           &trans           &trans       &trans         &trans    &trans
+                                           &trans           &trans           &trans       &trans         &kp TAB   &trans
             >;
         };
 
@@ -405,10 +405,10 @@
 
         tab {
             bindings = <
-&trans  &trans  &swap_tab  &trans  &swap_win  &trans    &trans   &trans     &trans  &trans  &trans  &trans
-&trans  &trans  &trans     &trans  &kp LSHFT  &trans    &kp TAB  &kp LSHFT  &trans  &trans  &trans  &trans
-&trans  &trans  &trans     &trans  &trans     &trans    &trans   &trans     &trans  &trans  &trans  &trans
-                           &trans  &trans     &trans    &trans   &trans     &trans
+&trans  &trans  &trans  &trans  &kp LSHFT  &trans    &trans  &trans   &trans     &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans    &trans  &kp TAB  &swap_win  &swap_tab  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans    &trans  &trans   &trans     &trans     &trans  &trans
+                        &trans  &trans     &trans    &trans  &trans   &trans
             >;
         };
 
