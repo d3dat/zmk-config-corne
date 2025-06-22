@@ -81,7 +81,7 @@
         mm_comma_ru: mm_comma_ru {
             compatible = "zmk,behavior-mod-morph";
             label = "MM_COMMA_RU";
-            bindings = <&macro_comma_ru>, <&kp SEMI>;
+            bindings = <&macro_comma_ru>, <&kp LS(N4)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -99,7 +99,7 @@
         mm_dot_ru: mm_dot_ru {
             compatible = "zmk,behavior-mod-morph";
             label = "MM_DOT_RU";
-            bindings = <&macro_dot_ru>, <&kp LS(SEMI)>;
+            bindings = <&macro_dot_ru>, <&kp LS(N6)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
