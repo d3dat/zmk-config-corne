@@ -403,12 +403,12 @@
             >;
         };
 
-        tab {
+        app {
             bindings = <
-&trans  &trans  &trans  &trans  &kp LSHFT  &trans    &trans  &trans   &swap_win  &swap_tab  &trans  &trans
-&trans  &trans  &trans  &trans  &trans     &trans    &trans  &kp TAB  &kp UP     &kp DOWN   &trans  &trans
-&trans  &trans  &trans  &trans  &trans     &trans    &trans  &trans   &trans     &trans     &trans  &trans
-                        &trans  &trans     &trans    &trans  &kp TAB  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
 
