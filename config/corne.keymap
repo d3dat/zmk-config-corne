@@ -306,7 +306,7 @@
 &none  &kp GRAVE           &kp BACKSPACE   &kp ESCAPE       &kp DEL          &kp LS(GRAVE)    &kp DELETE     &kp HOME  &kp PG_UP  &kp PG_DN  &kp END    &none
 &none  &tp LEFT_GUI LC(A)  &tp LALT LC(S)  &tp LCTRL LC(D)  &tp LSHFT LC(F)  &swap_win        &kp TAB        &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &none
 &none  &kp LC(Z)           &kp LC(X)       &kp LC(C)        &kp LC(V)        &swap_tab        &kp BACKSPACE  &kp RET   &mm_comma  &mm_dot    &mm_minus  &none
-                                           &trans           &trans           &trans           &trans         &kp TAB   &trans
+                                           &trans           &trans           &trans           &trans         &trans    &trans
             >;
         };
 
@@ -324,7 +324,7 @@
 &none  &kp GRAVE           &kp BACKSPACE   &kp ESCAPE       &kp DEL          &kp CAPS     &kp DEL        &kp HOME  &kp PG_UP     &kp PG_DN   &kp END    &none
 &none  &tp LEFT_GUI LC(A)  &tp LALT LC(S)  &tp LCTRL LC(D)  &tp LSHFT LC(F)  &swap_win    &kp TAB        &kp LEFT  &kp UP        &kp DOWN    &kp RIGHT  &none
 &none  &kp LC(Z)           &kp LC(X)       &kp LC(C)        &kp LC(V)        &swap_tab    &kp BACKSPACE  &kp RET   &mm_comma_ru  &mm_dot_ru  &mm_minus  &none
-                                           &trans           &trans           &trans       &trans         &kp TAB   &trans
+                                           &trans           &trans           &trans       &trans         &trans    &trans
             >;
         };
 
