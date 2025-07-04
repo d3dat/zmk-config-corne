@@ -297,7 +297,7 @@
 &none  &kp Q        &kp W        &lt 13 E      &kp R         &kp T         &kp Y        &kp U         &kp I         &kp O        &kp P           &none
 &none  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &lt 9 G       &kp H        &hmr LSHFT J  &hmr LCTRL K  &hmr LALT L  &hmr LGUI SEMI  &none
 &none  &kp Z        &lt 8 X      &lt 4 C       &lt 6 V       &kp B         &kp N        &kp M         &kp COMMA     &kp DOT      &kp FSLH        &none
-                                 &mo 14        &lt 1 SPACE   &lt 11 ESC    &lt 4 ENTER  &mo 9         &mo 14
+                                 &mo 14        &lt 1 SPACE   &lt 11 ESC    &lt 4 ENTER  &mo 17        &mo 14
             >;
         };
 
@@ -454,6 +454,15 @@
 &trans      &kp C_PREV    &kp C_NEXT    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PP        &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans   &trans
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans    &trans    &trans  &trans     &trans   &trans
                                         &trans        &trans        &trans          &trans    &trans    &trans
+            >;
+        };
+
+        cmd {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans     &trans        &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &sk LSHIFT  &sk LCTRL  &sk LEFT_ALT  &sk LGUI  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans     &trans        &trans    &trans
+                        &trans  &trans  &trans    &trans  &trans      &trans
             >;
         };
     };
