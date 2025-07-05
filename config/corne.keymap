@@ -393,7 +393,7 @@
         sym {
             bindings = <
 &trans  &kp LT         &kp GT         &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp GRAVE         &kp SQT       &kp LPAR         &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
-&trans  &kp PERCENT    &kp AMPERSAND  &kp AT_SIGN     &kp HASH         &kp TILDE         &kp QUESTION  &kp EXCLAMATION  &kp SEMICOLON          &kp COLON         &kp DQT            &trans
+&trans  &kp PERCENT    &kp AMPERSAND  &kp AT_SIGN     &kp HASH         &kp TILDE         &kp QUESTION  &kp EXCLAMATION  &kp COLON              &kp SEMI          &kp DQT            &trans
 &trans  &kp BACKSLASH  &kp CARET      &kp DOLLAR      &kp PIPE         &kp UNDERSCORE    &kp EQUAL     &kp PLUS         &kp MINUS              &kp ASTERISK      &kp SLASH          &trans
                                       &trans          &trans           &trans            &trans        &trans           &trans
             >;
