@@ -212,8 +212,8 @@
             key-positions = <19 31>;
         };
 
-        combo_tab {
-            bindings = <&kp TAB>;
+        combo_bs {
+            bindings = <&kp BACKSPACE>;
             key-positions = <18 19>;
         };
 
