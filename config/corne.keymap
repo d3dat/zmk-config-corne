@@ -302,7 +302,7 @@
 &none  &kp GRAVE           &kp BACKSPACE   &kp ESCAPE       &kp DEL          &kp LS(GRAVE)    &kp DELETE     &kp HOME  &kp PG_UP  &kp PG_DN  &kp END    &none
 &none  &tp LEFT_GUI LC(A)  &tp LALT LC(S)  &tp LCTRL LC(D)  &tp LSHFT LC(F)  &swap_win        &kp TAB        &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &none
 &none  &kp LC(Z)           &kp LC(X)       &kp LC(C)        &kp LC(V)        &swap_tab        &kp BACKSPACE  &kp RET   &mm_comma  &mm_dot    &mm_minus  &none
-                                           &trans           &trans           &trans           &trans         &trans    &trans
+                                           &trans           &trans           &lt 12 ESC       &trans         &trans    &trans
             >;
         };
 
@@ -396,12 +396,12 @@
             >;
         };
 
-        multi_ext {
+        multi_ru {
             bindings = <
-&none     &none         &kp BACKSPACE  &tog 11    &kp DEL    &none        &kp BACKSPACE  &kp HOME  &kp PG_UP     &kp PG_DN   &kp END    &kp KP_NUMLOCK
-&kp CAPS  &sk LEFT_GUI  &sk LALT       &sk LCTRL  &sk LSHFT  &kp SPACE    &kp TAB        &kp LEFT  &kp UP        &kp DOWN    &kp RIGHT  &kp BACKSLASH
-&none     &none         &none          &none      &none      &kp DEL      &kp BACKSPACE  &kp RET   &mm_comma_ru  &mm_dot_ru  &mm_minus  &kp INS
-                                       &trans     &trans     &trans       &trans         &trans    &trans
+&none  &kp F1       &kp F2        &kp F3     &kp F4    &kp F5     &kp F6   &kp F7     &kp F8         &kp F9     &kp F10            &none
+&none  &kp N7       &kp N5        &kp N3     &kp N1    &kp N9     &kp N8   &kp N0     &kp N2         &kp N4     &kp N6             &none
+&none  &kp PERCENT  &kp ASTERISK  &kp MINUS  &kp PLUS  &kp F11    &kp F12  &kp EQUAL  &kp LS(SLASH)  &kp SLASH  &kp LS(BACKSLASH)  &none
+                                  &trans     &trans    &trans     &trans   &trans     &trans
             >;
         };
 
