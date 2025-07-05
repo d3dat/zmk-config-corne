@@ -185,6 +185,13 @@
             bindings = <&kp CAPS &kp LS(DOT) &kp CAPS>;
             label = "MACRO_GT";
         };
+
+        macro_num_ru: macro_num_ru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp CAPS &kp HASH &kp CAPS>;
+            label = "MACRO_NUM_RU";
+        };
     };
 
     combos {
@@ -293,7 +300,7 @@
 &none  &kp Q  &kp W    &kp E    &kp R        &kp T         &kp Y        &kp U   &kp I      &kp O    &kp P     &none
 &none  &kp A  &kp S    &kp D    &kp F        &kp G         &kp H        &kp J   &kp K      &kp L    &kp SEMI  &none
 &none  &kp Z  &lt 8 X  &lt 4 C  &lt 6 V      &kp B         &kp N        &kp M   &kp COMMA  &kp DOT  &kp FSLH  &none
-                       &mo 14   &lt 1 SPACE  &lt 11 ESC    &lt 4 ENTER  &sl 17  &mo 14
+                       &mo 14   &lt 1 SPACE  &lt 11 ESC    &lt 6 ENTER  &sl 17  &mo 14
             >;
         };
 
@@ -308,10 +315,10 @@
 
         ru {
             bindings = <
-&trans  &trans  &trans  &trans   &trans       &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans   &trans       &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &lt 5 C  &lt 7 V      &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans   &lt 3 SPACE  &trans    &trans  &trans  &trans
+&trans  &trans  &trans  &trans   &trans       &trans    &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans   &trans       &trans    &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &lt 5 C  &lt 7 V      &trans    &trans       &trans  &trans  &trans  &trans  &trans
+                        &trans   &lt 3 SPACE  &trans    &lt 7 ENTER  &trans  &trans
             >;
         };
 
@@ -344,10 +351,10 @@
 
         sym {
             bindings = <
-&trans  &trans    &trans    &trans     &trans  &trans    &kp GRAVE      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)  &trans
-&trans  &trans    &trans    &trans     &trans  &trans    &kp LS(GRAVE)  &kp MINUS         &kp LS(SEMI)       &kp LS(N7)            &kp LS(BACKSLASH)      &trans
-&trans  &kp LGUI  &kp LALT  &kp LCTRL  &trans  &trans    &kp LS(N3)     &kp LS(MINUS)     &kp LS(NUMBER_6)   &kp LS(NUMBER_4)      &kp BACKSLASH          &trans
-                            &trans     &trans  &trans    &trans         &trans            &trans
+&trans  &kp LT         &kp GT       &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp GRAVE      &kp SQT         &kp LPAR         &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
+&trans  &kp AMPERSAND  &kp AT_SIGN  &kp POUND       &macro_num_ru    &kp PERCENT    &kp ASTERISK    &kp MINUS        &kp DQT                &kp COLON         &kp SEMI           &trans
+&trans  &kp BACKSLASH  &kp CARET    &kp DOLLAR      &kp PIPE         &kp TILDE      &kp UNDERSCORE  &kp EXCLAMATION  &kp COMMA              &kp DOT           &kp SLASH          &trans
+                                    &trans          &trans           &trans         &trans          &trans           &trans
             >;
         };
 
