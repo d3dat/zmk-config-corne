@@ -370,6 +370,16 @@
             bindings = <&bootloader>;
             key-positions = <11 23>;
         };
+
+        combo_stidky_shift_l {
+            bindings = <&sk LSHFT>;
+            key-positions = <19 20>;
+        };
+
+        combo_stidky_shift_r {
+            bindings = <&sk LSHFT>;
+            key-positions = <15 16>;
+        };
     };
 
     keymap {
