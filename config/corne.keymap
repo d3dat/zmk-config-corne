@@ -494,7 +494,7 @@
 &trans  &trans  &trans  &trans     &trans  &trans    &trans      &kp MINUS        &kp LS(N2)     &trans      &kp LBKT  &trans
 &trans  &trans  &trans  &sk LSHFT  &trans  &trans    &kp LS(N7)  &kp EXCLAMATION  &kp LS(N6)     &kp LS(N4)  &kp SQT   &trans
 &trans  &trans  &trans  &trans     &trans  &trans    &trans      &trans           &kp LS(SLASH)  &kp SLASH   &kp RBKT  &trans
-                        &trans     &trans  &trans    &trans      &trans           &trans
+                        &trans     &trans  &trans    &trans      &sk LSHFT        &trans
             >;
         };
 
