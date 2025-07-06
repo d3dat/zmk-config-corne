@@ -233,6 +233,42 @@
 
             label = "MACRO_LAYER_CMD";
         };
+
+        macro_unicode_rqt_l: macro_unicode_rqt_l {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp CAPS>,
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&macro_tap>,
+                <&kp N0 &kp N0 &kp A &kp B &kp SPACE>,
+                <&macro_release>,
+                <&kp LCTRL &kp LSHFT>;
+
+            label = "MACRO_UNICODE_RQT_L";
+        };
+
+        macro_unicode_rqt_r: macro_unicode_rqt_r {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp CAPS>,
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&macro_tap>,
+                <&kp N0 &kp N0 &kp B &kp B &kp SPACE>,
+                <&macro_release>,
+                <&kp LCTRL &kp LSHFT>;
+
+            label = "MACRO_UNICODE_RQT_R";
+        };
     };
 
     combos {
@@ -446,9 +482,9 @@
 
         alt {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans      &kp MINUS        &kp LS(N6)     &kp LS(N4)  &trans      &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp LS(N7)  &kp EXCLAMATION  &kp LS(SLASH)  &kp SLASH   &kp LS(N2)  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans      &trans           &trans         &trans      &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans      &kp MINUS        &kp LS(N6)     &kp LS(N4)            &trans                &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LS(N7)  &kp EXCLAMATION  &kp LS(SLASH)  &kp SLASH             &kp LS(N2)            &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans      &trans           &trans         &macro_unicode_rqt_l  &macro_unicode_rqt_r  &trans
                         &trans  &trans  &trans    &trans      &trans           &trans
             >;
         };
