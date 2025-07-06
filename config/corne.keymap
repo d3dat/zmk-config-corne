@@ -371,14 +371,9 @@
             key-positions = <11 23>;
         };
 
-        combo_stidky_shift_l {
+        combo_sticky_shift {
             bindings = <&sk LSHFT>;
-            key-positions = <19 20>;
-        };
-
-        combo_stidky_shift_r {
-            bindings = <&sk LSHFT>;
-            key-positions = <15 16>;
+            key-positions = <16 17>;
         };
     };
 
