@@ -330,13 +330,13 @@
         combo_mouse_l {
             bindings = <&tog 8>;
             key-positions = <5 4>;
-            layers = <1 3>;
+            layers = <1 3 8>;
         };
 
         combo_mouse_r {
             bindings = <&tog 8>;
             key-positions = <6 7>;
-            layers = <1 3>;
+            layers = <1 3 8>;
         };
 
         combo_caps {
@@ -349,6 +349,16 @@
             bindings = <&kp INS>;
             key-positions = <6 18>;
             layers = <0 2 1 3>;
+        };
+
+        combo_bootloader_l {
+            bindings = <&bootloader>;
+            key-positions = <0 12>;
+        };
+
+        combo_bootloader_r {
+            bindings = <&bootloader>;
+            key-positions = <11 23>;
         };
     };
 
