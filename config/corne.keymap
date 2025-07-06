@@ -375,18 +375,18 @@
         num {
             bindings = <
 &none  &none     &kp BACKSPACE  &kp ESC  &kp DEL    &none     &kp SLASH   &kp N9  &kp N0  &kp MINUS  &kp EQUAL  &none
-&none  &none     &none          &none    &none      &none     &kp PERIOD  &kp N5  &kp N6  &kp N7     &kp N8     &none
-&none  &kp LALT  &kp LCTRL      &none    &kp LSHFT  &none     &kp COMMA   &kp N1  &kp N2  &kp N3     &kp N4     &none
+&none  &kp LALT  &kp LCTRL      &none    &kp LSHFT  &none     &kp PERIOD  &kp N5  &kp N6  &kp N7     &kp N8     &none
+&none  &none     &none          &none    &none      &none     &kp COMMA   &kp N1  &kp N2  &kp N3     &kp N4     &none
                                 &trans   &trans     &trans    &trans      &trans  &trans
             >;
         };
 
         num_ru {
             bindings = <
-&none  &none     &kp BACKSPACE  &kp ESC  &kp DEL    &none     &kp LS(BACKSLASH)  &kp N9  &kp N0  &kp MINUS  &kp EQUAL  &none
-&none  &none     &none          &none    &none      &none     &kp SLASH          &kp N5  &kp N6  &kp N7     &kp N8     &num_word
-&none  &kp LALT  &kp LCTRL      &none    &kp LSHFT  &none     &kp LS(SLASH)      &kp N1  &kp N2  &kp N3     &kp N4     &none
-                                &trans   &trans     &trans    &trans             &trans  &trans
+&none  &none     &kp BACKSPACE  &kp ESC  &kp DEL     &none     &kp LS(BACKSLASH)  &kp N9  &kp N0  &kp MINUS  &kp EQUAL  &none
+&none  &kp LALT  &kp LCTRL      &none    &kp LSHIFT  &none     &kp SLASH          &kp N5  &kp N6  &kp N7     &kp N8     &none
+&none  &none     &none          &none    &none       &none     &kp LS(SLASH)      &kp N1  &kp N2  &kp N3     &kp N4     &none
+                                &trans   &trans      &trans    &trans             &trans  &trans
             >;
         };
 
