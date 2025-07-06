@@ -486,9 +486,9 @@
 
         alt {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans      &kp MINUS        &trans         &trans      &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans      &kp MINUS        &trans         &kp LBKT    &kp SQT     &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &kp LS(N7)  &kp EXCLAMATION  &kp LS(N6)     &kp LS(N4)  &kp LS(N2)  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans      &trans           &kp LS(SLASH)  &kp SLASH   &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans      &kp RBKT         &kp LS(SLASH)  &kp SLASH   &trans      &trans
                         &trans  &trans  &trans    &trans      &trans           &trans
             >;
         };
