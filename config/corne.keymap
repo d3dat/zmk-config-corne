@@ -247,7 +247,9 @@
                 <&macro_tap>,
                 <&kp N0 &kp N0 &kp A &kp B &kp SPACE>,
                 <&macro_release>,
-                <&kp LCTRL &kp LSHFT>;
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp CAPS>;
 
             label = "MACRO_UNICODE_RQT_L";
         };
@@ -265,7 +267,9 @@
                 <&macro_tap>,
                 <&kp N0 &kp N0 &kp B &kp B &kp SPACE>,
                 <&macro_release>,
-                <&kp LCTRL &kp LSHFT>;
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp CAPS>;
 
             label = "MACRO_UNICODE_RQT_R";
         };
