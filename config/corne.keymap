@@ -399,7 +399,7 @@
             bindings = <
 &none  &kp GRAVE           &kp BACKSPACE   &kp ESCAPE       &kp DEL          &kp INS       &kp DELETE     &kp HOME  &kp PG_UP  &kp PG_DN  &kp END    &none
 &none  &tp LEFT_GUI LC(A)  &tp LALT LC(S)  &tp LCTRL LC(D)  &tp LSHFT LC(F)  &swap_win     &kp TAB        &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &none
-&none  &kp LC(Z)           &kp LC(X)       &kp LC(C)        &kp LC(V)        &swap_tab     &kp BACKSPACE  &kp RET   &mm_comma  &mm_dot    &kp CAPS   &none
+&none  &kp LC(Z)           &kp LC(X)       &kp LC(C)        &kp LC(V)        &swap_tab     &kp BACKSPACE  &kp RET   &mm_comma  &mm_dot    &sk LSHFT  &none
                                            &trans           &trans           &lt 11 ESC    &trans         &trans    &trans
             >;
         };
@@ -417,7 +417,7 @@
             bindings = <
 &none  &kp GRAVE           &kp BACKSPACE   &kp ESCAPE       &kp DEL          &kp INS      &kp DEL        &kp HOME  &kp PG_UP     &kp PG_DN   &kp END    &none
 &none  &tp LEFT_GUI LC(A)  &tp LALT LC(S)  &tp LCTRL LC(D)  &tp LSHFT LC(F)  &swap_win    &kp TAB        &kp LEFT  &kp UP        &kp DOWN    &kp RIGHT  &none
-&none  &kp LC(Z)           &kp LC(X)       &kp LC(C)        &kp LC(V)        &swap_tab    &kp BACKSPACE  &kp RET   &mm_comma_ru  &mm_dot_ru  &kp CAPS   &none
+&none  &kp LC(Z)           &kp LC(X)       &kp LC(C)        &kp LC(V)        &swap_tab    &kp BACKSPACE  &kp RET   &mm_comma_ru  &mm_dot_ru  &sk LSHFT  &none
                                            &trans           &trans           &trans       &trans         &trans    &trans
             >;
         };
@@ -478,28 +478,28 @@
 
         multi {
             bindings = <
-&none  &kp F1     &kp F2        &kp F3     &kp F4    &kp F5     &kp F6   &kp F7         &kp F8     &kp F9   &kp F10    &none
-&none  &kp N7     &kp N5        &kp N3     &kp N1    &kp N9     &kp N8   &kp N0         &kp N2     &kp N4   &kp N6     &none
-&none  &kp SLASH  &kp ASTERISK  &kp MINUS  &kp PLUS  &kp F11    &kp F12  &macro_num_ru  &kp COMMA  &kp DOT  &kp EQUAL  &none
-                                &trans     &trans    &trans     &trans   &trans         &trans
+&none  &kp F1       &kp F2        &kp F3     &kp F4    &kp F5     &kp F6   &kp F7     &kp F8     &kp F9   &kp F10    &none
+&none  &kp N7       &kp N5        &kp N3     &kp N1    &kp N9     &kp N8   &kp N0     &kp N2     &kp N4   &kp N6     &none
+&none  &kp PERCENT  &kp ASTERISK  &kp MINUS  &kp PLUS  &kp F11    &kp F12  &kp EQUAL  &kp COMMA  &kp DOT  &kp SLASH  &none
+                                  &trans     &trans    &trans     &trans   &trans     &trans
             >;
         };
 
         multi_ru {
             bindings = <
-&none  &kp F1             &kp F2        &kp F3     &kp F4    &kp F5     &kp F6   &kp F7      &kp F8         &kp F9     &kp F10    &none
-&none  &kp N7             &kp N5        &kp N3     &kp N1    &kp N9     &kp N8   &kp N0      &kp N2         &kp N4     &kp N6     &none
-&none  &kp LS(BACKSLASH)  &kp ASTERISK  &kp MINUS  &kp PLUS  &kp F11    &kp F12  &kp LS(N3)  &kp LS(SLASH)  &kp SLASH  &kp EQUAL  &none
-                                        &trans     &trans    &trans     &trans   &trans      &trans
+&none  &kp F1       &kp F2        &kp F3     &kp F4    &kp F5     &kp F6   &kp F7     &kp F8         &kp F9     &kp F10            &none
+&none  &kp N7       &kp N5        &kp N3     &kp N1    &kp N9     &kp N8   &kp N0     &kp N2         &kp N4     &kp N6             &none
+&none  &kp PERCENT  &kp ASTERISK  &kp MINUS  &kp PLUS  &kp F11    &kp F12  &kp EQUAL  &kp LS(SLASH)  &kp SLASH  &kp LS(BACKSLASH)  &none
+                                  &trans     &trans    &trans     &trans   &trans     &trans
             >;
         };
 
         alt {
             bindings = <
-&trans  &trans  &trans  &trans     &trans  &trans    &trans      &kp MINUS        &kp LS(N2)     &trans      &kp LBKT  &trans
-&trans  &trans  &trans  &sk LSHFT  &trans  &trans    &kp LS(N7)  &kp EXCLAMATION  &kp LS(N6)     &kp LS(N4)  &kp SQT   &trans
-&trans  &trans  &trans  &trans     &trans  &trans    &trans      &trans           &kp LS(SLASH)  &kp SLASH   &kp RBKT  &trans
-                        &trans     &trans  &trans    &trans      &sk LSHFT        &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans      &kp MINUS        &kp LS(N2)     &kp LS(N3)  &kp LBKT  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LS(N7)  &kp EXCLAMATION  &kp LS(N6)     &kp LS(N4)  &kp SQT   &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans      &sk LSHFT        &kp LS(SLASH)  &kp SLASH   &kp RBKT  &trans
+                        &trans  &trans  &trans    &trans      &trans           &trans
             >;
         };
 
