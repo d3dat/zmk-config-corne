@@ -146,6 +146,16 @@
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
+
+        tp_lng: tp_lng {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TP_LNG";
+            bindings = <&kp>, <&macro_lng>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <150>;
+        };
     };
 
     macros {
@@ -388,10 +398,10 @@
             //                    | GUI | LWR | ALT/ENT |   | HYPER/SPC | BKSP  | RSE |
 
             bindings = <
-&none  &kp Q  &kp W  &kp E         &kp R        &kp T         &kp Y        &kp U  &kp I      &kp O    &kp P     &none
-&none  &kp A  &kp S  &lt 6 D       &kp F        &kp G         &kp H        &kp J  &lt 6 K    &kp L    &kp SEMI  &none
-&none  &kp Z  &kp X  &lt 4 C       &kp V        &kp B         &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &none
-                     &lt_lng 13 0  &lt 1 SPACE  &lt 10 ESC    &lt 6 ENTER  &mo 7  &mo 13
+&none  &kp Q  &kp W  &kp E      &kp R        &kp T         &kp Y        &kp U  &kp I            &kp O    &kp P     &none
+&none  &kp A  &kp S  &lt 6 D    &kp F        &kp G         &kp H        &kp J  &lt 6 K          &kp L    &kp SEMI  &none
+&none  &kp Z  &kp X  &lt 4 C    &kp V        &kp B         &kp N        &kp M  &kp COMMA        &kp DOT  &kp FSLH  &none
+                     &sk LSHFT  &lt 1 SPACE  &lt 10 ESC    &lt 6 ENTER  &mo 7  &tp_lng LCTRL 0
             >;
         };
 
