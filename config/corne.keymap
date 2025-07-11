@@ -428,10 +428,10 @@
 
         ext {
             bindings = <
-&none  &kp CAPS            &kp BACKSPACE   &kp ESCAPE       &kp DEL          &kp INS      &kp DELETE     &kp HOME         &kp PG_UP  &kp PG_DN  &kp END    &none
-&none  &tp LEFT_GUI LC(A)  &tp LALT LC(S)  &tp LCTRL LC(D)  &tp LSHFT LC(F)  &swap_win    &kp TAB        &kp LEFT         &kp UP     &kp DOWN   &kp RIGHT  &none
-&none  &kp LC(Z)           &kp LC(X)       &kp LC(C)        &kp LC(V)        &swap_tab    &kp BACKSPACE  &kp RET          &mm_comma  &mm_dot    &sk LSHFT  &none
-                                           &trans           &trans           &trans       &trans         &macro_warpd_on  &trans
+&none  &kp CAPS            &kp BACKSPACE   &kp ESCAPE       &kp DEL          &kp INS      &kp DELETE     &kp HOME  &kp PG_UP  &kp PG_DN  &kp END    &none
+&none  &tp LEFT_GUI LC(A)  &tp LALT LC(S)  &tp LCTRL LC(D)  &tp LSHFT LC(F)  &swap_win    &kp TAB        &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &none
+&none  &kp LC(Z)           &kp LC(X)       &kp LC(C)        &kp LC(V)        &swap_tab    &kp BACKSPACE  &kp RET   &mm_comma  &mm_dot    &sk LSHFT  &none
+                                           &trans           &trans           &trans       &trans         &trans    &trans
             >;
         };
 
@@ -482,10 +482,10 @@
 
         cmd {
             bindings = <
-&trans  &trans    &trans    &trans     &trans     &trans    &trans  &trans     &trans     &trans    &trans    &trans
-&trans  &sk LGUI  &sk LALT  &sk LCTRL  &sk LSHFT  &trans    &trans  &sk RSHFT  &sk RCTRL  &sk RALT  &sk RGUI  &trans
-&trans  &trans    &trans    &trans     &trans     &trans    &trans  &trans     &trans     &trans    &trans    &trans
-                            &trans     &trans     &trans    &trans  &trans     &trans
+&trans  &trans    &trans    &trans     &trans           &trans    &trans  &trans     &trans     &trans    &trans    &trans
+&trans  &sk LGUI  &sk LALT  &sk LCTRL  &sk LSHFT        &trans    &trans  &sk RSHFT  &sk RCTRL  &sk RALT  &sk RGUI  &trans
+&trans  &trans    &trans    &trans     &trans           &trans    &trans  &trans     &trans     &trans    &trans    &trans
+                            &trans     &macro_warpd_on  &trans    &trans  &trans     &trans
             >;
         };
 
