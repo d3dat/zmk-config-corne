@@ -534,10 +534,10 @@
 
         alt {
             bindings = <
-&none  &none  &none                &none              &none   &none     &none         &none            &kp DQT    &kp HASH       &none   &none
-&none  &none  &macro_warpd_normal  &macro_warpd_hint  &none   &none     &kp PLUS      &kp MINUS        &kp COLON  &kp SEMICOLON  &none   &none
-&none  &none  &none                &none              &none   &none     &kp QUESTION  &kp EXCLAMATION  &trans     &trans         &trans  &none
-                                   &trans             &trans  &trans    &trans        &trans           &trans
+&none  &none                &none   &none              &none   &none     &none         &none            &kp DQT    &kp HASH       &none   &none
+&none  &macro_warpd_normal  &tog 9  &macro_warpd_hint  &none   &none     &kp PLUS      &kp MINUS        &kp COLON  &kp SEMICOLON  &none   &none
+&none  &none                &none   &none              &none   &none     &kp QUESTION  &kp EXCLAMATION  &trans     &trans         &trans  &none
+                                    &trans             &trans  &trans    &trans        &trans           &trans
             >;
         };
 
@@ -554,7 +554,7 @@
             bindings = <
 &none  &kp Q  &kp W  &kp E   &kp R   &kp T               &kp Y               &kp U   &kp I      &kp O       &kp P          &none
 &none  &kp A  &kp S  &kp D   &kp F   &kp G               &kp H               &kp J   &kp K      &kp L       &kp SEMICOLON  &none
-&kp H  &kp Z  &kp X  &kp C   &kp V   &kp B               &kp N               &kp M   &kp COMMA  &kp PERIOD  &kp SLASH      &none
+&none  &kp Z  &kp X  &kp C   &kp V   &kp B               &kp N               &kp M   &kp COMMA  &kp PERIOD  &kp SLASH      &none
                      &trans  &trans  &macro_warpd_esc    &macro_warpd_click  &trans  &trans
             >;
         };
