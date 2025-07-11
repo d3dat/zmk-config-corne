@@ -468,21 +468,21 @@
             >;
         };
 
-        mouse {
+        mouse_l {
             bindings = <
-&none  &mkp RCLK       &msc SCRL_DOWN  &msc SCRL_UP  &mkp LCLK        &none     &none  &mkp LCLK       &msc SCRL_UP    &msc SCRL_DOWN  &mkp RCLK        &none
-&none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none     &none  &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none
-&none  &kp LALT        &kp LCTRL       &kp LSHFT     &mkp LCLK        &none     &none  &mkp LCLK       &kp LSHFT       &kp LCTRL       &kp LALT         &none
-                                       &none         &mo 9            &tog 8    &none  &none           &studio_unlock
+&none  &msc SCRL_LEFT     &msc SCRL_DOWN    &msc SCRL_UP       &msc SCRL_RIGHT   &none     &none  &none      &none           &none      &none     &none
+&none  &mmv MOVE_LEFT     &mmv MOVE_DOWN    &mmv MOVE_UP       &mmv MOVE_RIGHT   &none     &none  &mkp LCLK  &mkp RCLK       &mkp MB3   &kp F17   &none
+&none  &mmv MOVE_X(-200)  &mmv MOVE_Y(200)  &mmv MOVE_Y(-200)  &mmv MOVE_X(200)  &none     &none  &mkp LCLK  &kp LSHFT       &kp LCTRL  &kp LALT  &none
+                                            &none              &none             &tog 8    &none  &none      &studio_unlock
             >;
         };
 
-        mouse_ext {
+        mouse_r {
             bindings = <
-&trans  &msc SCRL_LEFT     &msc SCRL_DOWN    &msc SCRL_UP       &msc SCRL_RIGHT   &trans    &trans  &msc SCRL_LEFT     &msc SCRL_UP       &msc SCRL_DOWN    &msc SCRL_RIGHT   &trans
-&trans  &mmv MOVE_X(-200)  &mmv MOVE_Y(200)  &mmv MOVE_Y(-200)  &mmv MOVE_X(200)  &trans    &trans  &mmv MOVE_X(-200)  &mmv MOVE_Y(-200)  &mmv MOVE_Y(200)  &mmv MOVE_X(200)  &trans
-&trans  &trans             &trans            &trans             &trans            &trans    &trans  &trans             &trans             &trans            &trans            &trans
-                                             &trans             &trans            &trans    &trans  &trans             &trans
+&trans  &none     &none      &none      &none      &trans    &trans  &msc SCRL_LEFT     &msc SCRL_UP       &msc SCRL_DOWN    &msc SCRL_RIGHT   &trans
+&trans  &kp F17   &mkp MB3   &mkp RCLK  &mkp LCLK  &trans    &trans  &mmv MOVE_X(-200)  &mmv MOVE_Y(-200)  &mmv MOVE_Y(200)  &mmv MOVE_X(200)  &trans
+&trans  &kp LALT  &kp LCTRL  &kp LSHFT  &mkp LCLK  &trans    &trans  &mmv MOVE_X(-200)  &mmv MOVE_Y(-200)  &mmv MOVE_Y(200)  &mmv MOVE_X(200)  &trans
+                             &trans     &trans     &trans    &trans  &trans             &trans
             >;
         };
 
@@ -567,6 +567,15 @@
 &trans      &kp C_PREV    &kp C_NEXT    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PP        &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans   &trans
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans    &trans    &trans  &trans     &trans   &trans
                                         &trans        &trans        &trans          &trans    &trans    &trans
+            >;
+        };
+
+        hint {
+            bindings = <
+&none  &kp Q  &kp W  &kp E   &kp R   &kp T      &kp Y   &kp U   &kp I      &kp O       &kp P          &none
+&none  &kp A  &kp S  &kp D   &kp F   &kp G      &kp H   &kp J   &kp K      &kp L       &kp SEMICOLON  &none
+&none  &kp Z  &kp X  &kp C   &kp V   &kp B      &kp N   &kp M   &kp COMMA  &kp PERIOD  &kp SLASH      &none
+                     &trans  &trans  &tog 18    &trans  &trans  &trans
             >;
         };
     };
