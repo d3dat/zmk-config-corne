@@ -484,19 +484,19 @@
 
         mouse_l {
             bindings = <
-&none   &msc SCRL_LEFT     &msc SCRL_DOWN    &msc SCRL_UP       &msc SCRL_RIGHT   &none               &none  &none      &none           &none      &none            &none
-&none   &mmv MOVE_LEFT     &mmv MOVE_DOWN    &mmv MOVE_UP       &mmv MOVE_RIGHT   &none               &none  &mkp LCLK  &mkp RCLK       &mkp MB3   &macro_warpd_on  &none
-&kp N8  &mmv MOVE_X(-200)  &mmv MOVE_Y(200)  &mmv MOVE_Y(-200)  &mmv MOVE_X(200)  &none               &none  &mkp LCLK  &kp LSHFT       &kp LCTRL  &kp LALT         &none
-                                             &none              &none             &macro_warpd_off    &none  &none      &studio_unlock
+&none   &msc SCRL_LEFT     &msc SCRL_DOWN    &msc SCRL_UP       &msc SCRL_RIGHT   &none     &none  &none      &none           &none      &none            &none
+&none   &mmv MOVE_LEFT     &mmv MOVE_DOWN    &mmv MOVE_UP       &mmv MOVE_RIGHT   &none     &none  &mkp LCLK  &mkp RCLK       &mkp MB3   &macro_warpd_on  &none
+&kp N8  &mmv MOVE_X(-200)  &mmv MOVE_Y(200)  &mmv MOVE_Y(-200)  &mmv MOVE_X(200)  &none     &none  &mkp LCLK  &kp LSHFT       &kp LCTRL  &kp LALT         &none
+                                             &none              &none             &tog 8    &none  &none      &studio_unlock
             >;
         };
 
         mouse_r {
             bindings = <
-&trans  &none            &none      &none      &none      &trans              &trans  &msc SCRL_LEFT     &msc SCRL_UP       &msc SCRL_DOWN    &msc SCRL_RIGHT   &trans
-&trans  &macro_warpd_on  &mkp MB3   &mkp RCLK  &mkp LCLK  &trans              &trans  &mmv MOVE_LEFT     &mmv MOVE_UP       &mmv MOVE_DOWN    &mmv MOVE_RIGHT   &trans
-&kp N9  &kp LALT         &kp LCTRL  &kp LSHFT  &mkp LCLK  &trans              &trans  &mmv MOVE_X(-200)  &mmv MOVE_Y(-200)  &mmv MOVE_Y(200)  &mmv MOVE_X(200)  &trans
-                                    &trans     &trans     &macro_warpd_off    &trans  &trans             &trans
+&trans  &none            &none      &none      &none      &trans    &trans  &msc SCRL_LEFT     &msc SCRL_UP       &msc SCRL_DOWN    &msc SCRL_RIGHT   &trans
+&trans  &macro_warpd_on  &mkp MB3   &mkp RCLK  &mkp LCLK  &trans    &trans  &mmv MOVE_LEFT     &mmv MOVE_UP       &mmv MOVE_DOWN    &mmv MOVE_RIGHT   &trans
+&kp N9  &kp LALT         &kp LCTRL  &kp LSHFT  &mkp LCLK  &trans    &trans  &mmv MOVE_X(-200)  &mmv MOVE_Y(-200)  &mmv MOVE_Y(200)  &mmv MOVE_X(200)  &trans
+                                    &trans     &trans     &tog 9    &trans  &trans             &trans
             >;
         };
 
