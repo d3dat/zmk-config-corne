@@ -529,8 +529,8 @@
 
         alt_ru {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &kp PLUS    &kp MINUS        &kp LS(N2)     &kp LS(N3)  &kp LBKT  &none
-&trans  &trans  &trans  &trans  &trans  &trans    &kp LS(N7)  &kp EXCLAMATION  &kp LS(N6)     &kp LS(N4)  &kp SQT   &none
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LS(N7)  &kp EXCLAMATION  &kp LS(N2)     &kp LS(N3)  &kp LBKT  &none
+&trans  &trans  &trans  &trans  &trans  &trans    &kp PLUS    &kp MINUS        &kp LS(N6)     &kp LS(N4)  &kp SQT   &none
 &trans  &trans  &trans  &trans  &trans  &trans    &none       &none            &kp LS(SLASH)  &kp SLASH   &kp RBKT  &none
                         &trans  &trans  &trans    &trans      &trans           &trans
             >;
