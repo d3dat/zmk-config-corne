@@ -543,10 +543,10 @@
 
         alt_ru {
             bindings = <
-&none  &none  &none                &none              &none   &none     &none       &none            &kp LS(N2)     &kp LS(N3)  &kp LBKT  &none
-&none  &none  &macro_warpd_normal  &macro_warpd_hint  &none   &none     &kp PLUS    &kp MINUS        &kp LS(N6)     &kp LS(N4)  &kp SQT   &none
-&none  &none  &none                &none              &none   &none     &kp LS(N7)  &kp EXCLAMATION  &kp LS(SLASH)  &kp SLASH   &kp RBKT  &none
-                                   &trans             &trans  &trans    &trans      &trans           &trans
+&none  &none                &none   &none              &none   &none     &none       &none            &kp LS(N2)     &kp LS(N3)  &kp LBKT  &none
+&none  &macro_warpd_normal  &tog 9  &macro_warpd_hint  &none   &none     &kp PLUS    &kp MINUS        &kp LS(N6)     &kp LS(N4)  &kp SQT   &none
+&none  &none                &none   &none              &none   &none     &kp LS(N7)  &kp EXCLAMATION  &kp LS(SLASH)  &kp SLASH   &kp RBKT  &none
+                                    &trans             &trans  &trans    &trans      &trans           &trans
             >;
         };
 
