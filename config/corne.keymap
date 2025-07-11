@@ -474,8 +474,8 @@
         sym {
             bindings = <
 &trans  &kp LT         &kp GT         &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp GRAVE         &kp SQT       &kp LPAR         &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
-&trans  &kp PERCENT    &kp AMPERSAND  &kp AT_SIGN     &kp HASH         &kp TILDE         &kp QUESTION  &kp EXCLAMATION  &kp COLON              &kp SEMI          &kp DQT            &trans
-&trans  &kp BACKSLASH  &kp CARET      &kp DOLLAR      &kp PIPE         &kp UNDERSCORE    &kp EQUAL     &kp PLUS         &kp MINUS              &kp ASTERISK      &kp SLASH          &trans
+&trans  &kp PERCENT    &kp AMPERSAND  &kp AT_SIGN     &kp HASH         &kp TILDE         &kp PLUS      &kp MINUS        &kp COLON              &kp SEMI          &kp DQT            &trans
+&trans  &kp BACKSLASH  &kp CARET      &kp DOLLAR      &kp PIPE         &kp UNDERSCORE    &kp QUESTION  &kp EXCLAMATION  &kp EQUAL              &kp ASTERISK      &kp SLASH          &trans
                                       &trans          &trans           &trans            &trans        &trans           &trans
             >;
         };
@@ -527,18 +527,18 @@
 
         alt {
             bindings = <
-&none  &none  &none  &none   &none   &none     &none         &none            &kp DQT    &kp HASH       &none   &none
-&none  &none  &none  &none   &none   &none     &kp PLUS      &kp MINUS        &kp COLON  &kp SEMICOLON  &none   &none
-&none  &none  &none  &none   &none   &none     &kp QUESTION  &kp EXCLAMATION  &trans     &trans         &trans  &none
-                     &trans  &trans  &trans    &trans        &trans           &trans
+&none  &none  &none  &none            &none   &none     &none         &none            &kp DQT    &kp HASH       &none   &none
+&none  &none  &none  &macro_warpd_on  &none   &none     &kp PLUS      &kp MINUS        &kp COLON  &kp SEMICOLON  &none   &none
+&none  &none  &none  &none            &none   &none     &kp QUESTION  &kp EXCLAMATION  &trans     &trans         &trans  &none
+                     &trans           &trans  &trans    &trans        &trans           &trans
             >;
         };
 
         alt_ru {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &kp LS(N7)  &kp EXCLAMATION  &kp LS(N2)     &kp LS(N3)  &kp LBKT  &none
+&trans  &trans  &trans  &trans  &trans  &trans    &none       &none            &kp LS(N2)     &kp LS(N3)  &kp LBKT  &none
 &trans  &trans  &trans  &trans  &trans  &trans    &kp PLUS    &kp MINUS        &kp LS(N6)     &kp LS(N4)  &kp SQT   &none
-&trans  &trans  &trans  &trans  &trans  &trans    &none       &none            &kp LS(SLASH)  &kp SLASH   &kp RBKT  &none
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LS(N7)  &kp EXCLAMATION  &kp LS(SLASH)  &kp SLASH   &kp RBKT  &none
                         &trans  &trans  &trans    &trans      &trans           &trans
             >;
         };
