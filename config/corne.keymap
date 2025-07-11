@@ -294,11 +294,11 @@
             label = "MACRO_UNICODE_RQT_R";
         };
 
-        macro_warpd_on: macro_warpd_on {
+        macro_warpd_hint: macro_warpd_hint {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp F17 &tog 14>;
-            label = "MACRO_WARPD_ON";
+            label = "MACRO_WARPD_HINT";
         };
 
         macro_warpd_esc: macro_warpd_esc {
@@ -313,6 +313,13 @@
             #binding-cells = <0>;
             bindings = <&kp ESC &mkp LCLK &tog 14>;
             label = "MACRO_WARPD_CLICK";
+        };
+
+        macro_warpd_normal: macro_warpd_normal {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp F18 &tog 14>;
+            label = "MACRO_WARPD_NORMAL";
         };
     };
 
@@ -473,37 +480,37 @@
 
         sym {
             bindings = <
-&trans  &kp LT         &kp GT         &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp GRAVE         &kp SQT       &kp LPAR         &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
-&trans  &kp PERCENT    &kp AMPERSAND  &kp AT_SIGN     &kp HASH         &kp TILDE         &kp PLUS      &kp MINUS        &kp COLON              &kp SEMI          &kp DQT            &trans
-&trans  &kp BACKSLASH  &kp CARET      &kp DOLLAR      &kp PIPE         &kp UNDERSCORE    &kp QUESTION  &kp EXCLAMATION  &kp EQUAL              &kp ASTERISK      &kp SLASH          &trans
-                                      &trans          &macro_warpd_on  &trans            &trans        &trans           &trans
+&trans  &kp LT         &kp GT         &kp LEFT_BRACE  &kp RIGHT_BRACE    &kp GRAVE         &kp SQT       &kp LPAR         &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
+&trans  &kp PERCENT    &kp AMPERSAND  &kp AT_SIGN     &kp HASH           &kp TILDE         &kp PLUS      &kp MINUS        &kp COLON              &kp SEMI          &kp DQT            &trans
+&trans  &kp BACKSLASH  &kp CARET      &kp DOLLAR      &kp PIPE           &kp UNDERSCORE    &kp QUESTION  &kp EXCLAMATION  &kp EQUAL              &kp ASTERISK      &kp SLASH          &trans
+                                      &trans          &macro_warpd_hint  &trans            &trans        &trans           &trans
             >;
         };
 
         cmd {
             bindings = <
-&trans  &trans    &trans    &trans     &trans           &trans    &trans  &trans     &trans     &trans    &trans    &trans
-&trans  &sk LGUI  &sk LALT  &sk LCTRL  &sk LSHFT        &trans    &trans  &sk RSHFT  &sk RCTRL  &sk RALT  &sk RGUI  &trans
-&trans  &trans    &trans    &trans     &trans           &trans    &trans  &trans     &trans     &trans    &trans    &trans
-                            &trans     &macro_warpd_on  &trans    &trans  &trans     &trans
+&trans  &trans    &trans    &trans     &trans             &trans    &trans  &trans     &trans     &trans    &trans    &trans
+&trans  &sk LGUI  &sk LALT  &sk LCTRL  &sk LSHFT          &trans    &trans  &sk RSHFT  &sk RCTRL  &sk RALT  &sk RGUI  &trans
+&trans  &trans    &trans    &trans     &trans             &trans    &trans  &trans     &trans     &trans    &trans    &trans
+                            &trans     &macro_warpd_hint  &trans    &trans  &trans     &trans
             >;
         };
 
         mouse_l {
             bindings = <
-&none   &msc SCRL_LEFT     &msc SCRL_DOWN    &msc SCRL_UP       &msc SCRL_RIGHT   &none     &none  &none      &none           &none      &none            &none
-&none   &mmv MOVE_LEFT     &mmv MOVE_DOWN    &mmv MOVE_UP       &mmv MOVE_RIGHT   &none     &none  &mkp LCLK  &mkp RCLK       &mkp MB3   &macro_warpd_on  &none
-&kp N8  &mmv MOVE_X(-200)  &mmv MOVE_Y(200)  &mmv MOVE_Y(-200)  &mmv MOVE_X(200)  &none     &none  &mkp LCLK  &kp LSHFT       &kp LCTRL  &kp LALT         &none
+&none   &msc SCRL_LEFT     &msc SCRL_DOWN    &msc SCRL_UP       &msc SCRL_RIGHT   &none     &none  &none      &none           &none      &none              &none
+&none   &mmv MOVE_LEFT     &mmv MOVE_DOWN    &mmv MOVE_UP       &mmv MOVE_RIGHT   &none     &none  &mkp LCLK  &mkp RCLK       &mkp MB3   &macro_warpd_hint  &none
+&kp N8  &mmv MOVE_X(-200)  &mmv MOVE_Y(200)  &mmv MOVE_Y(-200)  &mmv MOVE_X(200)  &none     &none  &mkp LCLK  &kp LSHFT       &kp LCTRL  &kp LALT           &none
                                              &none              &none             &tog 8    &none  &none      &studio_unlock
             >;
         };
 
         mouse_r {
             bindings = <
-&trans  &none            &none      &none      &none      &trans    &trans  &msc SCRL_LEFT     &msc SCRL_UP       &msc SCRL_DOWN    &msc SCRL_RIGHT   &trans
-&trans  &macro_warpd_on  &mkp MB3   &mkp RCLK  &mkp LCLK  &trans    &trans  &mmv MOVE_LEFT     &mmv MOVE_UP       &mmv MOVE_DOWN    &mmv MOVE_RIGHT   &trans
-&kp N9  &kp LALT         &kp LCTRL  &kp LSHFT  &mkp LCLK  &trans    &trans  &mmv MOVE_X(-200)  &mmv MOVE_Y(-200)  &mmv MOVE_Y(200)  &mmv MOVE_X(200)  &trans
-                                    &trans     &trans     &tog 9    &trans  &trans             &trans
+&trans  &none              &none      &none      &none      &trans    &trans  &msc SCRL_LEFT     &msc SCRL_UP       &msc SCRL_DOWN    &msc SCRL_RIGHT   &trans
+&trans  &macro_warpd_hint  &mkp MB3   &mkp RCLK  &mkp LCLK  &trans    &trans  &mmv MOVE_LEFT     &mmv MOVE_UP       &mmv MOVE_DOWN    &mmv MOVE_RIGHT   &trans
+&kp N9  &kp LALT           &kp LCTRL  &kp LSHFT  &mkp LCLK  &trans    &trans  &mmv MOVE_X(-200)  &mmv MOVE_Y(-200)  &mmv MOVE_Y(200)  &mmv MOVE_X(200)  &trans
+                                      &trans     &trans     &tog 9    &trans  &trans             &trans
             >;
         };
 
@@ -527,19 +534,19 @@
 
         alt {
             bindings = <
-&none  &none  &none  &none            &none   &none     &none         &none            &kp DQT    &kp HASH       &none   &none
-&none  &none  &none  &macro_warpd_on  &none   &none     &kp PLUS      &kp MINUS        &kp COLON  &kp SEMICOLON  &none   &none
-&none  &none  &none  &none            &none   &none     &kp QUESTION  &kp EXCLAMATION  &trans     &trans         &trans  &none
-                     &trans           &trans  &trans    &trans        &trans           &trans
+&none  &none  &none                &none              &none   &none     &none         &none            &kp DQT    &kp HASH       &none   &none
+&none  &none  &macro_warpd_normal  &macro_warpd_hint  &none   &none     &kp PLUS      &kp MINUS        &kp COLON  &kp SEMICOLON  &none   &none
+&none  &none  &none                &none              &none   &none     &kp QUESTION  &kp EXCLAMATION  &trans     &trans         &trans  &none
+                                   &trans             &trans  &trans    &trans        &trans           &trans
             >;
         };
 
         alt_ru {
             bindings = <
-&none  &none  &none  &none            &none   &none     &none       &none            &kp LS(N2)     &kp LS(N3)  &kp LBKT  &none
-&none  &none  &none  &macro_warpd_on  &none   &none     &kp PLUS    &kp MINUS        &kp LS(N6)     &kp LS(N4)  &kp SQT   &none
-&none  &none  &none  &none            &none   &none     &kp LS(N7)  &kp EXCLAMATION  &kp LS(SLASH)  &kp SLASH   &kp RBKT  &none
-                     &trans           &trans  &trans    &trans      &trans           &trans
+&none  &none  &none                &none              &none   &none     &none       &none            &kp LS(N2)     &kp LS(N3)  &kp LBKT  &none
+&none  &none  &macro_warpd_normal  &macro_warpd_hint  &none   &none     &kp PLUS    &kp MINUS        &kp LS(N6)     &kp LS(N4)  &kp SQT   &none
+&none  &none  &none                &none              &none   &none     &kp LS(N7)  &kp EXCLAMATION  &kp LS(SLASH)  &kp SLASH   &kp RBKT  &none
+                                   &trans             &trans  &trans    &trans      &trans           &trans
             >;
         };
 
