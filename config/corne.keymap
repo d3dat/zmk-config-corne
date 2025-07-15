@@ -435,10 +435,10 @@
 
         ext {
             bindings = <
-&none  &kp CAPS            &kp BACKSPACE   &kp ESCAPE       &kp DEL          &kp GRAVE    &kp INS     &kp HOME       &kp PG_UP  &kp PG_DN  &kp END    &none
-&none  &tp LEFT_GUI LC(A)  &tp LALT LC(S)  &tp LCTRL LC(D)  &tp LSHFT LC(F)  &swap_win    &kp TAB     &kp LEFT       &kp UP     &kp DOWN   &kp RIGHT  &none
-&none  &kp LC(Z)           &kp LC(X)       &kp LC(C)        &kp LC(V)        &swap_tab    &kp RETURN  &kp BACKSPACE  &mm_comma  &mm_dot    &kp DEL    &none
-                                           &trans           &trans           &trans       &trans      &trans         &trans
+&none  &kp CAPS            &kp BACKSPACE   &kp ESCAPE  &kp DEL    &kp GRAVE    &kp INS     &kp HOME       &kp PG_UP  &kp PG_DN  &kp END    &none
+&none  &tp LEFT_GUI LC(A)  &tp LALT LC(S)  &sk LCTRL   &sk LSHFT  &swap_win    &kp TAB     &kp LEFT       &kp UP     &kp DOWN   &kp RIGHT  &none
+&none  &kp LC(Z)           &kp LC(X)       &kp LC(C)   &kp LC(V)  &swap_tab    &kp RETURN  &kp BACKSPACE  &mm_comma  &mm_dot    &kp DEL    &none
+                                           &trans      &trans     &trans       &trans      &trans         &trans
             >;
         };
 
