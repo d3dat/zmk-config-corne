@@ -437,7 +437,7 @@
             bindings = <
 &none  &kp CAPS            &kp BACKSPACE   &kp ESCAPE       &kp DEL          &none        &kp INS     &kp HOME       &kp PG_UP  &kp PG_DN  &kp END    &none
 &none  &tp LEFT_GUI LC(A)  &tp LALT LC(S)  &tp LCTRL LC(D)  &tp LSHFT LC(F)  &swap_win    &kp TAB     &kp LEFT       &kp UP     &kp DOWN   &kp RIGHT  &none
-&none  &kp LC(Z)           &kp LC(X)       &kp LC(C)        &kp LC(V)        &swap_tab    &kp RETURN  &kp BACKSPACE  &mm_comma  &mm_dot    &sk DEL    &none
+&none  &kp LC(Z)           &kp LC(X)       &kp LC(C)        &kp LC(V)        &swap_tab    &kp RETURN  &kp BACKSPACE  &mm_comma  &mm_dot    &kp DEL    &none
                                            &trans           &trans           &trans       &trans      &trans         &trans
             >;
         };
@@ -455,7 +455,7 @@
             bindings = <
 &none  &kp CAPS            &kp BACKSPACE   &kp ESCAPE       &kp DEL          &none        &kp INS  &kp HOME       &kp PG_UP     &kp PG_DN   &kp END    &none
 &none  &tp LEFT_GUI LC(A)  &tp LALT LC(S)  &tp LCTRL LC(D)  &tp LSHFT LC(F)  &swap_win    &kp TAB  &kp LEFT       &kp UP        &kp DOWN    &kp RIGHT  &none
-&none  &kp LC(Z)           &kp LC(X)       &kp LC(C)        &kp LC(V)        &swap_tab    &kp RET  &kp BACKSPACE  &mm_comma_ru  &mm_dot_ru  &sk DEL    &none
+&none  &kp LC(Z)           &kp LC(X)       &kp LC(C)        &kp LC(V)        &swap_tab    &kp RET  &kp BACKSPACE  &mm_comma_ru  &mm_dot_ru  &kp DEL    &none
                                            &trans           &trans           &trans       &trans   &trans         &trans
             >;
         };
@@ -534,8 +534,8 @@
 
         alt {
             bindings = <
-&none  &none                &none   &none              &none   &none     &kp TILDE     &sk LSHFT        &kp DQT    &kp HASH       &none   &none
-&none  &macro_warpd_normal  &tog 9  &macro_warpd_hint  &none   &none     &kp PLUS      &kp MINUS        &kp COLON  &kp SEMICOLON  &none   &none
+&none  &none                &none   &none              &none   &none     &kp PLUS      &kp MINUS        &kp DQT    &kp HASH       &none   &none
+&none  &macro_warpd_normal  &tog 9  &macro_warpd_hint  &none   &none     &kp TILDE     &sk LSHFT        &kp COLON  &kp SEMICOLON  &none   &none
 &none  &none                &none   &none              &none   &none     &kp QUESTION  &kp EXCLAMATION  &trans     &trans         &trans  &none
                                     &trans             &trans  &trans    &trans        &trans           &trans
             >;
@@ -543,8 +543,8 @@
 
         alt_ru {
             bindings = <
-&none  &none                &none   &none              &none   &none     &kp GRAVE   &sk LSHFT        &kp LS(N2)     &kp LS(N3)  &kp LBKT  &none
-&none  &macro_warpd_normal  &tog 9  &macro_warpd_hint  &none   &none     &kp PLUS    &kp MINUS        &kp LS(N6)     &kp LS(N4)  &kp SQT   &none
+&none  &none                &none   &none              &none   &none     &kp PLUS    &kp MINUS        &kp LS(N2)     &kp LS(N3)  &kp LBKT  &none
+&none  &macro_warpd_normal  &tog 9  &macro_warpd_hint  &none   &none     &kp GRAVE   &sk LSHFT        &kp LS(N6)     &kp LS(N4)  &kp SQT   &none
 &none  &none                &none   &none              &none   &none     &kp LS(N7)  &kp EXCLAMATION  &kp LS(SLASH)  &kp SLASH   &kp RBKT  &none
                                     &trans             &trans  &trans    &trans      &trans           &trans
             >;
