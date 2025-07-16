@@ -544,7 +544,7 @@
         alt {
             bindings = <
 &none  &none                &none   &none              &none   &none     &kp TILDE     &none            &kp DQT    &kp HASH       &none   &none
-&none  &macro_warpd_normal  &tog 8  &macro_warpd_hint  &none   &none     &kp PLUS      &sk MINUS        &kp COLON  &kp SEMICOLON  &none   &none
+&none  &macro_warpd_normal  &tog 8  &macro_warpd_hint  &none   &none     &kp PLUS      &kp MINUS        &kp COLON  &kp SEMICOLON  &none   &none
 &none  &none                &none   &none              &none   &none     &kp QUESTION  &kp EXCLAMATION  &trans     &trans         &trans  &none
                                     &trans             &trans  &trans    &trans        &trans           &trans
             >;
@@ -553,7 +553,7 @@
         alt_ru {
             bindings = <
 &none  &none                &none    &none              &none   &none     &kp GRAVE   &none            &kp LS(N2)     &kp LS(N3)  &kp LBKT  &none
-&none  &macro_warpd_normal  &tog 10  &macro_warpd_hint  &none   &none     &kp PLUS    &sk MINUS        &kp LS(N6)     &kp LS(N4)  &kp SQT   &none
+&none  &macro_warpd_normal  &tog 10  &macro_warpd_hint  &none   &none     &kp PLUS    &kp MINUS        &kp LS(N6)     &kp LS(N4)  &kp SQT   &none
 &none  &none                &none    &none              &none   &none     &kp LS(N7)  &kp EXCLAMATION  &kp LS(SLASH)  &kp SLASH   &kp RBKT  &none
                                      &trans             &trans  &trans    &trans      &trans           &trans
             >;
