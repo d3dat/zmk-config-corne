@@ -15,7 +15,7 @@
 
 &sk {
     quick-release;
-    release-after-ms = <3000>;
+    release-after-ms = <2000>;
 };
 
 &sl { release-after-ms = <2000>; };
@@ -428,10 +428,10 @@
             //                    | GUI | LWR | ALT/ENT |   | HYPER/SPC | BKSP  | RSE |
 
             bindings = <
-&none   &kp Q  &kp W  &kp E     &kp R        &kp T         &kp Y        &kp U  &kp I      &kp O    &kp P     &none
-&none   &kp A  &kp S  &lt 4 D   &lt 12 F     &kp G         &kp H        &kp J  &lt 4 K    &kp L    &kp SEMI  &none
-&kp N0  &kp Z  &kp X  &lt 20 C  &kp V        &kp B         &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &none
-                      &none     &lt 1 SPACE  &lt 10 ESC    &lt 4 ENTER  &sl 5  &none
+&none  &kp Q  &kp W  &kp E  &kp R        &kp T         &kp Y        &kp U  &kp I      &kp O    &kp P     &none
+&none  &kp A  &kp S  &kp D  &kp F        &kp G         &kp H        &kp J  &kp K      &kp L    &kp SEMI  &none
+&none  &kp Z  &kp X  &kp C  &kp V        &kp B         &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &none
+                     &none  &lt 1 SPACE  &lt 10 ESC    &lt 4 ENTER  &sl 5  &none
             >;
         };
 
@@ -448,7 +448,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans       &trans        &trans           &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans       &trans        &trans           &trans  &trans  &trans  &trans  &trans
-&kp N2  &trans  &trans  &trans  &trans       &trans        &trans           &trans  &trans  &trans  &trans  &trans
+&none   &trans  &trans  &trans  &trans       &trans        &trans           &trans  &trans  &trans  &trans  &trans
                         &trans  &lt 3 SPACE  &lt 11 ESC    &lt_sym 0 ENTER  &sl 6   &trans
             >;
         };
