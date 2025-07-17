@@ -475,7 +475,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &caps_word  &num_word  &trans    &trans
 &trans  &trans  &trans  &trans  &sl 12  &trans    &trans  &sk RSHFT  &sk RCTRL   &sk RALT   &sk RGUI  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &macro_en  &macro_ru   &trans     &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &macro_en  &macro_ru   &tog 7     &trans    &trans
                         &trans  &trans  &trans    &trans  &trans     &trans
             >;
         };
@@ -484,7 +484,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &caps_word  &num_word  &trans    &trans
 &trans  &trans  &trans  &trans  &sl 13  &trans    &trans  &sk RSHFT  &sk RCTRL   &sk RALT   &sk RGUI  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &macro_en  &macro_ru   &trans     &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &macro_en  &macro_ru   &tog 7     &trans    &trans
                         &trans  &trans  &trans    &trans  &trans     &trans
             >;
         };
