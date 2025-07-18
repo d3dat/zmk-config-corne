@@ -473,19 +473,19 @@
 
         cmd {
             bindings = <
-&trans  &trans  &trans  &trans             &trans  &trans    &trans  &trans     &caps_word  &num_word 10  &trans    &trans
-&trans  &trans  &trans  &macro_warpd_hint  &sl 12  &trans    &trans  &sk LSHFT  &sk LCTRL   &sk LALT      &sk LGUI  &trans
-&trans  &trans  &trans  &trans             &trans  &trans    &trans  &macro_en  &macro_ru   &tog 7        &trans    &trans
-                        &trans             &trans  &trans    &trans  &trans     &trans
+&none  &none  &none   &none              &none   &none     &none   &none      &caps_word  &num_word 10  &none     &none
+&none  &none  &tog 7  &macro_warpd_hint  &sl 12  &none     &none   &sk LSHFT  &sk LCTRL   &sk LALT      &sk LGUI  &none
+&none  &none  &none   &none              &none   &none     &none   &macro_en  &macro_ru   &none         &none     &none
+                      &trans             &trans  &trans    &trans  &trans     &trans
             >;
         };
 
         cmd_ru {
             bindings = <
-&trans  &trans  &trans  &trans             &trans  &trans    &trans  &trans     &caps_word  &num_word 11  &trans    &trans
-&trans  &trans  &trans  &macro_warpd_hint  &sl 13  &trans    &trans  &sk LSHFT  &sk LCTRL   &sk LALT      &sk LGUI  &trans
-&trans  &trans  &trans  &trans             &trans  &trans    &trans  &macro_en  &macro_ru   &tog 7        &trans    &trans
-                        &trans             &trans  &trans    &trans  &trans     &trans
+&none  &none  &none   &none              &none   &none     &none   &none      &caps_word  &num_word 11  &none     &none
+&none  &none  &tog 7  &macro_warpd_hint  &sl 13  &none     &none   &sk LSHFT  &sk LCTRL   &sk LALT      &sk LGUI  &none
+&none  &none  &none   &none              &none   &none     &none   &macro_en  &macro_ru   &none         &none     &none
+                      &trans             &trans  &trans    &trans  &trans     &trans
             >;
         };
 
@@ -536,19 +536,19 @@
 
         alt {
             bindings = <
-&none  &none                &none   &none              &none   &none     &kp TILDE     &kp EQUAL        &kp DQT    &kp HASH       &none   &none
-&none  &macro_warpd_normal  &tog 7  &macro_warpd_hint  &none   &none     &kp PLUS      &kp MINUS        &kp COLON  &kp SEMICOLON  &none   &none
-&none  &none                &none   &none              &none   &none     &kp QUESTION  &kp EXCLAMATION  &trans     &trans         &trans  &none
-                                    &trans             &trans  &trans    &trans        &trans           &trans
+&none  &none  &none  &none   &none   &none     &kp TILDE     &kp EQUAL        &kp DQT    &kp HASH       &none   &none
+&none  &none  &none  &none   &none   &none     &kp PLUS      &kp MINUS        &kp COLON  &kp SEMICOLON  &none   &none
+&none  &none  &none  &none   &none   &none     &kp QUESTION  &kp EXCLAMATION  &trans     &trans         &trans  &none
+                     &trans  &trans  &trans    &trans        &trans           &trans
             >;
         };
 
         alt_ru {
             bindings = <
-&none  &none                &none   &none              &none   &none     &kp GRAVE   &kp EQUAL        &kp LS(N2)     &kp LS(N3)  &kp LBKT  &none
-&none  &macro_warpd_normal  &tog 9  &macro_warpd_hint  &none   &none     &kp PLUS    &kp MINUS        &kp LS(N6)     &kp LS(N4)  &kp SQT   &none
-&none  &none                &none   &none              &none   &none     &kp LS(N7)  &kp EXCLAMATION  &kp LS(SLASH)  &kp SLASH   &kp RBKT  &none
-                                    &trans             &trans  &trans    &trans      &trans           &trans
+&none  &none  &none  &none   &none   &none     &kp GRAVE   &kp EQUAL        &kp LS(N2)     &kp LS(N3)  &kp LBKT  &none
+&none  &none  &none  &none   &none   &none     &kp PLUS    &kp MINUS        &kp LS(N6)     &kp LS(N4)  &kp SQT   &none
+&none  &none  &none  &none   &none   &none     &kp LS(N7)  &kp EXCLAMATION  &kp LS(SLASH)  &kp SLASH   &kp RBKT  &none
+                     &trans  &trans  &trans    &trans      &trans           &trans
             >;
         };
 
