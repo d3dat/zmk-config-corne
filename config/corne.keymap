@@ -16,13 +16,21 @@
 &sk {
     quick-release;
     release-after-ms = <2000>;
+    lazy;
 };
 
-&sl { release-after-ms = <2000>; };
+&sl {
+    release-after-ms = <2000>;
+    lazy;
+    ignore-modifiers;
+
+    /delete-property/ quick-release;
+};
 
 &lt {
-    tapping-term-ms = <200>;
-    require-prior-idle-ms = <200>;
+    require-prior-idle-ms = <50>;
+    flavor = "hold-preferred";
+    hold-while-undecided;
 };
 
 / {
