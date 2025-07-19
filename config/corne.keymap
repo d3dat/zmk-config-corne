@@ -310,7 +310,7 @@
         macro_zed_1: macro_zed_1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp F3 &kp LA(UP)>;
+            bindings = <&kp F3 &kp LA(UP) &kp DOWN>;
             label = "MACRO_ZED_1";
         };
     };
