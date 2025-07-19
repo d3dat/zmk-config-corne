@@ -192,20 +192,6 @@
             label = "MACRO_DOT_RU";
         };
 
-        macro_lng: macro_lng {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp CAPS &tog 2>;
-            label = "MACRO_LNG";
-        };
-
-        macro_lng_en: macro_lng_sync {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp CAPS &to 0>;
-            label = "MACRO_LNG_SYNC";
-        };
-
         macro_lt: macro_lt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -330,30 +316,14 @@
         macro_en: macro_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&to 0>,
-                <&macro_press>,
-                <&kp RSHFT>,
-                <&macro_tap>,
-                <&kp LSHFT>,
-                <&macro_release>,
-                <&kp RSHFT>;
-
+            bindings = <&to 0 &kp CAPS>;
             label = "MACRO_EN";
         };
 
         macro_ru: macro_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&to 2>,
-                <&macro_press>,
-                <&kp LSHFT>,
-                <&macro_tap>,
-                <&kp RSHFT>,
-                <&macro_release>,
-                <&kp LSHFT>;
-
+            bindings = <&to 2 &kp LS(CAPS)>;
             label = "MACRO_RU";
         };
     };
@@ -456,7 +426,7 @@
 &none  &kp CAPS      &kp BACKSPACE  &kp ESCAPE  &kp DEL    &kp GRAVE    &kp INS     &kp HOME       &kp PG_UP  &kp PG_DN  &kp END    &none
 &none  &sk LEFT_GUI  &sk LALT       &sk LCTRL   &sk LSHFT  &swap_win    &kp TAB     &kp LEFT       &kp UP     &kp DOWN   &kp RIGHT  &none
 &none  &kp LC(Z)     &kp LC(X)      &kp LC(C)   &kp LC(V)  &swap_tab    &kp RETURN  &kp BACKSPACE  &mm_comma  &mm_dot    &kp DEL    &none
-                                    &trans      &trans     &trans       &trans      &trans         &trans
+                                    &trans      &trans     &trans       &trans      &macro_ru      &trans
             >;
         };
 
@@ -474,7 +444,7 @@
 &none  &kp CAPS      &kp BACKSPACE  &kp ESCAPE  &kp DEL    &kp GRAVE    &kp INS  &kp HOME       &kp PG_UP     &kp PG_DN   &kp END    &none
 &none  &sk LEFT_GUI  &sk LALT       &sk LCTRL   &sk LSHFT  &swap_win    &kp TAB  &kp LEFT       &kp UP        &kp DOWN    &kp RIGHT  &none
 &none  &kp LC(Z)     &kp LC(X)      &kp LC(C)   &kp LC(V)  &swap_tab    &kp RET  &kp BACKSPACE  &mm_comma_ru  &mm_dot_ru  &kp DEL    &none
-                                    &trans      &trans     &trans       &trans   &trans         &trans
+                                    &trans      &trans     &trans       &trans   &macro_en      &trans
             >;
         };
 
