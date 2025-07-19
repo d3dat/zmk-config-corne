@@ -351,7 +351,7 @@
         macro_ru: macro_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(RSHFT) &to 0>;
+            bindings = <&kp LS(RSHFT) &to 2>;
             label = "MACRO_RU";
         };
     };
