@@ -333,11 +333,9 @@
             bindings =
                 <&to 0>,
                 <&macro_press>,
-                <&kp RSHFT>,
-                <&macro_tap>,
-                <&kp LSHFT>,
+                <&kp RSHFT &kp LSHFT>,
                 <&macro_release>,
-                <&kp RSHFT>;
+                <&kp LSHFT &kp RSHFT>;
 
             label = "MACRO_EN";
         };
@@ -348,11 +346,9 @@
             bindings =
                 <&to 2>,
                 <&macro_press>,
-                <&kp LSHFT>,
-                <&macro_press>,
-                <&kp RSHFT>,
-                <&macro_press>,
-                <&kp LSHFT>;
+                <&kp LSHFT &kp RSHFT>,
+                <&macro_release>,
+                <&kp RSHFT &kp LSHFT>;
 
             label = "MACRO_RU";
         };
