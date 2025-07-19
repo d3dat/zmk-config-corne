@@ -341,34 +341,18 @@
             label = "MACRO_RU";
         };
 
-        macro_ru: macro_en_2 {
+        macro_en: macro_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&to 2>,
-                <&macro_press>,
-                <&kp LSHFT>,
-                <&macro_tap>,
-                <&kp RSHFT>,
-                <&macro_release>,
-                <&kp LSHFT>;
-
-            label = "MACRO_EN_2";
+            bindings = <&kp RS(LSHFT) &to 0>;
+            label = "MACRO_EN";
         };
 
-        macro_en: macro_ru_2 {
+        macro_ru: macro_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&to 0>,
-                <&macro_press>,
-                <&kp RSHFT>,
-                <&macro_tap>,
-                <&kp LSHFT>,
-                <&macro_release>,
-                <&kp RSHFT>;
-
-            label = "MACRO_RU_2";
+            bindings = <&kp LS(RSHFT) &to 0>;
+            label = "MACRO_RU";
         };
     };
 
@@ -503,10 +487,10 @@
 
         cmd {
             bindings = <
-&none  &none  &macro_ru_1  &macro_en_1        &none   &none     &none   &none      &none      &none     &none     &none
-&none  &none  &tog 7       &macro_warpd_hint  &sl 12  &none     &none   &sk LSHFT  &sk LCTRL  &sk LALT  &sk LGUI  &none
-&none  &none  &none        &none              &none   &none     &none   &none      &none      &none     &none     &none
-                           &trans             &trans  &trans    &trans  &trans     &trans
+&none  &none  &macro_ru  &macro_en          &none   &none     &none   &none      &none      &none     &none     &none
+&none  &none  &tog 7     &macro_warpd_hint  &sl 12  &none     &none   &sk LSHFT  &sk LCTRL  &sk LALT  &sk LGUI  &none
+&none  &none  &none      &none              &none   &none     &none   &none      &none      &none     &none     &none
+                         &trans             &trans  &trans    &trans  &trans     &trans
             >;
         };
 
