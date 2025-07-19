@@ -327,20 +327,6 @@
             label = "MACRO_WARPD_NORMAL";
         };
 
-        macro_en_1: macro_en {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp F14 &to 0>;
-            label = "MACRO_EN";
-        };
-
-        macro_ru_1: macro_ru {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp F15 &to 2>;
-            label = "MACRO_RU";
-        };
-
         macro_en: macro_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
