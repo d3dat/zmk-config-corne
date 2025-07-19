@@ -497,9 +497,9 @@
 
         alt {
             bindings = <
-&none  &none  &none  &none   &none   &none     &kp TILDE     &kp EQUAL        &kp DQT    &kp HASH       &none   &none
-&none  &none  &none  &none   &none   &none     &kp PLUS      &kp MINUS        &kp COLON  &kp SEMICOLON  &none   &none
-&none  &none  &none  &none   &none   &none     &kp QUESTION  &kp EXCLAMATION  &trans     &trans         &trans  &none
+&none  &none  &none  &none   &none   &none     &kp TILDE     &kp EQUAL        &kp DQT    &kp HASH       &kp GRAVE  &none
+&none  &none  &none  &none   &none   &none     &kp PLUS      &kp MINUS        &kp COLON  &kp SEMICOLON  &kp SQT    &none
+&none  &none  &none  &none   &none   &none     &kp QUESTION  &kp EXCLAMATION  &trans     &trans         &trans     &none
                      &trans  &trans  &trans    &trans        &trans           &trans
             >;
         };
