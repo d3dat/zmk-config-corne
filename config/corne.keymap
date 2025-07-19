@@ -330,30 +330,14 @@
         macro_en: macro_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&to 0>,
-                <&macro_press>,
-                <&kp RSHFT>,
-                <&macro_tap>,
-                <&kp LSHFT>,
-                <&macro_release>,
-                <&kp RSHFT>;
-
+            bindings = <&to 0 &kp RS(LSHFT)>;
             label = "MACRO_EN";
         };
 
         macro_ru: macro_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&to 2>,
-                <&macro_press>,
-                <&kp LSHFT>,
-                <&macro_tap>,
-                <&kp RSHFT>,
-                <&macro_release>,
-                <&kp LSHFT>;
-
+            bindings = <&to 2 &kp LS(RSHFT)>;
             label = "MACRO_RU";
         };
     };
