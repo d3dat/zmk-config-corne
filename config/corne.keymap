@@ -141,26 +141,6 @@
             flavor = "tap-preferred";
             bindings = <&macro_layer_sym>, <&kp>;
         };
-
-        lt_lng: lt_lng {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LT_LNG";
-            bindings = <&mo>, <&macro_lng>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-        };
-
-        tp_lng: tp_lng {
-            compatible = "zmk,behavior-hold-tap";
-            label = "TP_LNG";
-            bindings = <&kp>, <&macro_lng>;
-
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-        };
     };
 
     macros {
