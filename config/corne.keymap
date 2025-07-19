@@ -331,18 +331,6 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_lng_l {
-            bindings = <&macro_lng>;
-            key-positions = <>;
-            layers = <0 2>;
-        };
-
-        combo_lng_r {
-            bindings = <&macro_lng>;
-            key-positions = <>;
-            layers = <0 2>;
-        };
-
         combo_esc {
             bindings = <&kp ESC>;
             key-positions = <>;
