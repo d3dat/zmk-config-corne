@@ -473,19 +473,19 @@
 
         cmd {
             bindings = <
-&none  &none  &macro_ru  &macro_en          &none   &none     &none   &none      &none      &none     &none     &none
-&none  &none  &tog 7     &macro_warpd_hint  &sl 12  &none     &none   &sk LSHFT  &sk LCTRL  &sk LALT  &sk LGUI  &none
-&none  &none  &none      &none              &none   &none     &none   &none      &none      &none     &none     &none
-                         &trans             &trans  &trans    &trans  &trans     &trans
+&none  &none   &none              &none      &none   &none     &none   &none      &none      &none     &none     &none
+&none  &tog 7  &macro_warpd_hint  &macro_ru  &sl 12  &none     &none   &sk LSHFT  &sk LCTRL  &sk LALT  &sk LGUI  &none
+&none  &none   &none              &none      &none   &none     &none   &none      &none      &none     &none     &none
+                                  &trans     &trans  &trans    &trans  &trans     &trans
             >;
         };
 
         cmd_ru {
             bindings = <
-&none  &none  &macro_ru  &macro_en          &none   &none     &none   &none      &none      &none     &none     &none
-&none  &none  &tog 7     &macro_warpd_hint  &sl 13  &none     &none   &sk LSHFT  &sk LCTRL  &sk LALT  &sk LGUI  &none
-&none  &none  &none      &none              &none   &none     &none   &none      &none      &none     &none     &none
-                         &trans             &trans  &trans    &trans  &trans     &trans
+&none  &none   &none              &none      &none   &none     &none   &none      &none      &none     &none     &none
+&none  &tog 7  &macro_warpd_hint  &macro_en  &sl 13  &none     &none   &sk LSHFT  &sk LCTRL  &sk LALT  &sk LGUI  &none
+&none  &none   &none              &none      &none   &none     &none   &none      &none      &none     &none     &none
+                                  &trans     &trans  &trans    &trans  &trans     &trans
             >;
         };
 
