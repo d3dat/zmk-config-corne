@@ -340,6 +340,36 @@
             bindings = <&kp F15 &to 2>;
             label = "MACRO_RU";
         };
+
+        macro_ru_2: macro_en_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&to 2>,
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp RSHFT>,
+                <&macro_release>,
+                <&kp LSHFT>;
+
+            label = "MACRO_EN_2";
+        };
+
+        macro_en_2: macro_ru_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&to 0>,
+                <&macro_press>,
+                <&kp RSHFT>,
+                <&macro_tap>,
+                <&kp LSHFT>,
+                <&macro_release>,
+                <&kp RSHFT>;
+
+            label = "MACRO_RU_2";
+        };
     };
 
     combos {
