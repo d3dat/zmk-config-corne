@@ -141,6 +141,20 @@
             flavor = "tap-preferred";
             bindings = <&macro_layer_sym>, <&kp>;
         };
+
+        td_ru: td_ru {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_RU";
+            #binding-cells = <0>;
+            bindings = <&sl 5>, <&macro_ru>;
+        };
+
+        td_en: td_en {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_EN";
+            #binding-cells = <0>;
+            bindings = <&sl 6>, <&macro_en>;
+        };
     };
 
     macros {
@@ -392,7 +406,7 @@
 &none  &kp Q  &kp W  &kp E  &kp R        &kp T         &kp Y        &kp U  &kp I      &kp O    &kp P     &none
 &none  &kp A  &kp S  &kp D  &kp F        &kp G         &kp H        &kp J  &kp K      &kp L    &kp SEMI  &none
 &none  &kp Z  &kp X  &kp C  &kp V        &kp B         &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &none
-                     &none  &lt 1 SPACE  &lt 10 ESC    &lt 4 ENTER  &sl 5  &none
+                     &none  &lt 1 SPACE  &lt 10 ESC    &lt 4 ENTER  &sl 5  &td_ru
             >;
         };
 
@@ -434,10 +448,10 @@
 
         cmd {
             bindings = <
-&none  &none         &none              &none      &none      &none     &none   &none      &macro_ru  &none     &none     &none
-&none  &tog 7        &macro_warpd_hint  &macro_ru  &sl 12     &none     &none   &sk LSHFT  &sk LCTRL  &sk LALT  &sk LGUI  &none
-&none  &macro_zed_1  &none              &none      &kp LSHFT  &none     &none   &kp RSHFT  &none      &none     &none     &none
-                                        &trans     &trans     &trans    &trans  &trans     &trans
+&none  &none         &none              &none      &none   &none     &none   &none      &macro_ru  &none     &none     &none
+&none  &tog 7        &macro_warpd_hint  &macro_ru  &sl 12  &none     &none   &sk RSHFT  &sk RCTRL  &sk LALT  &sk LGUI  &none
+&none  &macro_zed_1  &none              &none      &none   &none     &none   &none      &none      &none     &none     &none
+                                        &trans     &trans  &trans    &trans  &trans     &trans
             >;
         };
 
@@ -479,10 +493,10 @@
 
         multi {
             bindings = <
-&none  &kp F1       &kp F2        &kp F3     &kp F4    &kp F5     &kp F6   &kp F7     &kp F8     &kp F9   &kp F10    &none
-&none  &kp N7       &kp N5        &kp N3     &kp N1    &kp N9     &kp N8   &kp N0     &kp N2     &kp N4   &kp N6     &none
-&none  &kp PERCENT  &kp ASTERISK  &kp MINUS  &kp PLUS  &kp F11    &kp F12  &kp EQUAL  &kp COMMA  &kp DOT  &kp SLASH  &none
-                                  &trans     &trans    &trans     &trans   &trans     &trans
+&none  &kp F1       &kp F2        &kp F3     &kp F4    &kp F5     &kp F6         &kp F7     &kp F8     &kp F9   &kp F10    &none
+&none  &kp N7       &kp N5        &kp N3     &kp N1    &kp N9     &kp N8         &kp N0     &kp N2     &kp N4   &kp N6     &none
+&none  &kp PERCENT  &kp ASTERISK  &kp MINUS  &kp PLUS  &kp F11    &kp F12        &kp EQUAL  &kp COMMA  &kp DOT  &kp SLASH  &none
+                                  &trans     &trans    &trans     &kp BACKSPACE  &kp SPACE  &trans
             >;
         };
 
