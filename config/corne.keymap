@@ -218,7 +218,7 @@
                 <&macro_release>,
                 <&mo 4 &mo 0>,
                 <&macro_tap>,
-                <&kp CAPS>;
+                <&kp LS(CAPS)>;
 
             label = "MACRO_LAYER_SYM";
         };
