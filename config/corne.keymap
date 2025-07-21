@@ -229,54 +229,14 @@
             bindings =
                 <&kp CAPS>,
                 <&macro_press>,
-                <&mo 0 &mo 0>,
+                <&mo 0 &mo 5>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 0 &mo 0>,
+                <&mo 5 &mo 0>,
                 <&macro_tap>,
-                <&kp CAPS>;
+                <&kp LS(CAPS)>;
 
             label = "MACRO_LAYER_CMD";
-        };
-
-        macro_unicode_rqt_l: macro_unicode_rqt_l {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp CAPS>,
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp A &kp B &kp SPACE>,
-                <&macro_release>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp CAPS>;
-
-            label = "MACRO_UNICODE_RQT_L";
-        };
-
-        macro_unicode_rqt_r: macro_unicode_rqt_r {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp CAPS>,
-                <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&macro_tap>,
-                <&kp N0 &kp N0 &kp B &kp B &kp SPACE>,
-                <&macro_release>,
-                <&kp LCTRL &kp LSHFT>,
-                <&macro_tap>,
-                <&kp CAPS>;
-
-            label = "MACRO_UNICODE_RQT_R";
         };
 
         macro_warpd_hint: macro_warpd_hint {
@@ -415,7 +375,7 @@
 &none  &kp CAPS      &kp BACKSPACE  &kp ESCAPE  &kp DEL    &kp GRAVE    &kp INS     &kp HOME       &kp PG_UP  &kp PG_DN  &kp END    &none
 &none  &sk LEFT_GUI  &sk LALT       &sk LCTRL   &sk LSHFT  &swap_win    &kp TAB     &kp LEFT       &kp UP     &kp DOWN   &kp RIGHT  &none
 &none  &kp LC(Z)     &kp LC(X)      &kp LC(C)   &kp LC(V)  &swap_tab    &kp RETURN  &kp BACKSPACE  &mm_comma  &mm_dot    &kp DEL    &none
-                                    &trans      &trans     &trans       &trans      &macro_ru      &trans
+                                    &trans      &trans     &trans       &trans      &trans         &trans
             >;
         };
 
@@ -433,16 +393,16 @@
 &none  &kp CAPS      &kp BACKSPACE  &kp ESCAPE  &kp DEL    &kp GRAVE    &kp INS  &kp HOME       &kp PG_UP     &kp PG_DN   &kp END    &none
 &none  &sk LEFT_GUI  &sk LALT       &sk LCTRL   &sk LSHFT  &swap_win    &kp TAB  &kp LEFT       &kp UP        &kp DOWN    &kp RIGHT  &none
 &none  &kp LC(Z)     &kp LC(X)      &kp LC(C)   &kp LC(V)  &swap_tab    &kp RET  &kp BACKSPACE  &mm_comma_ru  &mm_dot_ru  &kp DEL    &none
-                                    &trans      &trans     &trans       &trans   &macro_en      &trans
+                                    &trans      &trans     &trans       &trans   &trans         &trans
             >;
         };
 
         sym {
             bindings = <
-&trans  &kp LT         &kp GT         &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp GRAVE         &kp SQT       &kp LPAR         &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
-&trans  &kp PERCENT    &kp AMPERSAND  &kp AT_SIGN     &kp HASH         &kp TILDE         &kp PLUS      &kp MINUS        &kp COLON              &kp SEMI          &kp DQT            &trans
-&trans  &kp BACKSLASH  &kp CARET      &kp DOLLAR      &kp PIPE         &kp UNDERSCORE    &kp QUESTION  &kp EXCLAMATION  &kp EQUAL              &kp ASTERISK      &kp SLASH          &trans
-                                      &trans          &trans           &trans            &trans        &trans           &trans
+&trans  &kp LT         &kp GT     &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp GRAVE         &kp SQT       &kp LPAR         &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
+&trans  &kp AMPERSAND  &kp HASH   &kp AT_SIGN     &kp TILDE        &kp UNDERSCORE    &kp PLUS      &kp MINUS        &kp COLON              &kp SEMI          &kp DQT            &trans
+&trans  &kp BACKSLASH  &kp CARET  &kp DOLLAR      &kp PIPE         &kp PERCENT       &kp QUESTION  &kp EXCLAMATION  &kp EQUAL              &kp ASTERISK      &kp SLASH          &trans
+                                  &trans          &trans           &trans            &trans        &trans           &trans
             >;
         };
 
