@@ -301,14 +301,6 @@
             bindings = <&kp 0 &num_word 11>;
             label = "MACRO_NUM_WORD_RU";
         };
-
-        macro_caps_word: macro_caps_word {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_release>, <&sl 5>, <&macro_tap>, <&caps_word>;
-
-            label = "MACRO_CAPS_WORD";
-        };
     };
 
     combos {
@@ -430,9 +422,9 @@
 
         cmd {
             bindings = <
-&none  &none   &macro_caps_word   &macro_num_word_en  &none      &none     &none   &none      &macro_num_word_en  &macro_caps_word  &none     &none
-&none  &tog 7  &macro_warpd_hint  &sl 12              &macro_ru  &none     &none   &sk RSHFT  &sk RCTRL           &sk LALT          &sk LGUI  &none
-&none  &none   &none              &none               &none      &none     &none   &none      &none               &none             &none     &none
+&none  &none   &none              &macro_num_word_en  &none      &none     &none   &none      &macro_num_word_en  &none     &none     &none
+&none  &tog 7  &macro_warpd_hint  &sl 12              &macro_ru  &none     &none   &sk RSHFT  &sk RCTRL           &sk LALT  &sk LGUI  &none
+&none  &none   &none              &none               &none      &none     &none   &none      &none               &none     &none     &none
                                   &trans              &trans     &trans    &trans  &trans     &trans
             >;
         };
