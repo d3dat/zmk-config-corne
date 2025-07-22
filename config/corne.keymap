@@ -287,6 +287,13 @@
             bindings = <&kp F3 &kp LA(UP) &kp DOWN>;
             label = "MACRO_ZED_1";
         };
+
+        macro_num_word_en: macro_num_word_en {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp A &num_word>;
+            label = "MACRO_NUM_WORD_EN";
+        };
     };
 
     combos {
