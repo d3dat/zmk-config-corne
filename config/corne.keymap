@@ -291,8 +291,15 @@
         macro_num_word_en: macro_num_word_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp A &num_word>;
+            bindings = <&kp 0 &num_word 10>;
             label = "MACRO_NUM_WORD_EN";
+        };
+
+        macro_num_word_ru: macro_num_word_ru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp 0 &num_word 11>;
+            label = "MACRO_NUM_WORD_RU";
         };
     };
 
