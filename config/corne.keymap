@@ -305,7 +305,7 @@
         macro_caps_word: macro_caps_word {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp CLEAR &caps_word>;
+            bindings = <&kp 0 &caps_word>;
             label = "MACRO_CAPS_WORD";
         };
     };
