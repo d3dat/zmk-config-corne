@@ -408,7 +408,7 @@
 
         cmd {
             bindings = <
-&none  &none   &none              &kp ESC  &none      &none     &none   &none      &num_word  &caps_word  &none     &none
+&none  &none   &none              &kp ESC  &none      &none     &none   &none      &num_word 10  &caps_word  &none     &none
 &none  &tog 7  &macro_warpd_hint  &sl 12   &macro_ru  &none     &none   &sk RSHFT  &sk RCTRL  &sk LALT    &sk LGUI  &none
 &none  &none   &none              &none    &none      &none     &none   &none      &none      &none       &none     &none
                                   &trans   &trans     &trans    &trans  &trans     &trans
@@ -417,7 +417,7 @@
 
         cmd_ru {
             bindings = <
-&none  &none   &none              &kp ESC  &none      &none     &none   &none      &num_word  &caps_word  &kp LBKT  &none
+&none  &none   &none              &kp ESC  &none      &none     &none   &none      &num_word 11  &caps_word  &kp LBKT  &none
 &none  &tog 7  &macro_warpd_hint  &sl 13   &macro_en  &none     &none   &sk LSHFT  &sk LCTRL  &sk LALT    &sk SQT   &none
 &none  &none   &none              &none    &none      &none     &none   &none      &none      &none       &kp RBKT  &none
                                   &trans   &trans     &trans    &trans  &trans     &trans
