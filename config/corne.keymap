@@ -301,6 +301,13 @@
             bindings = <&kp 0 &num_word 11>;
             label = "MACRO_NUM_WORD_RU";
         };
+
+        macro_caps_word: macro_caps_word {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp CLEAR &caps_word>;
+            label = "MACRO_CAPS_WORD";
+        };
     };
 
     combos {
