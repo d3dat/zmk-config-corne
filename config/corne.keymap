@@ -386,10 +386,10 @@
 
         ext {
             bindings = <
-&none  &macro_num_word_en  &kp BACKSPACE  &kp ESCAPE  &caps_word  &kp GRAVE    &kp INS     &kp HOME       &kp PG_UP  &kp PG_DN  &kp END    &none
-&none  &sk LEFT_GUI        &sk LALT       &sk LCTRL   &sk LSHFT   &swap_win    &kp TAB     &kp LEFT       &kp UP     &kp DOWN   &kp RIGHT  &none
-&none  &kp LC(Z)           &kp LC(X)      &kp LC(C)   &kp LC(V)   &swap_tab    &kp RETURN  &kp BACKSPACE  &mm_comma  &mm_dot    &kp DEL    &none
-                                          &trans      &trans      &trans       &trans      &trans         &trans
+&none  &macro_ru     &kp BACKSPACE  &kp ESCAPE  &caps_word  &kp GRAVE    &kp INS     &kp HOME       &kp PG_UP  &kp PG_DN  &kp END    &none
+&none  &sk LEFT_GUI  &sk LALT       &sk LCTRL   &sk LSHFT   &swap_win    &kp TAB     &kp LEFT       &kp UP     &kp DOWN   &kp RIGHT  &none
+&none  &kp LC(Z)     &kp LC(X)      &kp LC(C)   &kp LC(V)   &swap_tab    &kp RETURN  &kp BACKSPACE  &mm_comma  &mm_dot    &kp DEL    &none
+                                    &trans      &trans      &trans       &trans      &trans         &trans
             >;
         };
 
@@ -404,10 +404,10 @@
 
         ru_ext {
             bindings = <
-&none  &macro_num_word_ru  &kp BACKSPACE  &kp ESCAPE  &caps_word  &kp GRAVE    &kp INS  &kp HOME       &kp PG_UP     &kp PG_DN   &kp END    &none
-&none  &sk LEFT_GUI        &sk LALT       &sk LCTRL   &sk LSHFT   &swap_win    &kp TAB  &kp LEFT       &kp UP        &kp DOWN    &kp RIGHT  &none
-&none  &kp LC(Z)           &kp LC(X)      &kp LC(C)   &kp LC(V)   &swap_tab    &kp RET  &kp BACKSPACE  &mm_comma_ru  &mm_dot_ru  &kp DEL    &none
-                                          &trans      &trans      &trans       &trans   &trans         &trans
+&none  &macro_en     &kp BACKSPACE  &kp ESCAPE  &caps_word  &kp GRAVE    &kp INS  &kp HOME       &kp PG_UP     &kp PG_DN   &kp END    &none
+&none  &sk LEFT_GUI  &sk LALT       &sk LCTRL   &sk LSHFT   &swap_win    &kp TAB  &kp LEFT       &kp UP        &kp DOWN    &kp RIGHT  &none
+&none  &kp LC(Z)     &kp LC(X)      &kp LC(C)   &kp LC(V)   &swap_tab    &kp RET  &kp BACKSPACE  &mm_comma_ru  &mm_dot_ru  &kp DEL    &none
+                                    &trans      &trans      &trans       &trans   &trans         &trans
             >;
         };
 
