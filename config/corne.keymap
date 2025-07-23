@@ -377,10 +377,10 @@
             //                    | GUI | LWR | ALT/ENT |   | HYPER/SPC | BKSP  | RSE |
 
             bindings = <
-&none  &kp Q  &kp W  &kp E      &kp R        &kp T         &kp Y        &kp U            &kp I      &kp O    &kp P     &none
-&none  &kp A  &kp S  &kp D      &kp F        &kp G         &kp H        &kp J            &kp K      &kp L    &kp SEMI  &none
-&none  &kp Z  &kp X  &kp C      &kp V        &kp B         &kp N        &kp M            &kp COMMA  &kp DOT  &kp FSLH  &none
-                     &kp LSHFT  &lt 1 SPACE  &lt 10 ESC    &lt 4 ENTER  &lt 5 BACKSPACE  &kp RSHFT
+&none  &kp Q  &kp W  &kp E      &kp R        &kp T         &kp Y        &kp U  &kp I      &kp O    &kp P     &none
+&none  &kp A  &kp S  &kp D      &kp F        &kp G         &kp H        &kp J  &kp K      &kp L    &kp SEMI  &none
+&none  &kp Z  &kp X  &kp C      &kp V        &kp B         &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &none
+                     &kp LSHFT  &lt 1 SPACE  &lt 10 ESC    &lt 4 ENTER  &sl 5  &kp RSHFT
             >;
         };
 
@@ -395,10 +395,10 @@
 
         ru {
             bindings = <
-&trans  &trans  &trans  &trans  &trans       &trans        &trans           &trans           &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans       &trans        &trans           &trans           &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans       &trans        &trans           &trans           &trans  &trans  &trans  &trans
-                        &trans  &lt 3 SPACE  &lt 11 ESC    &lt_sym 0 ENTER  &lt 6 BACKSPACE  &trans
+&trans  &trans  &trans  &trans  &trans       &trans        &trans           &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans       &trans        &trans           &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans       &trans        &trans           &trans  &trans  &trans  &trans  &trans
+                        &trans  &lt 3 SPACE  &lt 11 ESC    &lt_sym 0 ENTER  &sl 6   &trans
             >;
         };
 
@@ -422,19 +422,19 @@
 
         cmd {
             bindings = <
-&none  &none   &none              &macro_num_word_en  &sk LSHFT  &none     &none   &none      &macro_num_word_en  &none     &none     &none
-&none  &tog 7  &macro_warpd_hint  &sl 12              &macro_ru  &none     &none   &sk RSHFT  &sk RCTRL           &sk LALT  &sk LGUI  &none
-&none  &none   &none              &none               &none      &none     &none   &none      &none               &none     &none     &none
-                                  &trans              &trans     &trans    &trans  &trans     &trans
+&none  &none       &tog 7     &macro_warpd_hint  &none      &none                 &none   &none      &macro_num_word_en  &none     &none     &none
+&none  &caps_word  &macro_ru  &sl 12             &sk LSHFT  &macro_num_word_en    &none   &sk RSHFT  &sk RCTRL           &sk LALT  &sk LGUI  &none
+&none  &none       &none      &none              &none      &none                 &none   &none      &none               &none     &none     &none
+                              &trans             &trans     &trans                &trans  &trans     &trans
             >;
         };
 
         cmd_ru {
             bindings = <
-&none  &none   &none              &macro_num_word_ru  &sk LSHFT  &none     &none   &none      &macro_num_word_ru  &none     &kp LBKT  &none
-&none  &tog 7  &macro_warpd_hint  &sl 13              &macro_en  &none     &none   &sk LSHFT  &sk LCTRL           &sk LALT  &kp SQT   &none
-&none  &none   &none              &none               &none      &none     &none   &none      &none               &none     &kp RBKT  &none
-                                  &trans              &trans     &trans    &trans  &trans     &trans
+&none  &none       &tog 7     &sl 12  &none      &none                 &none   &none      &macro_num_word_ru  &none     &kp LBKT  &none
+&none  &caps_word  &macro_en  &sl 13  &sk LSHFT  &macro_num_word_ru    &none   &sk LSHFT  &sk LCTRL           &sk LALT  &kp SQT   &none
+&none  &none       &none      &none   &none      &none                 &none   &none      &none               &none     &kp RBKT  &none
+                              &trans  &trans     &trans                &trans  &trans     &trans
             >;
         };
 
