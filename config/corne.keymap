@@ -221,6 +221,8 @@
                 <&kp LS(CAPS)>;
 
             label = "MACRO_LAYER_SYM";
+            wait-ms = <0>;
+            tap-ms = <0>;
         };
 
         macro_layer_cmd: macro_layer_cmd {
