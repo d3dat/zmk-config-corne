@@ -401,10 +401,10 @@
 
         ext {
             bindings = <
-&none  &macro_ru     &kp BACKSPACE  &kp ESCAPE  &caps_word  &kp GRAVE    &kp INS     &kp HOME       &kp PG_UP  &kp PG_DN  &kp END    &none
-&none  &sk LEFT_GUI  &sk LALT       &sk LCTRL   &sk LSHFT   &swap_win    &kp TAB     &kp LEFT       &kp UP     &kp DOWN   &kp RIGHT  &none
-&none  &kp LC(Z)     &kp LC(X)      &kp LC(C)   &kp LC(V)   &swap_tab    &kp RETURN  &kp BACKSPACE  &mm_comma  &mm_dot    &kp DEL    &none
-                                    &trans      &trans      &trans       &trans      &trans         &trans
+&none  &none         &kp BACKSPACE  &kp ESCAPE  &sl 18     &none        &kp INS        &kp HOME       &kp PG_UP  &kp PG_DN  &kp END    &none
+&none  &sk LEFT_GUI  &sk LALT       &sk LCTRL   &sk LSHFT  &swap_win    &kp TAB        &kp LEFT       &kp UP     &kp DOWN   &kp RIGHT  &none
+&none  &kp LC(Z)     &kp LC(X)      &kp LC(C)   &kp LC(V)  &swap_tab    &kp BACKSPACE  &kp RET        &mm_comma  &mm_dot    &kp DEL    &none
+                                    &trans      &trans     &trans       &trans         &kp BACKSPACE  &trans
             >;
         };
 
@@ -419,10 +419,10 @@
 
         ru_ext {
             bindings = <
-&none  &macro_en     &kp BACKSPACE  &kp ESCAPE  &caps_word  &kp GRAVE    &kp INS  &kp HOME       &kp PG_UP     &kp PG_DN   &kp END    &none
-&none  &sk LEFT_GUI  &sk LALT       &sk LCTRL   &sk LSHFT   &swap_win    &kp TAB  &kp LEFT       &kp UP        &kp DOWN    &kp RIGHT  &none
-&none  &kp LC(Z)     &kp LC(X)      &kp LC(C)   &kp LC(V)   &swap_tab    &kp RET  &kp BACKSPACE  &mm_comma_ru  &mm_dot_ru  &kp DEL    &none
-                                    &trans      &trans      &trans       &trans   &trans         &trans
+&none  &none         &kp BACKSPACE  &kp ESCAPE  &sl 18     &none        &kp INS        &kp HOME       &kp PG_UP     &kp PG_DN   &kp END    &none
+&none  &sk LEFT_GUI  &sk LALT       &sk LCTRL   &sk LSHFT  &swap_win    &kp TAB        &kp LEFT       &kp UP        &kp DOWN    &kp RIGHT  &none
+&none  &kp LC(Z)     &kp LC(X)      &kp LC(C)   &kp LC(V)  &swap_tab    &kp BACKSPACE  &kp RET        &mm_comma_ru  &mm_dot_ru  &kp DEL    &none
+                                    &trans      &trans     &trans       &trans         &kp BACKSPACE  &trans
             >;
         };
 
@@ -431,13 +431,13 @@
 &trans  &kp LT         &kp GT     &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp GRAVE         &kp SQT       &kp LPAR         &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
 &trans  &kp AMPERSAND  &kp HASH   &kp AT_SIGN     &kp TILDE        &kp UNDERSCORE    &kp PLUS      &kp MINUS        &kp COLON              &kp SEMI          &kp DQT            &trans
 &trans  &kp BACKSLASH  &kp CARET  &kp DOLLAR      &kp PIPE         &kp PERCENT       &kp QUESTION  &kp EXCLAMATION  &kp EQUAL              &kp ASTERISK      &kp SLASH          &trans
-                                  &trans          &trans           &trans            &trans        &trans           &trans
+                                  &trans          &trans           &trans            &trans        &kp BACKSPACE    &trans
             >;
         };
 
         cmd {
             bindings = <
-&none  &none             &tog 7  &macro_warpd_hint  &none      &none                 &none   &none      &macro_num_word_en  &none     &none     &none
+&none  &none             &tog 7  &macro_warpd_hint  &sl 18     &none                 &none   &none      &macro_num_word_en  &none     &none     &none
 &none  &macro_caps_word  &sl 12  &macro_ru          &sk LSHFT  &macro_num_word_en    &none   &sk RSHFT  &sk RCTRL           &sk LALT  &sk LGUI  &none
 &none  &none             &none   &none              &none      &none                 &none   &none      &none               &none     &none     &none
                                  &trans             &trans     &trans                &trans  &trans     &trans
@@ -446,7 +446,7 @@
 
         cmd_ru {
             bindings = <
-&none  &none             &tog 7  &macro_warpd_hint  &none      &none                 &none   &none      &macro_num_word_ru  &none     &kp LBKT  &none
+&none  &none             &tog 7  &macro_warpd_hint  &sl 18     &kp GRAVE             &none   &none      &macro_num_word_ru  &none     &kp LBKT  &none
 &none  &macro_caps_word  &sl 13  &macro_en          &sk LSHFT  &macro_num_word_ru    &none   &sk LSHFT  &sk LCTRL           &sk LALT  &kp SQT   &none
 &none  &none             &none   &none              &none      &none                 &none   &none      &none               &none     &kp RBKT  &none
                                  &trans             &trans     &trans                &trans  &trans     &trans
@@ -536,26 +536,26 @@
 
         num {
             bindings = <
-&none  &none     &kp BACKSPACE  &kp ESC  &kp DEL    &none     &kp SLASH   &kp N9  &kp N0  &kp MINUS  &kp EQUAL  &none
-&none  &none     &none          &none    &none      &none     &kp PERIOD  &kp N5  &kp N6  &kp N7     &kp N8     &none
-&none  &kp LALT  &kp LCTRL      &none    &kp LSHFT  &none     &kp COMMA   &kp N1  &kp N2  &kp N3     &kp N4     &none
-                                &trans   &trans     &trans    &trans      &trans  &trans
+&none  &none     &kp BACKSPACE  &kp ESC  &kp DEL    &none     &kp SLASH   &kp N9         &kp N0  &kp MINUS  &kp EQUAL  &none
+&none  &none     &none          &none    &none      &none     &kp PERIOD  &kp N5         &kp N6  &kp N7     &kp N8     &none
+&none  &kp LALT  &kp LCTRL      &none    &kp LSHFT  &none     &kp COMMA   &kp N1         &kp N2  &kp N3     &kp N4     &none
+                                &trans   &trans     &trans    &trans      &kp BACKSPACE  &trans
             >;
         };
 
         num_ru {
             bindings = <
-&none  &none     &kp BACKSPACE  &kp ESC  &kp DEL    &none     &kp LS(BACKSLASH)  &kp N9  &kp N0  &kp MINUS  &kp EQUAL  &none
-&none  &none     &none          &none    &none      &none     &kp SLASH          &kp N5  &kp N6  &kp N7     &kp N8     &none
-&none  &kp LALT  &kp LCTRL      &none    &kp LSHFT  &none     &kp LS(SLASH)      &kp N1  &kp N2  &kp N3     &kp N4     &none
-                                &trans   &trans     &trans    &trans             &trans  &trans
+&none  &none     &kp BACKSPACE  &kp ESC  &kp DEL    &none     &kp LS(BACKSLASH)  &kp N9         &kp N0  &kp MINUS  &kp EQUAL  &none
+&none  &none     &none          &none    &none      &none     &kp SLASH          &kp N5         &kp N6  &kp N7     &kp N8     &none
+&none  &kp LALT  &kp LCTRL      &none    &kp LSHFT  &none     &kp LS(SLASH)      &kp N1         &kp N2  &kp N3     &kp N4     &none
+                                &trans   &trans     &trans    &trans             &kp BACKSPACE  &trans
             >;
         };
 
         fn {
             bindings = <
 &none  &none     &none     &none      &none      &none     &none   &kp F9  &kp F10  &kp F11  &kp F12  &none
-&none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none     &none   &kp F5  &kp F6   &kp F7   &kp F8   &none
+&none  &sk LGUI  &sk LALT  &sk LCTRL  &sk LSHFT  &none     &none   &kp F5  &kp F6   &kp F7   &kp F8   &none
 &none  &none     &none     &none      &none      &none     &none   &kp F1  &kp F2   &kp F3   &kp F4   &none
                            &trans     &trans     &trans    &trans  &trans  &trans
             >;
