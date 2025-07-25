@@ -159,7 +159,7 @@
         lt_multi: lt_multi {
             compatible = "zmk,behavior-hold-tap";
             label = "LT_MULTI";
-            bindings = <&mo>, <&tog_multi>;
+            bindings = <&mo_multi>, <&tog_multi>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -336,6 +336,20 @@
             bindings = <&tog 11 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TOG_MULTI_RU";
         };
+
+        mo_multi: mo_multi {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&tog 10>,
+                <&macro_press>,
+                <&mo 1>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&mo 1>;
+
+            label = "MO_MULTI";
+        };
     };
 
     combos {
@@ -502,10 +516,10 @@
 
         multi {
             bindings = <
-&none  &kp LS(N1)   &kp LS(N2)    &kp LS(N3)  &kp LS(N4)        &kp LS(N5)        &kp LS(N6)      &kp LS(N7)     &kp LS(N8)  &kp LS(N9)  &kp LS(N0)  &none
-&none  &kp N7       &kp N5        &kp N3      &kp N1            &kp N9            &kp N8          &kp N0         &kp N2      &kp N4      &kp N6      &none
-&none  &kp PERCENT  &kp ASTERISK  &kp MINUS   &kp PLUS          &kp LT            &kp GT          &kp EQUAL      &kp COMMA   &kp DOT     &kp SLASH   &none
-                                  &trans      &tog_multi SPACE  &tog_multi ESC    &tog_multi RET  &kp BACKSPACE  &trans
+&none  &kp LS(N1)   &kp LS(N2)    &kp LS(N3)  &kp LS(N4)         &kp LS(N5)        &kp LS(N6)      &kp LS(N7)     &kp LS(N8)  &kp LS(N9)  &kp LS(N0)  &none
+&none  &kp N7       &kp N5        &kp N3      &kp N1             &kp N9            &kp N8          &kp N0         &kp N2      &kp N4      &kp N6      &none
+&none  &kp PERCENT  &kp ASTERISK  &kp MINUS   &kp PLUS           &kp LT            &kp GT          &kp EQUAL      &kp COMMA   &kp DOT     &kp SLASH   &none
+                                  &trans      &lt_multi 0 SPACE  &tog_multi ESC    &tog_multi RET  &kp BACKSPACE  &trans
             >;
         };
 
