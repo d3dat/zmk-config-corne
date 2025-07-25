@@ -381,7 +381,10 @@
                 <&macro_press>,
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_tap>,
-                <&macro_param_2to1 &kp MACRO_PLACEHOLDER>;
+                <&macro_param_2to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
 
             label = "M_HOLD_MOD_PRESS_KEY";
         };
