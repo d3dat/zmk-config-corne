@@ -500,18 +500,18 @@
 
         cmd {
             bindings = <
-&none  &none             &tog 7  &macro_warpd_hint  &tog 18    &none      &none   &none      &macro_num_word_en  &none     &none     &none
-&none  &macro_caps_word  &sl 12  &macro_ru          &sk LSHFT  &tog 10    &none   &sk RSHFT  &sk RCTRL           &sk LALT  &sk LGUI  &none
-&none  &none             &none   &none              &none      &none      &none   &none      &none               &none     &none     &none
-                                 &trans             &trans     &trans     &trans  &trans     &trans
+&none  &none             &tog 7  &macro_warpd_hint  &tog 18    &none     &none   &none      &macro_num_word_en  &none     &none     &none
+&none  &macro_caps_word  &sl 12  &macro_ru          &sk LSHFT  &none     &none   &sk RSHFT  &sk RCTRL           &sk LALT  &sk LGUI  &none
+&none  &none             &none   &none              &tog 10    &none     &none   &none      &none               &none     &none     &none
+                                 &trans             &trans     &trans    &trans  &trans     &trans
             >;
         };
 
         cmd_ru {
             bindings = <
 &none  &none             &tog 7  &macro_warpd_hint  &tog 18    &kp GRAVE    &none   &none      &macro_num_word_ru  &none     &kp LBKT  &none
-&none  &macro_caps_word  &sl 13  &macro_en          &sk LSHFT  &tog 11      &none   &sk LSHFT  &sk LCTRL           &sk LALT  &kp SQT   &none
-&none  &none             &none   &none              &none      &none        &none   &none      &none               &none     &kp RBKT  &none
+&none  &macro_caps_word  &sl 13  &macro_en          &sk LSHFT  &none        &none   &sk LSHFT  &sk LCTRL           &sk LALT  &kp SQT   &none
+&none  &none             &none   &none              &tog 11    &none        &none   &none      &none               &none     &kp RBKT  &none
                                  &trans             &trans     &trans       &trans  &trans     &trans
             >;
         };
