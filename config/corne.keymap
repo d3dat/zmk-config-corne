@@ -325,6 +325,20 @@
             bindings = <&kp CAPS &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp LS(CAPS)>;
             label = "KP_EN";
         };
+
+        tog_multi: tog_multi {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&tog 10 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "TOG_MULTI";
+        };
+
+        tog_multi_ru: tog_multi_ru {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&tog 11 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "TOG_MULTI_RU";
+        };
     };
 
     combos {
@@ -446,19 +460,19 @@
 
         cmd {
             bindings = <
-&none  &none             &tog 7  &macro_warpd_hint  &tog 18    &none                 &none   &none      &macro_num_word_en  &none     &none     &none
-&none  &macro_caps_word  &sl 12  &macro_ru          &sk LSHFT  &macro_num_word_en    &none   &sk RSHFT  &sk RCTRL           &sk LALT  &sk LGUI  &none
-&none  &none             &none   &none              &none      &none                 &none   &none      &none               &none     &none     &none
-                                 &trans             &trans     &trans                &trans  &trans     &trans
+&none  &none             &tog 7  &macro_warpd_hint  &tog 18    &none      &none   &none      &macro_num_word_en  &none     &none     &none
+&none  &macro_caps_word  &sl 12  &macro_ru          &sk LSHFT  &tog 10    &none   &sk RSHFT  &sk RCTRL           &sk LALT  &sk LGUI  &none
+&none  &none             &none   &none              &none      &none      &none   &none      &none               &none     &none     &none
+                                 &trans             &trans     &trans     &trans  &trans     &trans
             >;
         };
 
         cmd_ru {
             bindings = <
-&none  &none             &tog 7  &macro_warpd_hint  &tog 18    &kp GRAVE             &none   &none      &macro_num_word_ru  &none     &kp LBKT  &none
-&none  &macro_caps_word  &sl 13  &macro_en          &sk LSHFT  &macro_num_word_ru    &none   &sk LSHFT  &sk LCTRL           &sk LALT  &kp SQT   &none
-&none  &none             &none   &none              &none      &none                 &none   &none      &none               &none     &kp RBKT  &none
-                                 &trans             &trans     &trans                &trans  &trans     &trans
+&none  &none             &tog 7  &macro_warpd_hint  &tog 18    &kp GRAVE    &none   &none      &macro_num_word_ru  &none     &kp LBKT  &none
+&none  &macro_caps_word  &sl 13  &macro_en          &sk LSHFT  &tog 11      &none   &sk LSHFT  &sk LCTRL           &sk LALT  &kp SQT   &none
+&none  &none             &none   &none              &none      &none        &none   &none      &none               &none     &kp RBKT  &none
+                                 &trans             &trans     &trans       &trans  &trans     &trans
             >;
         };
 
@@ -491,19 +505,19 @@
 
         multi {
             bindings = <
-&none  &kp LS(N1)   &kp LS(N2)    &kp LS(N3)  &kp LS(N4)  &kp LS(N5)    &kp LS(N6)  &kp LS(N7)     &kp LS(N8)  &kp LS(N9)  &kp LS(N0)  &none
-&none  &kp N7       &kp N5        &kp N3      &kp N1      &kp N9        &kp N8      &kp N0         &kp N2      &kp N4      &kp N6      &none
-&none  &kp PERCENT  &kp ASTERISK  &kp MINUS   &kp PLUS    &kp LT        &kp GT      &kp EQUAL      &kp COMMA   &kp DOT     &kp SLASH   &none
-                                  &trans      &trans      &trans        &trans      &kp BACKSPACE  &trans
+&none  &kp LS(N1)   &kp LS(N2)    &kp LS(N3)  &kp LS(N4)        &kp LS(N5)        &kp LS(N6)      &kp LS(N7)     &kp LS(N8)  &kp LS(N9)  &kp LS(N0)  &none
+&none  &kp N7       &kp N5        &kp N3      &kp N1            &kp N9            &kp N8          &kp N0         &kp N2      &kp N4      &kp N6      &none
+&none  &kp PERCENT  &kp ASTERISK  &kp MINUS   &kp PLUS          &kp LT            &kp GT          &kp EQUAL      &kp COMMA   &kp DOT     &kp SLASH   &none
+                                  &trans      &tog_multi SPACE  &tog_multi ESC    &tog_multi RET  &kp BACKSPACE  &trans
             >;
         };
 
         multi_ru {
             bindings = <
-&none  &kp LS(N1)   &kp LS(N2)    &kp LS(N3)  &kp LS(N4)  &kp LS(N5)    &kp LS(N6)  &kp LS(N7)     &kp LS(N8)     &kp LS(N9)  &kp LS(N0)         &none
-&none  &kp N7       &kp N5        &kp N3      &kp N1      &kp N9        &kp N8      &kp N0         &kp N2         &kp N4      &kp N6             &none
-&none  &kp PERCENT  &kp ASTERISK  &kp MINUS   &kp PLUS    &kp_en LT     &kp_en GT   &kp EQUAL      &kp LS(SLASH)  &kp SLASH   &kp LS(BACKSLASH)  &none
-                                  &trans      &trans      &trans        &trans      &kp BACKSPACE  &trans
+&none  &kp LS(N1)   &kp LS(N2)    &kp LS(N3)  &kp LS(N4)           &kp LS(N5)           &kp LS(N6)         &kp LS(N7)     &kp LS(N8)     &kp LS(N9)  &kp LS(N0)         &none
+&none  &kp N7       &kp N5        &kp N3      &kp N1               &kp N9               &kp N8             &kp N0         &kp N2         &kp N4      &kp N6             &none
+&none  &kp PERCENT  &kp ASTERISK  &kp MINUS   &kp PLUS             &kp_en LT            &kp_en GT          &kp EQUAL      &kp LS(SLASH)  &kp SLASH   &kp LS(BACKSLASH)  &none
+                                  &trans      &tog_multi_ru SPACE  &tog_multi_ru ESC    &tog_multi_ru RET  &kp BACKSPACE  &trans
             >;
         };
 
