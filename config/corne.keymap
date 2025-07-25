@@ -460,7 +460,7 @@
 
         cmd {
             bindings = <
-&none  &none             &tog 7  &macro_warpd_hint  &sl 18     &none                 &none   &none      &macro_num_word_en  &none     &none     &none
+&none  &none             &tog 7  &macro_warpd_hint  &tog 18    &none                 &none   &none      &macro_num_word_en  &none     &none     &none
 &none  &macro_caps_word  &sl 12  &macro_ru          &sk LSHFT  &macro_num_word_en    &none   &sk RSHFT  &sk RCTRL           &sk LALT  &sk LGUI  &none
 &none  &none             &none   &none              &none      &none                 &none   &none      &none               &none     &none     &none
                                  &trans             &trans     &trans                &trans  &trans     &trans
@@ -469,7 +469,7 @@
 
         cmd_ru {
             bindings = <
-&none  &none             &tog 7  &macro_warpd_hint  &sl 18     &kp GRAVE             &none   &none      &macro_num_word_ru  &none     &kp LBKT  &none
+&none  &none             &tog 7  &macro_warpd_hint  &tog 18    &kp GRAVE             &none   &none      &macro_num_word_ru  &none     &kp LBKT  &none
 &none  &macro_caps_word  &sl 13  &macro_en          &sk LSHFT  &macro_num_word_ru    &none   &sk LSHFT  &sk LCTRL           &sk LALT  &kp SQT   &none
 &none  &none             &none   &none              &none      &none                 &none   &none      &none               &none     &kp RBKT  &none
                                  &trans             &trans     &trans                &trans  &trans     &trans
@@ -577,10 +577,10 @@
 
         fn {
             bindings = <
-&none  &none     &none     &none      &none                  &none            &none          &macro_fn F9  &macro_fn F10  &macro_fn F11  &macro_fn F12  &none
-&none  &sk LGUI  &sk LALT  &sk LCTRL  &sk LSHFT              &none            &none          &macro_fn F5  &macro_fn F6   &macro_fn F7   &macro_fn F8   &none
-&none  &none     &none     &none      &none                  &none            &none          &macro_fn F1  &macro_fn F2   &macro_fn F3   &macro_fn F4   &none
-                           &trans     &macro_fn_press SPACE  &macro_fn ESC    &macro_fn RET  &trans        &trans
+&none  &none     &none     &none      &none      &none            &none          &macro_fn F9  &macro_fn F10  &macro_fn F11  &macro_fn F12  &none
+&none  &sk LGUI  &sk LALT  &sk LCTRL  &sk LSHFT  &none            &none          &macro_fn F5  &macro_fn F6   &macro_fn F7   &macro_fn F8   &none
+&none  &none     &none     &none      &none      &none            &none          &macro_fn F1  &macro_fn F2   &macro_fn F3   &macro_fn F4   &none
+                           &trans     &tog 18    &macro_fn ESC    &macro_fn RET  &tog 18       &trans
             >;
         };
 
