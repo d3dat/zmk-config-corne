@@ -12,29 +12,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-#define MACRO(NAME, COMPATIBLE, BINDING_CELLS, BINDINGS) \
-    NAME: NAME { \
-        compatible = COMPATIBLE; \
-        #binding-cells = <BINDING_CELLS>; \
-        wait-ms = <0>; \
-        tap-ms = <0>; \
-        bindings = \
-            <BINDINGS>; \
-    };
-
-#define MACRO_NO_PARAM(NAME, BINDINGS)  MACRO(NAME, "zmk,behavior-macro"          , 0, BINDINGS)
-#define MACRO_ONE_PARAM(NAME, BINDINGS) MACRO(NAME, "zmk,behavior-macro-one-param", 1, BINDINGS)
-#define MACRO_TWO_PARAM(NAME, BINDINGS) MACRO(NAME, "zmk,behavior-macro-two-param", 2, BINDINGS)
-
-#define MODMORPH(NAME, NORMAL, MORPHED, MODS, KEEP_MODS) \
-    NAME: NAME { \
-        compatible = "zmk,behavior-mod-morph"; \
-        #binding-cells = <0>; \
-        bindings = <NORMAL>, <MORPHED>; \
-        mods = <(MODS)>; \
-        keep-mods = <(KEEP_MODS)>; \
-    };
-
 &sk {
     quick-release;
     release-after-ms = <2000>;
@@ -49,22 +26,6 @@
 
 / {
     behaviors {
-        MODMORPH(
-            sw_tab,
-            &m_hold_mod_press_key LCTRL TAB,
-            &kp TAB,
-            MOD_LCTL,
-            MOD_LCTL
-        )
-
-        MODMORPH(
-            sw_win,
-            &m_hold_mod_press_key LALT TAB,
-            &kp TAB,
-            MOD_LALT,
-            MOD_LALT
-        )
-
         tp: tap_preferred {
             compatible = "zmk,behavior-hold-tap";
             label = "TAP_PREFERRED";
@@ -211,14 +172,6 @@
     };
 
     macros {
-        MACRO_TWO_PARAM(
-            m_hold_mod_press_key,
-            &macro_press
-                &macro_param_1to1 &kp PARAM_1
-            &macro_tap
-                &macro_param_2to1 &kp PARAM_2
-        )
-
         macro_comma: macro_comma {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
