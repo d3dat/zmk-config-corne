@@ -159,7 +159,7 @@
         lt_multi: lt_multi {
             compatible = "zmk,behavior-hold-tap";
             label = "LT_MULTI";
-            bindings = <&mo_multi>, <&tog_multi>;
+            bindings = <&to_0_mo_1>, <&to_0>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -337,11 +337,18 @@
             label = "TOG_MULTI_RU";
         };
 
-        mo_multi: mo_multi {
+        to_0_mo_1: mo_multi {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 0 &mo 1>;
+            label = "MO_MULTI";
+        };
+
+        to_0: to_1 {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&tog 10 &macro_param_1to1 &mo MACRO_PLACEHOLDER>;
-            label = "MO_MULTI";
+            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "TO_1";
         };
     };
 
