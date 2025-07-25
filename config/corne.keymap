@@ -15,7 +15,7 @@
 
 &sk {
     quick-release;
-    release-after-ms = <1000>;
+    release-after-ms = <2000>;
 };
 
 &sl { release-after-ms = <1000>; };
@@ -316,6 +316,15 @@
             wait-ms = <0>;
             tap-ms = <0>;
         };
+
+        macro_fn: macro_fn {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&tog 18 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "MACRO_FN";
+            wait-ms = <0>;
+            tap-ms = <0>;
+        };
     };
 
     combos {
@@ -554,10 +563,10 @@
 
         fn {
             bindings = <
-&none  &none     &none     &none      &none      &none     &none   &kp F9  &kp F10  &kp F11  &kp F12  &none
-&none  &sk LGUI  &sk LALT  &sk LCTRL  &sk LSHFT  &none     &none   &kp F5  &kp F6   &kp F7   &kp F8   &none
-&none  &none     &none     &none      &none      &none     &none   &kp F1  &kp F2   &kp F3   &kp F4   &none
-                           &trans     &trans     &trans    &trans  &trans  &trans
+&none  &none     &none     &none      &none      &none            &none          &macro_fn F9  &macro_fn F10  &macro_fn F11  &macro_fn F12  &none
+&none  &sk LGUI  &sk LALT  &sk LCTRL  &sk LSHFT  &none            &none          &macro_fn F5  &macro_fn F6   &macro_fn F7   &macro_fn F8   &none
+&none  &none     &none     &none      &none      &none            &none          &macro_fn F1  &macro_fn F2   &macro_fn F3   &macro_fn F4   &none
+                           &trans     &tog 18    &macro_fn ESC    &macro_fn RET  &trans        &trans
             >;
         };
 
