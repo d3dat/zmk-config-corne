@@ -261,7 +261,7 @@
         m_fn: macro_fn {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&tog 11 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            bindings = <&tog 9 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "MACRO_FN";
             wait-ms = <0>;
             tap-ms = <0>;
@@ -398,7 +398,7 @@
 
         nav {
             bindings = <
-&none  &m_caps_word  &kp BACKSPACE  &kp ESCAPE  &tog 11    &none        &kp INS        &kp HOME       &kp PG_UP  &kp PG_DN  &kp END    &none
+&none  &m_caps_word  &kp BACKSPACE  &kp ESCAPE  &tog 9     &none        &kp INS        &kp HOME       &kp PG_UP  &kp PG_DN  &kp END    &none
 &none  &sk LEFT_GUI  &sk LALT       &sk LCTRL   &sk LSHFT  &swap_win    &kp TAB        &kp LEFT       &kp UP     &kp DOWN   &kp RIGHT  &none
 &none  &kp LC(Z)     &kp LC(X)      &kp LC(C)   &kp LC(V)  &swap_tab    &kp BACKSPACE  &kp RET        &m_comma   &m_dot     &kp DEL    &none
                                     &trans      &trans     &trans       &trans         &kp BACKSPACE  &trans
@@ -407,7 +407,7 @@
 
         nav_ru {
             bindings = <
-&none  &m_caps_word  &kp BACKSPACE  &kp ESCAPE  &tog 11    &none        &kp INS        &kp HOME       &kp PG_UP    &kp PG_DN  &kp END    &none
+&none  &m_caps_word  &kp BACKSPACE  &kp ESCAPE  &tog 9     &none        &kp INS        &kp HOME       &kp PG_UP    &kp PG_DN  &kp END    &none
 &none  &sk LEFT_GUI  &sk LALT       &sk LCTRL   &sk LSHFT  &swap_win    &kp TAB        &kp LEFT       &kp UP       &kp DOWN   &kp RIGHT  &none
 &none  &kp LC(Z)     &kp LC(X)      &kp LC(C)   &kp LC(V)  &swap_tab    &kp BACKSPACE  &kp RET        &m_comma_ru  &m_dot_ru  &kp DEL    &none
                                     &trans      &trans     &trans       &trans         &kp BACKSPACE  &trans
@@ -416,8 +416,8 @@
 
         cmd {
             bindings = <
-&none  &none         &tog 13  &m_warpd_hint  &tog 11    &none     &none   &none      &none      &none     &none     &none
-&none  &m_caps_word  &sl 9    &m_to_ru       &sk LSHFT  &none     &none   &sk RSHFT  &sk RCTRL  &sk LALT  &sk LGUI  &none
+&none  &none         &tog 13  &m_warpd_hint  &tog 9     &none     &none   &none      &none      &none     &none     &none
+&none  &m_caps_word  &sl 10   &m_to_ru       &sk LSHFT  &none     &none   &sk RSHFT  &sk RCTRL  &sk LALT  &sk LGUI  &none
 &none  &none         &none    &none          &tog 6     &none     &none   &none      &none      &none     &none     &none
                               &trans         &trans     &trans    &trans  &trans     &trans
             >;
@@ -425,8 +425,8 @@
 
         cmd_ru {
             bindings = <
-&none  &none         &tog 13  &m_warpd_hint  &tog 11    &kp GRAVE    &none   &none      &none      &none     &kp LBKT  &none
-&none  &m_caps_word  &sl 10   &m_to_en       &sk LSHFT  &none        &none   &sk LSHFT  &sk LCTRL  &sk LALT  &kp SQT   &none
+&none  &none         &tog 13  &m_warpd_hint  &tog 9     &kp GRAVE    &none   &none      &none      &none     &kp LBKT  &none
+&none  &m_caps_word  &sl 11   &m_to_en       &sk LSHFT  &none        &none   &sk LSHFT  &sk LCTRL  &sk LALT  &kp SQT   &none
 &none  &none         &none    &none          &tog 7     &none        &none   &none      &none      &none     &kp RBKT  &none
                               &trans         &trans     &trans       &trans  &trans     &trans
             >;
@@ -459,6 +459,15 @@
             >;
         };
 
+        fn {
+            bindings = <
+&none  &none     &none     &none      &none      &none        &none      &m_fn F9  &m_fn F10  &m_fn F11  &m_fn F12  &none
+&none  &sk LGUI  &sk LALT  &sk LCTRL  &sk LSHFT  &none        &none      &m_fn F5  &m_fn F6   &m_fn F7   &m_fn F8   &none
+&none  &none     &none     &none      &none      &none        &none      &m_fn F1  &m_fn F2   &m_fn F3   &m_fn F4   &none
+                           &trans     &tog 9     &m_fn ESC    &m_fn RET  &tog 9    &trans
+            >;
+        };
+
         alt {
             bindings = <
 &none  &none  &none  &none   &none   &none     &kp TILDE     &kp EQUAL        &kp DQT    &kp HASH       &kp GRAVE  &none
@@ -474,15 +483,6 @@
 &none  &none  &none  &none   &none   &none     &kp PLUS    &kp MINUS        &kp LS(N6)     &kp LS(N4)  &kp SQT   &none
 &none  &none  &none  &none   &none   &none     &kp LS(N7)  &kp EXCLAMATION  &kp LS(SLASH)  &kp SLASH   &kp RBKT  &none
                      &trans  &trans  &trans    &trans      &trans           &trans
-            >;
-        };
-
-        fn {
-            bindings = <
-&none  &none     &none     &none      &none      &none        &none      &m_fn F9  &m_fn F10  &m_fn F11  &m_fn F12  &none
-&none  &sk LGUI  &sk LALT  &sk LCTRL  &sk LSHFT  &none        &none      &m_fn F5  &m_fn F6   &m_fn F7   &m_fn F8   &none
-&none  &none     &none     &none      &none      &none        &none      &m_fn F1  &m_fn F2   &m_fn F3   &m_fn F4   &none
-                           &trans     &tog 11    &m_fn ESC    &m_fn RET  &tog 11   &trans
             >;
         };
 
