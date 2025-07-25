@@ -410,7 +410,7 @@
 
         ext {
             bindings = <
-&none  &none         &kp BACKSPACE  &kp ESCAPE  &sl 18     &none        &kp INS        &kp HOME       &kp PG_UP  &kp PG_DN  &kp END    &none
+&none  &none         &kp BACKSPACE  &kp ESCAPE  &tog 18    &none        &kp INS        &kp HOME       &kp PG_UP  &kp PG_DN  &kp END    &none
 &none  &sk LEFT_GUI  &sk LALT       &sk LCTRL   &sk LSHFT  &swap_win    &kp TAB        &kp LEFT       &kp UP     &kp DOWN   &kp RIGHT  &none
 &none  &kp LC(Z)     &kp LC(X)      &kp LC(C)   &kp LC(V)  &swap_tab    &kp BACKSPACE  &kp RET        &mm_comma  &mm_dot    &kp DEL    &none
                                     &trans      &trans     &trans       &trans         &kp BACKSPACE  &trans
@@ -428,7 +428,7 @@
 
         ru_ext {
             bindings = <
-&none  &none         &kp BACKSPACE  &kp ESCAPE  &sl 18     &none        &kp INS        &kp HOME       &kp PG_UP     &kp PG_DN   &kp END    &none
+&none  &none         &kp BACKSPACE  &kp ESCAPE  &tog 18    &none        &kp INS        &kp HOME       &kp PG_UP     &kp PG_DN   &kp END    &none
 &none  &sk LEFT_GUI  &sk LALT       &sk LCTRL   &sk LSHFT  &swap_win    &kp TAB        &kp LEFT       &kp UP        &kp DOWN    &kp RIGHT  &none
 &none  &kp LC(Z)     &kp LC(X)      &kp LC(C)   &kp LC(V)  &swap_tab    &kp BACKSPACE  &kp RET        &mm_comma_ru  &mm_dot_ru  &kp DEL    &none
                                     &trans      &trans     &trans       &trans         &kp BACKSPACE  &trans
