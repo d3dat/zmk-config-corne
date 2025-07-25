@@ -398,7 +398,7 @@
 
         nav {
             bindings = <
-&none  &m_caps_word  &kp BACKSPACE  &kp ESCAPE  &tog 9     &none        &kp INS        &kp HOME       &kp PG_UP  &kp PG_DN  &kp END    &none
+&none  &m_caps_word  &kp BACKSPACE  &kp ESCAPE  &tog 9     &tog 6       &kp INS        &kp HOME       &kp PG_UP  &kp PG_DN  &kp END    &none
 &none  &sk LEFT_GUI  &sk LALT       &sk LCTRL   &sk LSHFT  &swap_win    &kp TAB        &kp LEFT       &kp UP     &kp DOWN   &kp RIGHT  &none
 &none  &kp LC(Z)     &kp LC(X)      &kp LC(C)   &kp LC(V)  &swap_tab    &kp BACKSPACE  &kp RET        &m_comma   &m_dot     &kp DEL    &none
                                     &trans      &trans     &trans       &trans         &kp BACKSPACE  &trans
@@ -407,7 +407,7 @@
 
         nav_ru {
             bindings = <
-&none  &m_caps_word  &kp BACKSPACE  &kp ESCAPE  &tog 9     &none        &kp INS        &kp HOME       &kp PG_UP    &kp PG_DN  &kp END    &none
+&none  &m_caps_word  &kp BACKSPACE  &kp ESCAPE  &tog 9     &tog 7       &kp INS        &kp HOME       &kp PG_UP    &kp PG_DN  &kp END    &none
 &none  &sk LEFT_GUI  &sk LALT       &sk LCTRL   &sk LSHFT  &swap_win    &kp TAB        &kp LEFT       &kp UP       &kp DOWN   &kp RIGHT  &none
 &none  &kp LC(Z)     &kp LC(X)      &kp LC(C)   &kp LC(V)  &swap_tab    &kp BACKSPACE  &kp RET        &m_comma_ru  &m_dot_ru  &kp DEL    &none
                                     &trans      &trans     &trans       &trans         &kp BACKSPACE  &trans
