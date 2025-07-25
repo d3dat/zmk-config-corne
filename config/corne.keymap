@@ -370,10 +370,10 @@
             bindings =
                 <&tog 11>,
                 <&macro_press>,
-                <&mo 1>,
+                <&mo 3>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 1>;
+                <&mo 3>;
 
             label = "MO_MULTI_RU";
             wait-ms = <0>;
