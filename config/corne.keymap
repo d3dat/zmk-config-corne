@@ -7,7 +7,6 @@
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1200  // default: 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
 
-#include <behaviors/num_word.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
@@ -61,13 +60,6 @@
 
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
             hold-trigger-on-release;
-        };
-
-        num_word: num_word {
-            compatible = "zmk,behavior-auto-layer";
-            #binding-cells = <1>;
-            continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
-            ignore-numbers;
         };
 
         mm_comma: mm_comma {
@@ -291,24 +283,6 @@
             label = "MACRO_ZED_1";
         };
 
-        macro_num_word_en: macro_num_word_en {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LSHFT &num_word 10>;
-            label = "MACRO_NUM_WORD_EN";
-            wait-ms = <0>;
-            tap-ms = <0>;
-        };
-
-        macro_num_word_ru: macro_num_word_ru {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LSHFT &num_word 11>;
-            label = "MACRO_NUM_WORD_RU";
-            wait-ms = <0>;
-            tap-ms = <0>;
-        };
-
         macro_caps_word: macro_caps_word {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -404,18 +378,6 @@
             key-positions = <>;
         };
 
-        combo_num_word_en {
-            bindings = <&num_word 10>;
-            key-positions = <8 20>;
-            layers = <0>;
-        };
-
-        combo_num_word_ru {
-            bindings = <&num_word 11>;
-            key-positions = <8 20>;
-            layers = <2>;
-        };
-
         combo_caps_word {
             bindings = <&caps_word>;
             key-positions = <21 9>;
@@ -500,18 +462,18 @@
 
         cmd {
             bindings = <
-&none  &none             &tog 7  &macro_warpd_hint  &tog 18    &none     &none   &none      &macro_num_word_en  &none     &none     &none
-&none  &macro_caps_word  &sl 12  &macro_ru          &sk LSHFT  &none     &none   &sk RSHFT  &sk RCTRL           &sk LALT  &sk LGUI  &none
-&none  &none             &none   &none              &tog 10    &none     &none   &none      &none               &none     &none     &none
+&none  &none             &tog 7  &macro_warpd_hint  &tog 18    &none     &none   &none      &none      &none     &none     &none
+&none  &macro_caps_word  &sl 12  &macro_ru          &sk LSHFT  &none     &none   &sk RSHFT  &sk RCTRL  &sk LALT  &sk LGUI  &none
+&none  &none             &none   &none              &tog 10    &none     &none   &none      &none      &none     &none     &none
                                  &trans             &trans     &trans    &trans  &trans     &trans
             >;
         };
 
         cmd_ru {
             bindings = <
-&none  &none             &tog 7  &macro_warpd_hint  &tog 18    &kp GRAVE    &none   &none      &macro_num_word_ru  &none     &kp LBKT  &none
-&none  &macro_caps_word  &sl 13  &macro_en          &sk LSHFT  &none        &none   &sk LSHFT  &sk LCTRL           &sk LALT  &kp SQT   &none
-&none  &none             &none   &none              &tog 11    &none        &none   &none      &none               &none     &kp RBKT  &none
+&none  &none             &tog 7  &macro_warpd_hint  &tog 18    &kp GRAVE    &none   &none      &none      &none     &kp LBKT  &none
+&none  &macro_caps_word  &sl 13  &macro_en          &sk LSHFT  &none        &none   &sk LSHFT  &sk LCTRL  &sk LALT  &kp SQT   &none
+&none  &none             &none   &none              &tog 11    &none        &none   &none      &none      &none     &kp RBKT  &none
                                  &trans             &trans     &trans       &trans  &trans     &trans
             >;
         };
