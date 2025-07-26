@@ -14,7 +14,7 @@
 
 &sk {
     quick-release;
-    release-after-ms = <2000>;
+    release-after-ms = <1000>;
 };
 
 &sl { release-after-ms = <1000>; };
