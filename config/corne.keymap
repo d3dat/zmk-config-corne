@@ -506,7 +506,7 @@
 &trans  &msc SCRL_LEFT  &msc SCRL_DOWN     &msc SCRL_UP  &msc SCRL_RIGHT    &trans     &trans  &msc SCRL_LEFT    &msc SCRL_UP  &msc SCRL_DOWN    &msc SCRL_RIGHT  &trans
 &trans  &none           &mmv MOVE_X(-600)  &mkp RCLK     &mkp LCLK          &trans     &trans  &mkp LCLK         &mkp RCLK     &mmv MOVE_X(600)  &none            &trans
 &trans  &trans          &kp LALT           &kp LCTRL     &kp LSHFT          &trans     &trans  &kp RSHFT         &kp RCTRL     &kp RALT          &trans           &trans
-                                           &none         &mmv MOVE_Y(-600)  &tog 13    &trans  &mmv MOVE_Y(600)  &none
+                                           &none         &mmv MOVE_Y(-600)  &tog 11    &trans  &mmv MOVE_Y(600)  &none
             >;
         };
 
@@ -524,7 +524,7 @@
 &none   &msc SCRL_LEFT     &msc SCRL_DOWN    &msc SCRL_UP       &msc SCRL_RIGHT   &none      &none  &none      &none      &none      &none          &none
 &none   &mmv MOVE_LEFT     &mmv MOVE_DOWN    &mmv MOVE_UP       &mmv MOVE_RIGHT   &none      &none  &mkp LCLK  &mkp RCLK  &mkp MB3   &m_warpd_hint  &none
 &kp N8  &mmv MOVE_X(-200)  &mmv MOVE_Y(200)  &mmv MOVE_Y(-200)  &mmv MOVE_X(200)  &none      &none  &mkp LCLK  &kp LSHFT  &kp LCTRL  &kp LALT       &none
-                                             &none              &none             &tog 14    &none  &none      &none
+                                             &none              &none             &tog 13    &none  &none      &none
             >;
         };
 
