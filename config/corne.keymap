@@ -452,7 +452,7 @@
 &none  &none         &tog 13  &m_warpd_hint  &tog 9     &kp GRAVE    &none   &none      &none      &none     &kp LBKT  &none
 &none  &m_caps_word  &sl 11   &m_to_en       &sk LSHFT  &none        &none   &sk LSHFT  &sk LCTRL  &sk LALT  &kp SQT   &none
 &none  &none         &none    &sl 8          &tog 7     &none        &none   &none      &none      &none     &kp RBKT  &none
-                              &trans         &m_to_en   &tog 6       &trans  &trans     &trans
+                              &trans         &m_to_en   &tog 7       &trans  &trans     &trans
             >;
         };
 
@@ -477,8 +477,8 @@
         sym {
             bindings = <
 &trans  &kp LT         &kp GT     &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp GRAVE         &kp SQT       &kp LPAR         &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
-&trans  &kp AMPERSAND  &kp HASH   &kp AT_SIGN     &kp TILDE        &kp UNDERSCORE    &kp PLUS      &kp MINUS        &kp COLON              &kp SEMI          &kp DQT            &trans
-&trans  &kp BACKSLASH  &kp CARET  &kp DOLLAR      &kp PIPE         &kp PERCENT       &kp QUESTION  &kp EXCLAMATION  &kp EQUAL              &kp ASTERISK      &kp SLASH          &trans
+&trans  &kp AMPERSAND  &kp HASH   &kp AT_SIGN     &kp TILDE        &kp PERCENT       &kp PLUS      &kp MINUS        &kp DQT                &kp COLON         &kp SEMI           &trans
+&trans  &kp BACKSLASH  &kp CARET  &kp DOLLAR      &kp PIPE         &kp UNDERSCORE    &kp QUESTION  &kp EXCLAMATION  &kp EQUAL              &kp ASTERISK      &kp SLASH          &trans
                                   &trans          &trans           &trans            &trans        &kp BACKSPACE    &trans
             >;
         };
