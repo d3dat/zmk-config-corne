@@ -603,4 +603,18 @@
             >;
         };
     };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        fn {
+            if-layers = <2 6>;
+            then-layer = <9>;
+        };
+
+        fn_ru {
+            if-layers = <3 7>;
+            then-layer = <9>;
+        };
+    };
 };
