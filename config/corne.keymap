@@ -413,10 +413,10 @@
 
         ru {
             bindings = <
-&trans  &trans  &trans  &trans  &trans       &trans         &trans           &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans       &trans         &trans           &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans       &trans         &trans           &trans  &trans  &trans  &trans  &trans
-                        &trans  &lt 3 SPACE  &lt_esc 7 0    &lt_sym 0 ENTER  &sl 5   &trans
+&trans  &trans  &trans  &trans  &trans       &trans         &trans           &trans      &trans  &trans  &tp LBKT P    &trans
+&trans  &trans  &trans  &trans  &trans       &trans         &trans           &trans      &trans  &trans  &tp SQT SEMI  &trans
+&trans  &trans  &trans  &trans  &trans       &trans         &trans           &tp RBKT M  &trans  &trans  &trans        &trans
+                        &trans  &lt 3 SPACE  &lt_esc 7 0    &lt_sym 0 ENTER  &sl 5       &trans
             >;
         };
 
