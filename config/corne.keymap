@@ -396,6 +396,8 @@
             bindings = <&mo 9>;
             key-positions = <37 38>;
             layers = <0 1>;
+            timeout-ms = <150>;
+            require-prior-idle-ms = <50>;
         };
     };
 
