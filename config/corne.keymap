@@ -451,7 +451,7 @@
 &none  &none  &tog 11       &m_warpd_hint  &tog 9     &none     &none   &none      &none      &none     &none     &none
 &none  &none  &m_caps_word  &m_to_ru       &sk LSHFT  &none     &none   &sk RSHFT  &sk RCTRL  &sk LALT  &sk LGUI  &none
 &none  &none  &tog 9        &tog 6         &sl 8      &none     &none   &m_to_ru   &none      &none     &none     &none
-                            &trans         &trans     &trans    &trans  &trans     &trans
+                            &trans         &mo 9      &trans    &trans  &trans     &trans
             >;
         };
 
@@ -460,7 +460,7 @@
 &none  &none  &tog 11       &m_warpd_hint  &tog 9     &kp GRAVE    &none   &none      &none      &none     &kp LBKT  &none
 &none  &none  &m_caps_word  &m_to_en       &sk LSHFT  &none        &none   &sk LSHFT  &sk LCTRL  &sk LALT  &kp SQT   &none
 &none  &none  &tog 9        &tog 7         &sl 8      &none        &none   &m_to_en   &none      &none     &kp RBKT  &none
-                            &trans         &trans     &trans       &trans  &trans     &trans
+                            &trans         &mo 9      &trans       &trans  &trans     &trans
             >;
         };
 
