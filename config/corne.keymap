@@ -30,7 +30,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "TAP_PREFERRED";
             #binding-cells = <2>;
-            tapping-term-ms = <170>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -430,37 +430,37 @@
 
         nav {
             bindings = <
-&none  &m_to_ru      &kp BACKSPACE  &kp ESCAPE  &tog 9     &tog 6       &kp INS        &kp HOME       &kp PG_UP  &kp PG_DN  &kp END    &none
-&none  &sk LEFT_GUI  &sk LALT       &sk LCTRL   &sk LSHFT  &swap_win    &kp TAB        &kp LEFT       &kp UP     &kp DOWN   &kp RIGHT  &none
-&none  &kp LC(Z)     &kp LC(X)      &kp LC(C)   &kp LC(V)  &swap_tab    &kp BACKSPACE  &kp RET        &m_comma   &m_dot     &kp DEL    &none
-                                    &trans      &trans     &trans       &trans         &kp BACKSPACE  &trans
+&none  &m_to_ru      &kp BACKSPACE  &kp ESCAPE  &tog 9     &tog 6       &kp INS        &kp HOME  &kp PG_UP  &kp PG_DN  &kp END    &none
+&none  &sk LEFT_GUI  &sk LALT       &sk LCTRL   &sk LSHFT  &swap_win    &kp TAB        &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &none
+&none  &kp LC(Z)     &kp LC(X)      &kp LC(C)   &kp LC(V)  &swap_tab    &kp BACKSPACE  &kp RET   &m_comma   &m_dot     &kp DEL    &none
+                                    &trans      &trans     &trans       &trans         &m_to_ru  &trans
             >;
         };
 
         nav_ru {
             bindings = <
-&none  &m_to_en      &kp BACKSPACE  &kp ESCAPE  &tog 9     &tog 7       &kp INS        &kp HOME       &kp PG_UP    &kp PG_DN  &kp END    &none
-&none  &sk LEFT_GUI  &sk LALT       &sk LCTRL   &sk LSHFT  &swap_win    &kp TAB        &kp LEFT       &kp UP       &kp DOWN   &kp RIGHT  &none
-&none  &kp LC(Z)     &kp LC(X)      &kp LC(C)   &kp LC(V)  &swap_tab    &kp BACKSPACE  &kp RET        &m_comma_ru  &m_dot_ru  &kp DEL    &none
-                                    &trans      &trans     &trans       &trans         &kp BACKSPACE  &trans
+&none  &m_to_en      &kp BACKSPACE  &kp ESCAPE  &tog 9     &tog 7       &kp INS        &kp HOME  &kp PG_UP    &kp PG_DN  &kp END    &none
+&none  &sk LEFT_GUI  &sk LALT       &sk LCTRL   &sk LSHFT  &swap_win    &kp TAB        &kp LEFT  &kp UP       &kp DOWN   &kp RIGHT  &none
+&none  &kp LC(Z)     &kp LC(X)      &kp LC(C)   &kp LC(V)  &swap_tab    &kp BACKSPACE  &kp RET   &m_comma_ru  &m_dot_ru  &kp DEL    &none
+                                    &trans      &trans     &trans       &trans         &m_to_en  &trans
             >;
         };
 
         cmd {
             bindings = <
-&none  &none  &tog 11  &m_warpd_hint  &none      &none     &none   &none      &m_to_ru   &none     &none     &none
-&none  &none  &tog 9   &m_caps_word   &sk LSHFT  &none     &none   &sk RSHFT  &sk RCTRL  &sk LALT  &sk LGUI  &none
-&none  &none  &none    &tog 6         &sl 8      &none     &none   &none      &none      &none     &none     &none
-                       &trans         &m_to_ru   &trans    &trans  &trans     &trans
+&none  &none   &tog 11  &m_warpd_hint  &none      &none     &none   &none      &m_to_ru   &none     &none     &none
+&none  &sl 15  &tog 9   &m_caps_word   &sk LSHFT  &none     &none   &sk RSHFT  &sk RCTRL  &sk LALT  &sk LGUI  &none
+&none  &none   &none    &tog 6         &sl 8      &none     &none   &none      &none      &none     &none     &none
+                        &trans         &m_to_ru   &trans    &trans  &trans     &trans
             >;
         };
 
         cmd_ru {
             bindings = <
-&none  &none  &tog 11  &m_warpd_hint  &none      &kp GRAVE    &none   &none      &m_to_en   &none     &none     &none
-&none  &none  &tog 9   &m_caps_word   &sk LSHFT  &none        &none   &sk LSHFT  &sk LCTRL  &sk LALT  &sk LGUI  &none
-&none  &none  &none    &tog 7         &sl 8      &none        &none   &none      &none      &none     &none     &none
-                       &trans         &m_to_en   &trans       &trans  &trans     &trans
+&none  &none   &tog 11  &m_warpd_hint  &none      &kp GRAVE    &none   &none      &m_to_en   &none     &none     &none
+&none  &sl 15  &tog 9   &m_caps_word   &sk LSHFT  &none        &none   &sk LSHFT  &sk LCTRL  &sk LALT  &sk LGUI  &none
+&none  &none   &none    &tog 7         &sl 8      &none        &none   &none      &none      &none     &none     &none
+                        &trans         &m_to_en   &trans       &trans  &trans     &trans
             >;
         };
 
@@ -542,6 +542,15 @@
 &trans  &m_warpd_hint  &mkp MB3   &mkp RCLK  &mkp LCLK  &trans     &trans  &mmv MOVE_LEFT     &mmv MOVE_UP       &mmv MOVE_DOWN    &mmv MOVE_RIGHT   &trans
 &kp N9  &kp LALT       &kp LCTRL  &kp LSHFT  &mkp LCLK  &trans     &trans  &mmv MOVE_X(-200)  &mmv MOVE_Y(-200)  &mmv MOVE_Y(200)  &mmv MOVE_X(200)  &trans
                                   &none      &none      &tog 14    &trans  &none              &none
+            >;
+        };
+
+        lo {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans      &trans      &trans      &trans      &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LC(N0)  &kp LC(N1)  &kp LC(N2)  &kp LC(N3)  &kp LC(N4)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans      &trans      &trans      &trans      &trans      &trans
+                        &trans  &trans  &trans    &trans      &trans      &trans
             >;
         };
 
