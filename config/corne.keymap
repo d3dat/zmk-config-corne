@@ -104,6 +104,15 @@
             flavor = "tap-preferred";
             bindings = <&m_warpd_hint>, <&kp>;
         };
+
+        tt: tt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TT";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&tog>, <&kp>;
+        };
     };
 
     macros {
@@ -441,7 +450,7 @@
             bindings = <
 &none  &m_to_ru      &kp BACKSPACE           &kp ESCAPE    &key_repeat  &tog 6       &kp INS        &kp HOME  &kp PG_UP  &kp PG_DN  &kp END    &none
 &none  &sk LEFT_GUI  &sk LALT                &sk LCTRL     &sk LSHFT    &swap_win    &kp TAB        &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &none
-&none  &kp LC(Z)     &tp_warpd_hint 0 LC(X)  &lt 18 LC(C)  &lt 9 LC(V)  &swap_tab    &kp BACKSPACE  &kp RET   &m_comma   &m_dot     &kp DEL    &none
+&none  &tt 11 LC(Z)  &tp_warpd_hint 0 LC(X)  &lt 18 LC(C)  &lt 9 LC(V)  &swap_tab    &kp BACKSPACE  &kp RET   &m_comma   &m_dot     &kp DEL    &none
                                              &trans        &trans       &trans       &trans         &m_to_ru  &trans
             >;
         };
@@ -450,7 +459,7 @@
             bindings = <
 &none  &m_to_en      &kp BACKSPACE           &kp ESCAPE    &key_repeat  &tog 7       &kp INS        &kp HOME  &kp PG_UP    &kp PG_DN  &kp END    &none
 &none  &sk LEFT_GUI  &sk LALT                &sk LCTRL     &sk LSHFT    &swap_win    &kp TAB        &kp LEFT  &kp UP       &kp DOWN   &kp RIGHT  &none
-&none  &kp LC(Z)     &tp_warpd_hint 0 LC(X)  &lt 19 LC(C)  &lt 9 LC(V)  &swap_tab    &kp BACKSPACE  &kp RET   &m_comma_ru  &m_dot_ru  &kp DEL    &none
+&none  &tt 11 LC(Z)  &tp_warpd_hint 0 LC(X)  &lt 19 LC(C)  &lt 9 LC(V)  &swap_tab    &kp BACKSPACE  &kp RET   &m_comma_ru  &m_dot_ru  &kp DEL    &none
                                              &trans        &trans       &trans       &trans         &m_to_en  &trans
             >;
         };
