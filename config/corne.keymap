@@ -448,19 +448,19 @@
 
         nav {
             bindings = <
-&none  &m_to_ru      &kp BACKSPACE           &kp ESCAPE    &key_repeat  &tog 6       &kp INS        &kp HOME       &kp PG_UP  &kp PG_DN  &kp END    &none
-&none  &sk LEFT_GUI  &sk LALT                &sk LCTRL     &sk LSHFT    &swap_win    &kp TAB        &kp LEFT       &kp UP     &kp DOWN   &kp RIGHT  &none
-&none  &tt 11 LC(Z)  &tp_warpd_hint 0 LC(X)  &lt 18 LC(C)  &lt 9 LC(V)  &swap_tab    &kp BACKSPACE  &kp RET        &m_comma   &m_dot     &kp DEL    &none
-                                             &trans        &trans       &trans       &trans         &m_warpd_hint  &trans
+&none  &m_to_ru      &kp BACKSPACE  &kp ESCAPE    &key_repeat  &tog 6       &kp INS        &kp HOME       &kp PG_UP  &kp PG_DN  &kp END    &none
+&none  &sk LEFT_GUI  &sk LALT       &sk LCTRL     &sk LSHFT    &swap_win    &kp TAB        &kp LEFT       &kp UP     &kp DOWN   &kp RIGHT  &none
+&none  &kp LC(Z)     &kp LC(X)      &lt 18 LC(C)  &lt 9 LC(V)  &swap_tab    &kp BACKSPACE  &kp RET        &m_comma   &m_dot     &kp DEL    &none
+                                    &trans        &trans       &trans       &trans         &m_warpd_hint  &trans
             >;
         };
 
         nav_ru {
             bindings = <
-&none  &m_to_en      &kp BACKSPACE           &kp ESCAPE    &key_repeat  &tog 7       &kp INS        &kp HOME       &kp PG_UP    &kp PG_DN  &kp END    &none
-&none  &sk LEFT_GUI  &sk LALT                &sk LCTRL     &sk LSHFT    &swap_win    &kp TAB        &kp LEFT       &kp UP       &kp DOWN   &kp RIGHT  &none
-&none  &tt 11 LC(Z)  &tp_warpd_hint 0 LC(X)  &lt 19 LC(C)  &lt 9 LC(V)  &swap_tab    &kp BACKSPACE  &kp RET        &m_comma_ru  &m_dot_ru  &kp DEL    &none
-                                             &trans        &trans       &trans       &trans         &m_warpd_hint  &trans
+&none  &m_to_en      &kp BACKSPACE  &kp ESCAPE    &key_repeat  &tog 7       &kp INS        &kp HOME       &kp PG_UP    &kp PG_DN  &kp END    &none
+&none  &sk LEFT_GUI  &sk LALT       &sk LCTRL     &sk LSHFT    &swap_win    &kp TAB        &kp LEFT       &kp UP       &kp DOWN   &kp RIGHT  &none
+&none  &kp LC(Z)     &kp LC(X)      &lt 19 LC(C)  &lt 9 LC(V)  &swap_tab    &kp BACKSPACE  &kp RET        &m_comma_ru  &m_dot_ru  &kp DEL    &none
+                                    &trans        &trans       &trans       &trans         &m_warpd_hint  &trans
             >;
         };
 
@@ -468,7 +468,7 @@
             bindings = <
 &none  &none   &tog 11  &m_warpd_hint  &none      &none     &none   &none      &m_to_ru   &none     &none     &none
 &none  &sl 15  &tog 9   &m_caps_word   &sk LSHFT  &none     &none   &sk RSHFT  &sk RCTRL  &sk LALT  &sk LGUI  &none
-&none  &none   &none    &tog 6         &sl 8      &none     &none   &none      &none      &none     &none     &none
+&none  &none   &none    &tog 6         &sl 8      &none     &none   &tog 11    &none      &none     &none     &none
                         &trans         &m_to_ru   &trans    &trans  &trans     &trans
             >;
         };
@@ -477,7 +477,7 @@
             bindings = <
 &none  &none   &tog 11  &m_warpd_hint  &none      &kp GRAVE    &none   &none      &m_to_en   &none     &none     &none
 &none  &sl 15  &tog 9   &m_caps_word   &sk LSHFT  &none        &none   &sk LSHFT  &sk LCTRL  &sk LALT  &sk LGUI  &none
-&none  &none   &none    &tog 7         &sl 8      &none        &none   &none      &none      &none     &none     &none
+&none  &none   &none    &tog 7         &sl 8      &none        &none   &tog 11    &none      &none     &none     &none
                         &trans         &m_to_en   &trans       &trans  &trans     &trans
             >;
         };
