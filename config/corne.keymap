@@ -95,6 +95,15 @@
             require-prior-idle-ms = <50>;
             flavor = "tap-preferred";
         };
+
+        tp_warpd_hint: tp_warpd_hint {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TP_WARPD_HINT";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&m_warpd_hint>, <&kp>;
+        };
     };
 
     macros {
@@ -430,19 +439,19 @@
 
         nav {
             bindings = <
-&none  &m_to_ru      &kp BACKSPACE  &kp ESCAPE    &key_repeat  &tog 6       &kp INS        &kp HOME  &kp PG_UP  &kp PG_DN  &kp END    &none
-&none  &sk LEFT_GUI  &sk LALT       &sk LCTRL     &sk LSHFT    &swap_win    &kp TAB        &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &none
-&none  &kp LC(Z)     &kp LC(X)      &lt 18 LC(C)  &lt 9 LC(V)  &swap_tab    &kp BACKSPACE  &kp RET   &m_comma   &m_dot     &kp DEL    &none
-                                    &trans        &trans       &trans       &trans         &m_to_ru  &trans
+&none  &m_to_ru      &kp BACKSPACE           &kp ESCAPE    &key_repeat  &tog 6       &kp INS        &kp HOME  &kp PG_UP  &kp PG_DN  &kp END    &none
+&none  &sk LEFT_GUI  &sk LALT                &sk LCTRL     &sk LSHFT    &swap_win    &kp TAB        &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &none
+&none  &kp LC(Z)     &tp_warpd_hint 0 LC(X)  &lt 18 LC(C)  &lt 9 LC(V)  &swap_tab    &kp BACKSPACE  &kp RET   &m_comma   &m_dot     &kp DEL    &none
+                                             &trans        &trans       &trans       &trans         &m_to_ru  &trans
             >;
         };
 
         nav_ru {
             bindings = <
-&none  &m_to_en      &kp BACKSPACE  &kp ESCAPE    &key_repeat  &tog 7       &kp INS        &kp HOME  &kp PG_UP    &kp PG_DN  &kp END    &none
-&none  &sk LEFT_GUI  &sk LALT       &sk LCTRL     &sk LSHFT    &swap_win    &kp TAB        &kp LEFT  &kp UP       &kp DOWN   &kp RIGHT  &none
-&none  &kp LC(Z)     &kp LC(X)      &lt 19 LC(C)  &lt 9 LC(V)  &swap_tab    &kp BACKSPACE  &kp RET   &m_comma_ru  &m_dot_ru  &kp DEL    &none
-                                    &trans        &trans       &trans       &trans         &m_to_en  &trans
+&none  &m_to_en      &kp BACKSPACE           &kp ESCAPE    &key_repeat  &tog 7       &kp INS        &kp HOME  &kp PG_UP    &kp PG_DN  &kp END    &none
+&none  &sk LEFT_GUI  &sk LALT                &sk LCTRL     &sk LSHFT    &swap_win    &kp TAB        &kp LEFT  &kp UP       &kp DOWN   &kp RIGHT  &none
+&none  &kp LC(Z)     &tp_warpd_hint 0 LC(X)  &lt 19 LC(C)  &lt 9 LC(V)  &swap_tab    &kp BACKSPACE  &kp RET   &m_comma_ru  &m_dot_ru  &kp DEL    &none
+                                             &trans        &trans       &trans       &trans         &m_to_en  &trans
             >;
         };
 
@@ -575,7 +584,7 @@
         num_ {
             bindings = <
 &none  &none     &kp BACKSPACE  &kp ESC  &kp DEL    &none     &kp SLASH   &kp N9         &kp N0  &kp MINUS  &kp EQUAL  &none
-&none  &none     &none          &none    &none      &none     &kp PERIOD  &kp N5         &kp N6  &kp N7     &kp N8     &none
+&none  &none     &none          &none    &kp SPACE  &none     &kp PERIOD  &kp N5         &kp N6  &kp N7     &kp N8     &none
 &none  &kp LALT  &kp LCTRL      &none    &kp LSHFT  &none     &kp COMMA   &kp N1         &kp N2  &kp N3     &kp N4     &none
                                 &trans   &trans     &trans    &trans      &kp BACKSPACE  &trans
             >;
@@ -584,7 +593,7 @@
         num_ru_ {
             bindings = <
 &none  &none     &kp BACKSPACE  &kp ESC  &kp DEL    &none     &kp LS(BACKSLASH)  &kp N9         &kp N0  &kp MINUS  &kp EQUAL  &none
-&none  &none     &none          &none    &none      &none     &kp SLASH          &kp N5         &kp N6  &kp N7     &kp N8     &none
+&none  &none     &none          &none    &kp SPACE  &none     &kp SLASH          &kp N5         &kp N6  &kp N7     &kp N8     &none
 &none  &kp LALT  &kp LCTRL      &none    &kp LSHFT  &none     &kp LS(SLASH)      &kp N1         &kp N2  &kp N3     &kp N4     &none
                                 &trans   &trans     &trans    &trans             &kp BACKSPACE  &trans
             >;
