@@ -100,7 +100,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "TP_WARPD_HINT";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             flavor = "tap-preferred";
             bindings = <&m_warpd_hint>, <&kp>;
         };
@@ -109,9 +109,33 @@
             compatible = "zmk,behavior-hold-tap";
             label = "TT";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             flavor = "tap-preferred";
             bindings = <&tog>, <&kp>;
+        };
+
+        hrm_l: hrm_l {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HRM_L";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+
+            hold-trigger-key-positions = <6 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35>;
+        };
+
+        hrm_r: hrm_r {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HRM_R";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+
+            hold-trigger-key-positions = <17 0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29>;
         };
     };
 
@@ -430,10 +454,10 @@
             //                    | GUI | LWR | ALT/ENT |   | HYPER/SPC | BKSP  | RSE |
 
             bindings = <
-&none  &kp Q  &kp W  &kp E  &kp R        &kp T           &kp Y        &kp U  &kp I      &kp O    &kp P     &none
-&none  &kp A  &kp S  &kp D  &kp F        &kp G           &kp H        &kp J  &kp K      &kp L    &kp SEMI  &none
-&none  &kp Z  &kp X  &kp C  &kp V        &kp B           &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &none
-                     &mo 9  &lt 2 SPACE  &lt_esc 18 0    &lt 8 ENTER  &sl 4  &kp RSHFT
+&none  &kp Q  &kp W  &kp E  &kp R           &kp T           &kp Y        &kp U           &kp I      &kp O    &kp P     &none
+&none  &kp A  &kp S  &kp D  &hrm_l LSHFT F  &kp G           &kp H        &hrm_r LSHFT J  &kp K      &kp L    &kp SEMI  &none
+&none  &kp Z  &kp X  &kp C  &kp V           &kp B           &kp N        &kp M           &kp COMMA  &kp DOT  &kp FSLH  &none
+                     &mo 9  &lt 2 SPACE     &lt_esc 18 0    &lt 8 ENTER  &sl 4           &kp RSHFT
             >;
         };
 
@@ -450,8 +474,8 @@
             bindings = <
 &none  &m_to_ru      &none      &kp ESCAPE    &key_repeat  &tog 6       &kp INS  &kp HOME       &kp PG_UP  &kp PG_DN  &kp END    &none
 &none  &sk LEFT_GUI  &sk LALT   &sk LCTRL     &sk LSHFT    &swap_win    &kp TAB  &kp LEFT       &kp UP     &kp DOWN   &kp RIGHT  &none
-&none  &kp LC(Z)     &kp LC(X)  &lt 18 LC(C)  &lt 9 LC(V)  &swap_tab    &kp RET  &kp BACKSPACE  &m_comma   &m_dot     &kp DEL    &none
-                                &trans        &trans       &trans       &trans   &m_warpd_hint  &trans
+&none  &kp LC(Z)     &kp LC(X)  &lt 18 LC(C)  &tt 9 LC(V)  &swap_tab    &kp RET  &kp BACKSPACE  &m_comma   &m_dot     &kp DEL    &none
+                                &trans        &trans       &trans       &trans   &kp BACKSPACE  &trans
             >;
         };
 
@@ -459,25 +483,25 @@
             bindings = <
 &none  &m_to_en      &none      &kp ESCAPE    &key_repeat  &tog 7       &kp INS  &kp HOME       &kp PG_UP    &kp PG_DN  &kp END    &none
 &none  &sk LEFT_GUI  &sk LALT   &sk LCTRL     &sk LSHFT    &swap_win    &kp TAB  &kp LEFT       &kp UP       &kp DOWN   &kp RIGHT  &none
-&none  &kp LC(Z)     &kp LC(X)  &lt 19 LC(C)  &lt 9 LC(V)  &swap_tab    &kp RET  &kp BACKSPACE  &m_comma_ru  &m_dot_ru  &kp DEL    &none
-                                &trans        &trans       &trans       &trans   &m_warpd_hint  &trans
+&none  &kp LC(Z)     &kp LC(X)  &lt 19 LC(C)  &tt 9 LC(V)  &swap_tab    &kp RET  &kp BACKSPACE  &m_comma_ru  &m_dot_ru  &kp DEL    &none
+                                &trans        &trans       &trans       &trans   &kp BACKSPACE  &trans
             >;
         };
 
         cmd {
             bindings = <
-&none  &none  &tog 11  &m_warpd_hint  &none      &none     &none   &none      &m_to_ru   &none     &none     &none
-&none  &none  &none    &m_caps_word   &sk LSHFT  &none     &none   &sk RSHFT  &sk RCTRL  &sk LALT  &sk LGUI  &none
-&none  &none  &none    &none          &none      &none     &none   &tog 11    &none      &none     &none     &none
+&none  &none  &tog 11  &m_warpd_hint  &none      &none     &none   &none      &m_to_ru       &none     &none     &none
+&none  &none  &none    &m_caps_word   &sk LSHFT  &none     &none   &sk RSHFT  &sk RCTRL      &sk LALT  &sk LGUI  &none
+&none  &none  &none    &none          &none      &none     &none   &tog 11    &m_warpd_hint  &none     &none     &none
                        &trans         &m_to_ru   &trans    &trans  &trans     &trans
             >;
         };
 
         cmd_ru {
             bindings = <
-&none  &none  &tog 11  &m_warpd_hint  &none      &kp GRAVE    &none   &none      &m_to_en   &none     &none     &none
-&none  &none  &none    &m_caps_word   &sk LSHFT  &none        &none   &sk LSHFT  &sk LCTRL  &sk LALT  &sk LGUI  &none
-&none  &none  &none    &none          &none      &none        &none   &tog 11    &none      &none     &none     &none
+&none  &none  &tog 11  &m_warpd_hint  &none      &kp GRAVE    &none   &none      &m_to_en       &none     &none     &none
+&none  &none  &none    &m_caps_word   &sk LSHFT  &none        &none   &sk LSHFT  &sk LCTRL      &sk LALT  &sk LGUI  &none
+&none  &none  &none    &none          &none      &none        &none   &tog 11    &m_warpd_hint  &none     &none     &none
                        &trans         &m_to_en   &trans       &trans  &trans     &trans
             >;
         };
